@@ -1,0 +1,130 @@
+\hypertarget{class_device___calibrate___sensors___dialog}{}\doxysection{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog Class Reference}
+\label{class_device___calibrate___sensors___dialog}\index{Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}}
+
+
+{\ttfamily \#include $<$device\+\_\+calibrate\+\_\+sensors\+\_\+dialog.\+h$>$}
+
+Inheritance diagram for Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_device___calibrate___sensors___dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_device___calibrate___sensors___dialog_aa323b8c01454acfc3e3b7161946ce941}{Save\+\_\+\+Device\+\_\+\+Sensors\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Saves calibration data of currently selected sensor channel from \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog to the correspondent program variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_device___calibrate___sensors___dialog_ac7610331443008f3c1ca69ed8646bfea}{Update\+\_\+\+Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Reads sensor calibration data stored on the program variables, and sets/updates items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a0312514bdd9ff1c85716a933c6ebfae0}\label{class_device___calibrate___sensors___dialog_a0312514bdd9ff1c85716a933c6ebfae0}} 
+void {\bfseries Increase\+\_\+\+Number\+\_\+\+Valid\+\_\+\+Lines} ()
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a143b5a2566eb73f6f1afcff5b11f4e16}\label{class_device___calibrate___sensors___dialog_a143b5a2566eb73f6f1afcff5b11f4e16}} 
+void {\bfseries Device\+\_\+\+Calib\+\_\+\+Add\+\_\+\+New\+\_\+\+Row} ()
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_aedd726a491ae2902e6884eb0a93e5cc3}\label{class_device___calibrate___sensors___dialog_aedd726a491ae2902e6884eb0a93e5cc3}} 
+void {\bfseries Calib\+\_\+\+Channel\+\_\+\+Mode\+\_\+\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a35a7fc6451697ce91b098a8641942d7a}\label{class_device___calibrate___sensors___dialog_a35a7fc6451697ce91b098a8641942d7a}} 
+void {\bfseries Number\+\_\+\+Valid\+\_\+\+Table\+\_\+\+Lines\+\_\+\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device___calibrate___sensors___dialog_ae66bb0e63defaf700c6029552ecff567}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} (int $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+device\+\_\+calib\+\_\+dialog\+\_\+ptr, \mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+Calib\+Header\+Data}} $\ast$device\+\_\+calib\+\_\+header\+\_\+ptr, QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+sensors\+\_\+calib\+\_\+vector\+\_\+ptr, \mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$counters\+\_\+calib\+\_\+ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_af5ad45cc8f4617acaeaf1553feae42c0}\label{class_device___calibrate___sensors___dialog_af5ad45cc8f4617acaeaf1553feae42c0}} 
+char($\ast$ {\bfseries m\+\_\+sensors\+\_\+calib\+\_\+units\+\_\+vector\+\_\+ptr} )\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a9cffdb93161d1a02905d0989e8414d20}\label{class_device___calibrate___sensors___dialog_a9cffdb93161d1a02905d0989e8414d20}} 
+QWidget $\ast$ {\bfseries number\+\_\+valid\+\_\+table\+\_\+lines\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a296aa364866b46e5ba9a09c1e60128d1}\label{class_device___calibrate___sensors___dialog_a296aa364866b46e5ba9a09c1e60128d1}} 
+QGrid\+Layout $\ast$ {\bfseries number\+\_\+valid\+\_\+table\+\_\+lines\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a1a44338748bd12157f9c8b996441e3ad}\label{class_device___calibrate___sensors___dialog_a1a44338748bd12157f9c8b996441e3ad}} 
+QLabel $\ast$ {\bfseries number\+\_\+valid\+\_\+table\+\_\+lines\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_ad8ee7d42b3653acb994c9dba4a2ad98a}\label{class_device___calibrate___sensors___dialog_ad8ee7d42b3653acb994c9dba4a2ad98a}} 
+QSpin\+Box $\ast$ {\bfseries number\+\_\+valid\+\_\+table\+\_\+lines\+\_\+box}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_ada493c0adba48494eaa377ac2bffc701}\label{class_device___calibrate___sensors___dialog_ada493c0adba48494eaa377ac2bffc701}} 
+QWidget $\ast$ {\bfseries calib\+\_\+table\+\_\+is\+\_\+active\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a001ea28db6c153a29456230e4db1d1ff}\label{class_device___calibrate___sensors___dialog_a001ea28db6c153a29456230e4db1d1ff}} 
+QGrid\+Layout $\ast$ {\bfseries calib\+\_\+table\+\_\+is\+\_\+active\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a09e540f14584628b9f3dfbc5f0c6f4a5}\label{class_device___calibrate___sensors___dialog_a09e540f14584628b9f3dfbc5f0c6f4a5}} 
+QLabel $\ast$ {\bfseries calib\+\_\+table\+\_\+is\+\_\+active\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_aec500dd794ad96da73cdd1e45390b1cb}\label{class_device___calibrate___sensors___dialog_aec500dd794ad96da73cdd1e45390b1cb}} 
+QCheck\+Box $\ast$ {\bfseries calib\+\_\+table\+\_\+is\+\_\+active\+\_\+checkbox}
+\item 
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_a67d94b81b0c41932ed1f8e509ad20621}\label{class_device___calibrate___sensors___dialog_a67d94b81b0c41932ed1f8e509ad20621}} 
+\mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+Calib\+Header\+Data}} $\ast$ {\bfseries device\+\_\+calib\+\_\+header\+\_\+ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} -\/ Class of the dialog window used for configuring the device calibrations, that are used by Multiple-\/\+Sensor device to calculate measurements.
+
+{\bfseries{Description}} Class of the dialog window used for configuring the device calibrations. The device calibrations are saved on an EEPROM memory on the Multiple-\/\+Sensor Interface device, and are used by the device to calculate the sensor measurements. These are a 2 column table(for LCR channels and ADC channels) that translates a RAW value of the sensor (frequency, voltage) to a sensor measurement , and 4 float constants used on a function(counters of LCR/frequency channels) that translates a RAW\+\_\+counter\+\_\+value of the sensor (number of counts/cycles) to a counter measurement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_ae66bb0e63defaf700c6029552ecff567}\label{class_device___calibrate___sensors___dialog_ae66bb0e63defaf700c6029552ecff567}} 
+\index{Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}!Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}}
+\index{Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}!Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Device\_Calibrate\_Sensors\_Dialog()}{Device\_Calibrate\_Sensors\_Dialog()}}
+{\footnotesize\ttfamily Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}\item[{int $\ast$}]{previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+device\+\_\+calib\+\_\+dialog\+\_\+ptr,  }\item[{\mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+Calib\+Header\+Data}} $\ast$}]{device\+\_\+calib\+\_\+header\+\_\+ptr,  }\item[{QStandard\+Item\+Model $\ast$$\ast$}]{model\+\_\+tables\+\_\+sensors\+\_\+calib\+\_\+vector\+\_\+ptr,  }\item[{\mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$}]{counters\+\_\+calib\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+explicit \mbox{\hyperlink{class_device___calibrate___sensors___dialog_ae66bb0e63defaf700c6029552ecff567}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog(int $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+device\+\_\+calib\+\_\+dialog\+\_\+ptr, Device\+Calib\+Header\+Data $\ast$device\+\_\+calib\+\_\+header\+\_\+ptr, QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+sensors\+\_\+calib\+\_\+vector\+\_\+ptr, counters\+\_\+calib $\ast$counters\+\_\+calib\+\_\+ptr)}}
+
+The constructor of the class used for configuring the device calibration tables of measurements on LCR/frequency/\+ADC sensor channels , and configuring the constants of the device calibration function of counter measurements on frequency sensor channels. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+device\+\_\+calib\+\_\+dialog\+\_\+ptr} & Pointer to variable that stores the selected channel number that was previously selected by the user on \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$device\+\_\+calib\+\_\+header\+\_\+ptr} & Pointer to structure containing all data of table headers for all calibration tables. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr} & Pointer to array(vector) where are stored the calibration tables for all the sensor channels \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$counters\+\_\+calib\+\_\+ptr} & Pointer to structure (\textquotesingle{}counters\+\_\+calib\textquotesingle{}) where are stored the constants of the calibration function used to calculate the counter measurements \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_device___calibrate___sensors___dialog_aa323b8c01454acfc3e3b7161946ce941}\label{class_device___calibrate___sensors___dialog_aa323b8c01454acfc3e3b7161946ce941}} 
+\index{Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}!Save\_Device\_Sensors\_Calibrations@{Save\_Device\_Sensors\_Calibrations}}
+\index{Save\_Device\_Sensors\_Calibrations@{Save\_Device\_Sensors\_Calibrations}!Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Save\_Device\_Sensors\_Calibrations}{Save\_Device\_Sensors\_Calibrations}}
+{\footnotesize\ttfamily void Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Save\+\_\+\+Device\+\_\+\+Sensors\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Saves calibration data of currently selected sensor channel from \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog to the correspondent program variables. 
+
+void \mbox{\hyperlink{class_device___calibrate___sensors___dialog_aa323b8c01454acfc3e3b7161946ce941}{Save\+\_\+\+Device\+\_\+\+Sensors\+\_\+\+Calibrations()}}
+
+This function calls the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog_a4afddc40ee601de3b7e78dad75bf553f}{Save\+\_\+\+Sensors\+\_\+\+Calibrations()}}\textquotesingle{} from parent class, and also saves other information of the device calibration table (content of \textquotesingle{}Device\+Calib\+Header\+Data\textquotesingle{} structure), namely\+: the channel mode (saved to \textquotesingle{}calib\+\_\+channel\+\_\+mode\+\_\+bool\mbox{[}\mbox{]}\textquotesingle{}), jumper configuration (saved to \textquotesingle{}jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\mbox{[}\mbox{]}\textquotesingle{}), active table state (saved to \textquotesingle{}calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\mbox{[}\mbox{]}\textquotesingle{}), number of valid table lines (saved to \textquotesingle{}number\+\_\+table\+\_\+lines\mbox{[}\mbox{]}\textquotesingle{}) . \mbox{\Hypertarget{class_device___calibrate___sensors___dialog_ac7610331443008f3c1ca69ed8646bfea}\label{class_device___calibrate___sensors___dialog_ac7610331443008f3c1ca69ed8646bfea}} 
+\index{Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}!Update\_Device\_Calibrate\_Sensors\_Dialog@{Update\_Device\_Calibrate\_Sensors\_Dialog}}
+\index{Update\_Device\_Calibrate\_Sensors\_Dialog@{Update\_Device\_Calibrate\_Sensors\_Dialog}!Device\_Calibrate\_Sensors\_Dialog@{Device\_Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Update\_Device\_Calibrate\_Sensors\_Dialog}{Update\_Device\_Calibrate\_Sensors\_Dialog}}
+{\footnotesize\ttfamily void Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Update\+\_\+\+Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Reads sensor calibration data stored on the program variables, and sets/updates items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_device___calibrate___sensors___dialog_ac7610331443008f3c1ca69ed8646bfea}{Update\+\_\+\+Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog()}}
+
+This function calls the \textquotesingle{}Update\+\_\+\+Sensors\+\_\+\+Calibrations()\textquotesingle{} from parent class, and also updates other information of the currenlty visible device calibration table (content of \textquotesingle{}Device\+Calib\+Header\+Data\textquotesingle{} structure), namely\+: the channel mode (read from \textquotesingle{}calib\+\_\+channel\+\_\+mode\+\_\+bool\mbox{[}\mbox{]}\textquotesingle{}), jumper configuration (read from \textquotesingle{}jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\mbox{[}\mbox{]}\textquotesingle{}), active table state (read from \textquotesingle{}calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\mbox{[}\mbox{]}\textquotesingle{}), number of valid table lines (read from \textquotesingle{}number\+\_\+table\+\_\+lines\mbox{[}\mbox{]}\textquotesingle{}). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/device\+\_\+calibrate\+\_\+sensors\+\_\+dialog.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/device\+\_\+calibrate\+\_\+sensors\+\_\+dialog.\+cpp\end{DoxyCompactItemize}

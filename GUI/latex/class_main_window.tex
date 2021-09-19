@@ -1,0 +1,569 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}} 
+{\bfseries Main\+Window} (QWidget $\ast$parent=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_abb3bc674605d6c1c0279fcb13d1fa195}\label{class_main_window_abb3bc674605d6c1c0279fcb13d1fa195}} 
+QStandard\+Item\+Model $\ast$ {\bfseries model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_af05df93e9ff4b03d5aeed3ef9bd605cc}\label{class_main_window_af05df93e9ff4b03d5aeed3ef9bd605cc}} 
+float {\bfseries device\+\_\+calib\+\_\+sensors\+\_\+measurement\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a73e5ee5445dd076797b6f813bd6b20f8}\label{class_main_window_a73e5ee5445dd076797b6f813bd6b20f8}} 
+\mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+Calib\+Header\+Data}} {\bfseries device\+\_\+calib\+\_\+header\+\_\+data}
+\item 
+\mbox{\Hypertarget{class_main_window_a3ec4c8edaa64af3f8328865f7e456333}\label{class_main_window_a3ec4c8edaa64af3f8328865f7e456333}} 
+\mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+Calib\+Header\+Data}} {\bfseries downloaded\+\_\+device\+\_\+calib\+\_\+header\+\_\+data}
+\item 
+\mbox{\Hypertarget{class_main_window_a349c6818e2552ec35103cf60bce513e6}\label{class_main_window_a349c6818e2552ec35103cf60bce513e6}} 
+float {\bfseries virtual\+\_\+calib\+\_\+\+LCR\+\_\+sensors\+\_\+measurement\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_ab07377681d21be4c93ed36a6058d7a2b}\label{class_main_window_ab07377681d21be4c93ed36a6058d7a2b}} 
+QStandard\+Item\+Model $\ast$ {\bfseries model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_ad7d86506f5664416a4a592e43953d906}\label{class_main_window_ad7d86506f5664416a4a592e43953d906}} 
+char {\bfseries virtual\+\_\+calib\+\_\+units\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a67a9dbc0fa1f4ee382b4cb347afb7b33}\label{class_main_window_a67a9dbc0fa1f4ee382b4cb347afb7b33}} 
+unsigned char {\bfseries virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a500b2badfeadda772626c0c2c87f35d1}\label{class_main_window_a500b2badfeadda772626c0c2c87f35d1}} 
+char {\bfseries virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_aef47826ed6539dd812f4c82c8d9a202e}\label{class_main_window_aef47826ed6539dd812f4c82c8d9a202e}} 
+float {\bfseries virtual\+\_\+calib\+\_\+\+ADC\+\_\+sensors\+\_\+measurement\+\_\+vector} \mbox{[}N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_aeb9a5c52b333ed1476efea7b35238764}\label{class_main_window_aeb9a5c52b333ed1476efea7b35238764}} 
+\mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} {\bfseries counters\+\_\+device\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_main_window_aee35850584e549c147d2b13ef089caf8}\label{class_main_window_aee35850584e549c147d2b13ef089caf8}} 
+\mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} {\bfseries counters\+\_\+virtual\+\_\+calib}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_aa39469faa4c28523ae8bdd882889c177}\label{class_main_window_aa39469faa4c28523ae8bdd882889c177}} 
+static const int {\bfseries INTERVAL\+\_\+\+MSEC\+\_\+\+TIMER\+\_\+\+READ\+\_\+\+SENSOR} =500
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a6dfc8dc87f0a2e2819654342c58bfbcd}{Connect\+\_\+\+LCR\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Connect this program to the Multiple-\/\+Sensor Interface (by USB or by RS485/serial). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa9921d7ce41411b3022551f37a2074f4}{Update\+\_\+\+Sensors\+\_\+\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Update the current visible values/measurements for all active/requested sensor channels of the Multiple-\/\+Sensor Interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4abc6ca491572dcf5a10a6d1588db619}{Update\+\_\+\+Virtual\+\_\+\+Calibration\+\_\+\+Measurements\+\_\+\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Update the current visible Virtual Measurements for the sensor channels of the Multiple-\/\+Sensor Interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a8c9d7e9a766af4385ae1570817b67221}{Update\+\_\+\+Counters\+\_\+\+Virtual\+\_\+\+Calibration\+\_\+\+Measurements\+\_\+\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Update the current visible Virtual Counter Measurements for the sensor channels of the Multiple-\/\+Sensor Interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a783a98042b1cbefe13ffbded432c78e8}{Call\+\_\+\+Update\+\_\+\+Sensors\+\_\+\+Display}} ()
+\begin{DoxyCompactList}\small\item\em First check currently selected user option of \textquotesingle{}multi\textquotesingle{} or single\textquotesingle{} channel mode, then call \textquotesingle{}\mbox{\hyperlink{class_main_window_aa9921d7ce41411b3022551f37a2074f4}{Update\+\_\+\+Sensors\+\_\+\+Display()}}\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a43dddcc594d607c07c79de87e5b04c7e}{Change\+\_\+\+Sensors\+\_\+\+Read\+\_\+\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user selected \textquotesingle{}Continuous Read\textquotesingle{} check\+Box, and configures accordingly the \textquotesingle{}timer\+\_\+read\+\_\+sensors\textquotesingle{} timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a3631d42ecb2cd1bccd1fb1054afc0105}{Disable\+\_\+\+Virtual\+\_\+\+Calib\+\_\+\+Measurements}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5e4b065180350c6580164e33d6435132}{Enable\+RAWValues}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a6110f85870753b1213af5fb72ef26f81}{Create\+\_\+\+Calibrate\+\_\+\+Device\+\_\+\+Sensors\+\_\+\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aac8fadb48587ada11a998c674461d4d1}{Create\+\_\+\+Config\+\_\+\+Sensors\+\_\+\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a4edc3752900827f4bd20f63e76dc6cca}{Create\+\_\+\+Config\+\_\+\+Outputs\+\_\+\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a80642478ba2ca4393ef7487a5eb50403}{Create\+\_\+\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5e06fd050bf44d8365075f9e24330542}{Create\+\_\+\+Config\+\_\+\+Board\+ID\+\_\+\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a83bf2e832826d8983805292ecd53e60d}{Mode\+Multiple\+CH\+\_\+\+Changed}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a8b9bbe9b919fa4766326eaa06049d10a}{Save\+Mode\+Multiple\+CH}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a385fb91f579cd995f9912e668af3d21c}{Reset\+\_\+\+Counters}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ada5ade70df46608d3291d4823e92e605}{Set\+Connectio\+Status\+Label\+\_\+\+OK}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a93cba3836d48e3c2c70d26b0c1e1bfb4}{Set\+Connectio\+Status\+Label\+\_\+\+ERROR}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_acb5590abfeda9a62c62fce8ad5dcb267}{Update\+\_\+\+Sensors\+\_\+\+Graphic\+\_\+\+View}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a6a0c9525519520f5932990cbd1d3e04b}{Check\+\_\+\+Max\+\_\+\+Graph\+\_\+\+View}} (int CH\+\_\+number)
+\item 
+void \mbox{\hyperlink{class_main_window_a2a45eacc26f9e203f6299f9d0f3a5e3e}{Check\+\_\+\+Min\+\_\+\+Graph\+\_\+\+View}} (int CH\+\_\+number)
+\item 
+void \mbox{\hyperlink{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}{About}} ()
+\begin{DoxyCompactList}\small\item\em Shows the \textquotesingle{}About\textquotesingle{} dialog window with information about the project and the software licenses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a680791cb2ab9980b7eba9750380ee4f7}{Show\+\_\+\+Error\+\_\+\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Shows the \textquotesingle{}ERROR LOG\textquotesingle{} dialog window with information about errors when sending/receiving data between PC and Multiple-\/\+Sensor device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a7814a7d7a848cbcc8c0c5e41ce111a5b}{Show\+\_\+\+User\+\_\+\+Guide}} ()
+\begin{DoxyCompactList}\small\item\em Opens the \textquotesingle{}html\textquotesingle{} user guide on the web browser. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a80fc7e0175cb77f6927c9e145c65599b}{Import\+\_\+\+Device\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Imports/\+Reads the device calibrations of Multiple-\/\+Sensor Interface from a text file(name and path) selected by the user, and saves its content on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_afec498c01de892b94da4ee570362cdf2}{Export\+\_\+\+Device\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Exports/\+Saves the device calibrations of Multiple-\/\+Sensor Interface on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{} to a text file(name and path) selected by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a9dd05a4eb33a1f4af631a4c614f90633}{Import\+\_\+\+Virtual\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Imports/\+Reads the virtual calibrations of Multiple-\/\+Sensor Interface from a text file(name and path) selected by the user, and saves its content on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a06b7afac9c1fb093c15cb6fb68935b20}{Export\+\_\+\+Virtual\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Exports/\+Saves the virtual calibrations of Multiple-\/\+Sensor Interface on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector\textquotesingle{} to a text file(name and path) selected by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ab482c3080bde3ec6ca50add9fe189355}{Upload\+\_\+\+Device\+\_\+\+Calib\+\_\+\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Uploads/\+Saves to a Multiple-\/\+Sensor device the calibration tables, parameters, headers, from all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a391748217297638ec7660b45a04a5dfa}{Download\+\_\+\+Device\+\_\+\+Calib\+\_\+\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Downloads/\+Reads from a Multiple-\/\+Sensor device the calibration tables, parameters, headers, to all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+Ui\+::\+Main\+Window $\ast$ {\bfseries ui}
+\item 
+\mbox{\Hypertarget{class_main_window_ab6a89091d1a2ac34c2e0f84bf98f2277}\label{class_main_window_ab6a89091d1a2ac34c2e0f84bf98f2277}} 
+QGrid\+Layout $\ast$ {\bfseries Sensors\+\_\+\+Values\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_main_window_a6c2d06a9f3979711df92b12bb5ecf94a}\label{class_main_window_a6c2d06a9f3979711df92b12bb5ecf94a}} 
+QLabel $\ast$ {\bfseries sensors\+\_\+names\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS+2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_ac64e81604879fc2d5a34337cf4880d55}\label{class_main_window_ac64e81604879fc2d5a34337cf4880d55}} 
+QLabel $\ast$ {\bfseries sensors\+\_\+values\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS+2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a354b9598e2086d2849c707bec48d42c7}\label{class_main_window_a354b9598e2086d2849c707bec48d42c7}} 
+QLabel $\ast$ {\bfseries space\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_main_window_a448fb69bd7f1111e6b3357ae0e16901f}\label{class_main_window_a448fb69bd7f1111e6b3357ae0e16901f}} 
+QLabel $\ast$ {\bfseries long\+\_\+space\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_main_window_af53496fe4a555838158a81c6ae506c6c}\label{class_main_window_af53496fe4a555838158a81c6ae506c6c}} 
+QGrid\+Layout $\ast$ {\bfseries virtual\+\_\+calib\+\_\+\+Sensors\+\_\+\+Values\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_main_window_a35937355d72aa3ec2087ab3dfd171b8e}\label{class_main_window_a35937355d72aa3ec2087ab3dfd171b8e}} 
+QGrid\+Layout $\ast$ {\bfseries counters\+\_\+virtual\+\_\+calib\+\_\+\+Sensors\+\_\+\+Values\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_main_window_a909a0c1b8c784f281f204f4c1126d167}\label{class_main_window_a909a0c1b8c784f281f204f4c1126d167}} 
+QLabel $\ast$ {\bfseries virtual\+\_\+calib\+\_\+sensors\+\_\+names\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS+2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a9581e23fc7d02dd3406c50b4ed8035bd}\label{class_main_window_a9581e23fc7d02dd3406c50b4ed8035bd}} 
+QLabel $\ast$ {\bfseries virtual\+\_\+calib\+\_\+sensors\+\_\+values\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS+2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_ab3c5199c5a099ea31d56f6f5090d5589}\label{class_main_window_ab3c5199c5a099ea31d56f6f5090d5589}} 
+QLabel $\ast$ {\bfseries counters\+\_\+virtual\+\_\+calib\+\_\+sensors\+\_\+names\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+1\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_af016b7748472d37c99f5a0935581e2b8}\label{class_main_window_af016b7748472d37c99f5a0935581e2b8}} 
+QLabel $\ast$ {\bfseries counters\+\_\+virtual\+\_\+calib\+\_\+sensors\+\_\+values\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+1\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_ae4038cef6f0995841cfd2d375d5e2b4f}\label{class_main_window_ae4038cef6f0995841cfd2d375d5e2b4f}} 
+QGrid\+Layout $\ast$ {\bfseries Outputs\+\_\+\+Values\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_main_window_a0b750a201304e83f09da0495b0901073}\label{class_main_window_a0b750a201304e83f09da0495b0901073}} 
+QLabel $\ast$ {\bfseries outputs\+\_\+names\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+DIGITAL\+\_\+\+OUT\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a57593612550212556b3b7227ad0dd2af}\label{class_main_window_a57593612550212556b3b7227ad0dd2af}} 
+QLabel $\ast$ {\bfseries outputs\+\_\+values\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+DIGITAL\+\_\+\+OUT\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a7e9f4a2bb688d80ac7dc09d717bd1b9e}\label{class_main_window_a7e9f4a2bb688d80ac7dc09d717bd1b9e}} 
+QGrid\+Layout $\ast$ {\bfseries sensors\+\_\+graphic\+\_\+view\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_main_window_ae3451b17ab350999869194acc0017267}\label{class_main_window_ae3451b17ab350999869194acc0017267}} 
+QLabel $\ast$ {\bfseries sensors\+\_\+graphic\+\_\+view\+\_\+names\+\_\+display\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a4fd6a3d464ff9a05c229d6c134602ca8}\label{class_main_window_a4fd6a3d464ff9a05c229d6c134602ca8}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries sensors\+\_\+graphic\+\_\+view\+\_\+select\+\_\+min\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a278cde9366da42a12c3139be82904052}\label{class_main_window_a278cde9366da42a12c3139be82904052}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries sensors\+\_\+graphic\+\_\+view\+\_\+select\+\_\+max\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_aeee2bc34e1804f7dbe71d69eef2e58e3}\label{class_main_window_aeee2bc34e1804f7dbe71d69eef2e58e3}} 
+QProgress\+Bar $\ast$ {\bfseries sensors\+\_\+progress\+\_\+bar\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_aa739c32c031fb9846c96db5806e99266}\label{class_main_window_aa739c32c031fb9846c96db5806e99266}} 
+QTimer $\ast$ {\bfseries timer\+\_\+read\+\_\+sensors}
+\item 
+\mbox{\Hypertarget{class_main_window_afa1d6abc70a679211cb88f1152964d1b}\label{class_main_window_afa1d6abc70a679211cb88f1152964d1b}} 
+QAction $\ast$ {\bfseries calibrate\+\_\+device\+\_\+sensors\+\_\+action}
+\item 
+\mbox{\Hypertarget{class_main_window_af73f8fdcc34d405f94ea8d3ca057c24a}\label{class_main_window_af73f8fdcc34d405f94ea8d3ca057c24a}} 
+QAction $\ast$ {\bfseries config\+\_\+sensors\+\_\+action}
+\item 
+\mbox{\Hypertarget{class_main_window_a42a7263faf5ccdf650e6f40673de884f}\label{class_main_window_a42a7263faf5ccdf650e6f40673de884f}} 
+QAction $\ast$ {\bfseries config\+\_\+outputs\+\_\+action}
+\item 
+\mbox{\Hypertarget{class_main_window_a0bdd8d93fa962dc983003c0594eed363}\label{class_main_window_a0bdd8d93fa962dc983003c0594eed363}} 
+QAction $\ast$ {\bfseries virtual\+\_\+calibrate\+\_\+sensors\+\_\+action}
+\item 
+\mbox{\Hypertarget{class_main_window_a1bdb1cd07f4860295254586b0cfe72b8}\label{class_main_window_a1bdb1cd07f4860295254586b0cfe72b8}} 
+QAction $\ast$ {\bfseries config\+\_\+board\+ID\+\_\+action}
+\item 
+\mbox{\Hypertarget{class_main_window_a6091676a9ec334d4f2f0744e99e082f3}\label{class_main_window_a6091676a9ec334d4f2f0744e99e082f3}} 
+\mbox{\hyperlink{class_config___sensor___channels___dialog}{Config\+\_\+\+Sensor\+\_\+\+Channels\+\_\+\+Dialog}} $\ast$ {\bfseries config\+\_\+sensors\+\_\+dialog\+\_\+obj}
+\item 
+\mbox{\Hypertarget{class_main_window_affdf3095b7b59f770a37a1c24e8a9ee3}\label{class_main_window_affdf3095b7b59f770a37a1c24e8a9ee3}} 
+\mbox{\hyperlink{class_config___outputs___dialog}{Config\+\_\+\+Outputs\+\_\+\+Dialog}} $\ast$ {\bfseries config\+\_\+outputs\+\_\+dialog\+\_\+obj}
+\item 
+\mbox{\Hypertarget{class_main_window_a8d12ddeafbdb515ba0f253c98a062b2d}\label{class_main_window_a8d12ddeafbdb515ba0f253c98a062b2d}} 
+\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} $\ast$ {\bfseries calibrate\+\_\+device\+\_\+sensors\+\_\+dialog\+\_\+obj}
+\item 
+\mbox{\Hypertarget{class_main_window_aa698e9a69b579885fc52aebde9d950e4}\label{class_main_window_aa698e9a69b579885fc52aebde9d950e4}} 
+\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} $\ast$ {\bfseries virtual\+\_\+calibrate\+\_\+sensors\+\_\+dialog\+\_\+obj}
+\item 
+\mbox{\Hypertarget{class_main_window_a598ebc029ba3101aaf90f3620e30c14a}\label{class_main_window_a598ebc029ba3101aaf90f3620e30c14a}} 
+\mbox{\hyperlink{class_config___board_i_d___dialog}{Config\+\_\+\+Board\+ID\+\_\+\+Dialog}} $\ast$ {\bfseries config\+\_\+board\+ID\+\_\+dialog\+\_\+obj}
+\item 
+\mbox{\Hypertarget{class_main_window_a95bf0e2c04396a4c3f9a9413c1642412}\label{class_main_window_a95bf0e2c04396a4c3f9a9413c1642412}} 
+Multiple\+Sensor\+\_\+\+USB\+\_\+driver {\bfseries m\+\_\+\+USB\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session}
+\item 
+\mbox{\Hypertarget{class_main_window_acb1bb48bd3ada4e5da917fd08701dfd6}\label{class_main_window_acb1bb48bd3ada4e5da917fd08701dfd6}} 
+Multiple\+Sensor\+\_\+serial\+\_\+driver {\bfseries m\+\_\+serial\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session}
+\item 
+\mbox{\Hypertarget{class_main_window_a04d66c5170c03234b7eee106a201ee02}\label{class_main_window_a04d66c5170c03234b7eee106a201ee02}} 
+int {\bfseries previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_main_window_aff3cca48a73d017f6db48000308c705b}\label{class_main_window_aff3cca48a73d017f6db48000308c705b}} 
+int {\bfseries previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_main_window_a5975d8483bc54227e24b41ef159f4bf7}\label{class_main_window_a5975d8483bc54227e24b41ef159f4bf7}} 
+int {\bfseries previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_main_window_aec02989a6ca8227dbbdfab8cdd162a20}\label{class_main_window_aec02989a6ca8227dbbdfab8cdd162a20}} 
+int {\bfseries previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+device\+\_\+calib\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_main_window_a347dd4e1de0a278d47fca06b20ff463d}\label{class_main_window_a347dd4e1de0a278d47fca06b20ff463d}} 
+int {\bfseries previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+virtual\+\_\+calib\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_main_window_a429ac570ae197b24a3fa8efeb955ea49}\label{class_main_window_a429ac570ae197b24a3fa8efeb955ea49}} 
+QFont $\ast$ {\bfseries font\+\_\+display\+\_\+sensors}
+\item 
+\mbox{\Hypertarget{class_main_window_a236d4e936f8b5b0f3c0a81784b002777}\label{class_main_window_a236d4e936f8b5b0f3c0a81784b002777}} 
+int {\bfseries select\+\_\+\+CH\+\_\+mode\+\_\+combo\+Box\+\_\+previous\+\_\+value}
+\item 
+\mbox{\Hypertarget{class_main_window_a31db26d16fac0cf21429bff231c50708}\label{class_main_window_a31db26d16fac0cf21429bff231c50708}} 
+int {\bfseries select\+\_\+\+CH\+\_\+spin\+Box\+\_\+previous\+\_\+value}
+\item 
+\mbox{\Hypertarget{class_main_window_ac42ae92494d51c4bdd45e632aafce0e9}\label{class_main_window_ac42ae92494d51c4bdd45e632aafce0e9}} 
+int {\bfseries frequency\+\_\+sensors\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a8748f6a6924c01557c2c64aba7c3326c}\label{class_main_window_a8748f6a6924c01557c2c64aba7c3326c}} 
+float {\bfseries measurements\+\_\+sensor\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_ac1f1f99649e71bead5ebc4c949a76471}\label{class_main_window_ac1f1f99649e71bead5ebc4c949a76471}} 
+long int {\bfseries counters\+\_\+sensors\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a75bdc9393547c4228dcbbd77fa8e5308}\label{class_main_window_a75bdc9393547c4228dcbbd77fa8e5308}} 
+float {\bfseries counters\+\_\+sensors\+\_\+measurements\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a3798a652820504667d67b009c9bec7c2}\label{class_main_window_a3798a652820504667d67b009c9bec7c2}} 
+float {\bfseries LCR\+\_\+sensors\+\_\+values\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a86397747c897a22dba710fb25d324102}\label{class_main_window_a86397747c897a22dba710fb25d324102}} 
+float {\bfseries ADC\+\_\+sensors\+\_\+values\+\_\+vector} \mbox{[}N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_main_window_a53d8093fe17d2db2fd6fce4644675e60}\label{class_main_window_a53d8093fe17d2db2fd6fce4644675e60}} 
+QString {\bfseries error\+\_\+log}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_main_window}{Main\+Window}} -\/ main window of the Multiple-\/\+Sensor Interface GUI application.
+
+{\bfseries{Description}} Class of the main window of the Multiple-\/\+Sensor Interface GUI(\+Graphical User Interface) application. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}\label{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}} 
+\index{MainWindow@{MainWindow}!About@{About}}
+\index{About@{About}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{About}{About}}
+{\footnotesize\ttfamily void Main\+Window\+::\+About (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Shows the \textquotesingle{}About\textquotesingle{} dialog window with information about the project and the software licenses. 
+
+void \mbox{\hyperlink{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}{About()}} \mbox{\Hypertarget{class_main_window_a783a98042b1cbefe13ffbded432c78e8}\label{class_main_window_a783a98042b1cbefe13ffbded432c78e8}} 
+\index{MainWindow@{MainWindow}!Call\_Update\_Sensors\_Display@{Call\_Update\_Sensors\_Display}}
+\index{Call\_Update\_Sensors\_Display@{Call\_Update\_Sensors\_Display}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Call\_Update\_Sensors\_Display}{Call\_Update\_Sensors\_Display}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Call\+\_\+\+Update\+\_\+\+Sensors\+\_\+\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+First check currently selected user option of \textquotesingle{}multi\textquotesingle{} or single\textquotesingle{} channel mode, then call \textquotesingle{}\mbox{\hyperlink{class_main_window_aa9921d7ce41411b3022551f37a2074f4}{Update\+\_\+\+Sensors\+\_\+\+Display()}}\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_main_window_a783a98042b1cbefe13ffbded432c78e8}{Call\+\_\+\+Update\+\_\+\+Sensors\+\_\+\+Display()}}
+
+The function will first check if currently selected user option of \textquotesingle{}multi\textquotesingle{} or single\textquotesingle{} channel mode is different of the last read configuration from Multiple-\/\+Sensor device, in case is different that read now the channel mode configurations from Multiple-\/\+Sensor device and update accordingly the GUI items about \textquotesingle{}multi\textquotesingle{} or \textquotesingle{}single\textquotesingle{} channel mode. Then finally call the function \textquotesingle{}\mbox{\hyperlink{class_main_window_aa9921d7ce41411b3022551f37a2074f4}{Update\+\_\+\+Sensors\+\_\+\+Display()}}\textquotesingle{}. \mbox{\Hypertarget{class_main_window_a43dddcc594d607c07c79de87e5b04c7e}\label{class_main_window_a43dddcc594d607c07c79de87e5b04c7e}} 
+\index{MainWindow@{MainWindow}!Change\_Sensors\_Read\_Mode@{Change\_Sensors\_Read\_Mode}}
+\index{Change\_Sensors\_Read\_Mode@{Change\_Sensors\_Read\_Mode}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Change\_Sensors\_Read\_Mode}{Change\_Sensors\_Read\_Mode}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Change\+\_\+\+Sensors\+\_\+\+Read\+\_\+\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Checks if the user selected \textquotesingle{}Continuous Read\textquotesingle{} check\+Box, and configures accordingly the \textquotesingle{}timer\+\_\+read\+\_\+sensors\textquotesingle{} timer. 
+
+void \mbox{\hyperlink{class_main_window_a43dddcc594d607c07c79de87e5b04c7e}{Change\+\_\+\+Sensors\+\_\+\+Read\+\_\+\+Mode()}}
+
+Checks the check\+Box \textquotesingle{}Continuous Read\textquotesingle{}, if the user selected continuous read then it activates the \textquotesingle{}timer\+\_\+read\+\_\+sensors\textquotesingle{} timer for reading sensor channel values/measurements every time interval \textquotesingle{}INTERVAL\+\_\+\+MSEC\+\_\+\+TIMER\+\_\+\+READ\+\_\+\+SENSOR\textquotesingle{}. \mbox{\Hypertarget{class_main_window_a6a0c9525519520f5932990cbd1d3e04b}\label{class_main_window_a6a0c9525519520f5932990cbd1d3e04b}} 
+\index{MainWindow@{MainWindow}!Check\_Max\_Graph\_View@{Check\_Max\_Graph\_View}}
+\index{Check\_Max\_Graph\_View@{Check\_Max\_Graph\_View}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Check\_Max\_Graph\_View}{Check\_Max\_Graph\_View}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Check\+\_\+\+Max\+\_\+\+Graph\+\_\+\+View (\begin{DoxyParamCaption}\item[{int}]{CH\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a6a0c9525519520f5932990cbd1d3e04b}{Check\+\_\+\+Max\+\_\+\+Graph\+\_\+\+View(int CH\+\_\+number)}} -\/ Updates the minimum allowed value of \textquotesingle{}max\+\_\+value\textquotesingle{} is bigger than the current value of \textquotesingle{}min\+\_\+value\textquotesingle{} of the bar views of sensor channels.
+
+Updates the minimum allowed value of \textquotesingle{}max\+\_\+value\textquotesingle{} is bigger than the current value of \textquotesingle{}min\+\_\+value\textquotesingle{} of the bar views of sensor channels. \mbox{\Hypertarget{class_main_window_a2a45eacc26f9e203f6299f9d0f3a5e3e}\label{class_main_window_a2a45eacc26f9e203f6299f9d0f3a5e3e}} 
+\index{MainWindow@{MainWindow}!Check\_Min\_Graph\_View@{Check\_Min\_Graph\_View}}
+\index{Check\_Min\_Graph\_View@{Check\_Min\_Graph\_View}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Check\_Min\_Graph\_View}{Check\_Min\_Graph\_View}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Check\+\_\+\+Min\+\_\+\+Graph\+\_\+\+View (\begin{DoxyParamCaption}\item[{int}]{CH\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a2a45eacc26f9e203f6299f9d0f3a5e3e}{Check\+\_\+\+Min\+\_\+\+Graph\+\_\+\+View(int CH\+\_\+number)}} -\/ Updates the maximum allowed value of \textquotesingle{}min\+\_\+value\textquotesingle{} is smaller than the current value of \textquotesingle{}max\+\_\+value\textquotesingle{} of the bar views of sensor channels.
+
+Updates the maximum allowed value of \textquotesingle{}min\+\_\+value\textquotesingle{} is smaller than the current value of \textquotesingle{}max\+\_\+value\textquotesingle{} of the bar views of sensor channels. \mbox{\Hypertarget{class_main_window_a6dfc8dc87f0a2e2819654342c58bfbcd}\label{class_main_window_a6dfc8dc87f0a2e2819654342c58bfbcd}} 
+\index{MainWindow@{MainWindow}!Connect\_LCR\_Board@{Connect\_LCR\_Board}}
+\index{Connect\_LCR\_Board@{Connect\_LCR\_Board}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Connect\_LCR\_Board}{Connect\_LCR\_Board}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Connect\+\_\+\+LCR\+\_\+\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Connect this program to the Multiple-\/\+Sensor Interface (by USB or by RS485/serial). 
+
+void \mbox{\hyperlink{class_main_window_a6dfc8dc87f0a2e2819654342c58bfbcd}{Connect\+\_\+\+LCR\+\_\+\+Board()}}
+
+Connect this program to the Multiple-\/\+Sensor Interface by USB or by RS485/serial, it opens a connection through a Multiple-\/\+Sensor Interface driver library (\textquotesingle{}Multiple\+Sensor\+\_\+\+USB\+\_\+driver.\+lib\textquotesingle{} or \textquotesingle{}Multiple\+Sensor\+\_\+serial\+\_\+driver.\+lib\textquotesingle{}). Also updates the items on the main window to display the current connection status to the Multiple-\/\+Sensor device. \mbox{\Hypertarget{class_main_window_a6110f85870753b1213af5fb72ef26f81}\label{class_main_window_a6110f85870753b1213af5fb72ef26f81}} 
+\index{MainWindow@{MainWindow}!Create\_Calibrate\_Device\_Sensors\_Dialog@{Create\_Calibrate\_Device\_Sensors\_Dialog}}
+\index{Create\_Calibrate\_Device\_Sensors\_Dialog@{Create\_Calibrate\_Device\_Sensors\_Dialog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Create\_Calibrate\_Device\_Sensors\_Dialog}{Create\_Calibrate\_Device\_Sensors\_Dialog}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Create\+\_\+\+Calibrate\+\_\+\+Device\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a6110f85870753b1213af5fb72ef26f81}{Create\+\_\+\+Calibrate\+\_\+\+Device\+\_\+\+Sensors\+\_\+\+Dialog()}} -\/ Creates/\+Display a new \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window, fills the calibration table on the dialog
+
+Creates/\+Display a new \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window, fills the calibration table shown on the dialog with data from the corresponding \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entry on \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. Typically called after clicking on related button of the main window toolbar. \mbox{\Hypertarget{class_main_window_a5e06fd050bf44d8365075f9e24330542}\label{class_main_window_a5e06fd050bf44d8365075f9e24330542}} 
+\index{MainWindow@{MainWindow}!Create\_Config\_BoardID\_Dialog@{Create\_Config\_BoardID\_Dialog}}
+\index{Create\_Config\_BoardID\_Dialog@{Create\_Config\_BoardID\_Dialog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Create\_Config\_BoardID\_Dialog}{Create\_Config\_BoardID\_Dialog}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Create\+\_\+\+Config\+\_\+\+Board\+ID\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a5e06fd050bf44d8365075f9e24330542}{Create\+\_\+\+Config\+\_\+\+Board\+ID\+\_\+\+Dialog()}} -\/ Creates/\+Display a new \textquotesingle{}\mbox{\hyperlink{class_config___board_i_d___dialog}{Config\+\_\+\+Board\+ID\+\_\+\+Dialog}}\textquotesingle{} dialog window,
+
+Creates/\+Display a new \textquotesingle{}\mbox{\hyperlink{class_config___board_i_d___dialog}{Config\+\_\+\+Board\+ID\+\_\+\+Dialog}}\textquotesingle{} dialog window, typically called after clicking on related button of the main window toolbar. That dialog window is used for configuring the board\+\_\+\+ID of the device. \mbox{\Hypertarget{class_main_window_a4edc3752900827f4bd20f63e76dc6cca}\label{class_main_window_a4edc3752900827f4bd20f63e76dc6cca}} 
+\index{MainWindow@{MainWindow}!Create\_Config\_Outputs\_Dialog@{Create\_Config\_Outputs\_Dialog}}
+\index{Create\_Config\_Outputs\_Dialog@{Create\_Config\_Outputs\_Dialog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Create\_Config\_Outputs\_Dialog}{Create\_Config\_Outputs\_Dialog}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Create\+\_\+\+Config\+\_\+\+Outputs\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a4edc3752900827f4bd20f63e76dc6cca}{Create\+\_\+\+Config\+\_\+\+Outputs\+\_\+\+Dialog()}} -\/ Creates/\+Display the \textquotesingle{}\mbox{\hyperlink{class_config___outputs___dialog}{Config\+\_\+\+Outputs\+\_\+\+Dialog}}\textquotesingle{} dialog window
+
+Creates/\+Display the \textquotesingle{}\mbox{\hyperlink{class_config___outputs___dialog}{Config\+\_\+\+Outputs\+\_\+\+Dialog}}\textquotesingle{} dialog window, typically called after clicking on related button of the main window toolbar. That dialog window is used for configuring the bool(logical) function used for defining the output \textquotesingle{}OUT\textquotesingle{} digital signal of the Multiple Sensor Interface device. \mbox{\Hypertarget{class_main_window_aac8fadb48587ada11a998c674461d4d1}\label{class_main_window_aac8fadb48587ada11a998c674461d4d1}} 
+\index{MainWindow@{MainWindow}!Create\_Config\_Sensors\_Dialog@{Create\_Config\_Sensors\_Dialog}}
+\index{Create\_Config\_Sensors\_Dialog@{Create\_Config\_Sensors\_Dialog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Create\_Config\_Sensors\_Dialog}{Create\_Config\_Sensors\_Dialog}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Create\+\_\+\+Config\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_aac8fadb48587ada11a998c674461d4d1}{Create\+\_\+\+Config\+\_\+\+Sensors\+\_\+\+Dialog()}} -\/ Creates/\+Display the \textquotesingle{}\mbox{\hyperlink{class_config___sensor___channels___dialog}{Config\+\_\+\+Sensor\+\_\+\+Channels\+\_\+\+Dialog}}\textquotesingle{} dialog window
+
+Creates/\+Display the \textquotesingle{}\mbox{\hyperlink{class_config___sensor___channels___dialog}{Config\+\_\+\+Sensor\+\_\+\+Channels\+\_\+\+Dialog}}\textquotesingle{} dialog window, typically called after clicking on related button of the main window toolbar. That dialog window is used for configuring the trigger condition of each sensor channel used for generating its virtual digital variable. \mbox{\Hypertarget{class_main_window_a80642478ba2ca4393ef7487a5eb50403}\label{class_main_window_a80642478ba2ca4393ef7487a5eb50403}} 
+\index{MainWindow@{MainWindow}!Create\_Virtual\_Calibrate\_Sensors\_Dialog@{Create\_Virtual\_Calibrate\_Sensors\_Dialog}}
+\index{Create\_Virtual\_Calibrate\_Sensors\_Dialog@{Create\_Virtual\_Calibrate\_Sensors\_Dialog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Create\_Virtual\_Calibrate\_Sensors\_Dialog}{Create\_Virtual\_Calibrate\_Sensors\_Dialog}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Create\+\_\+\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a80642478ba2ca4393ef7487a5eb50403}{Create\+\_\+\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog()}} -\/ Creates/\+Display a new \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window, fills the calibration table on the dialog
+
+Creates/\+Display a new \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window, fills the calibration table shown on the dialog with data from the corresponding \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entry on \textquotesingle{}model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector\textquotesingle{}. Typically called after clicking on related button of the main window toolbar. \mbox{\Hypertarget{class_main_window_a3631d42ecb2cd1bccd1fb1054afc0105}\label{class_main_window_a3631d42ecb2cd1bccd1fb1054afc0105}} 
+\index{MainWindow@{MainWindow}!Disable\_Virtual\_Calib\_Measurements@{Disable\_Virtual\_Calib\_Measurements}}
+\index{Disable\_Virtual\_Calib\_Measurements@{Disable\_Virtual\_Calib\_Measurements}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Disable\_Virtual\_Calib\_Measurements}{Disable\_Virtual\_Calib\_Measurements}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Disable\+\_\+\+Virtual\+\_\+\+Calib\+\_\+\+Measurements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a3631d42ecb2cd1bccd1fb1054afc0105}{Disable\+\_\+\+Virtual\+\_\+\+Calib\+\_\+\+Measurements()}} -\/ Disables Virtual Calibration, typically called automatically when the user enables the selected the \textquotesingle{}Measured Values\textquotesingle{} option for the \textquotesingle{}Read Type\textquotesingle{}.
+
+Disables the check\+Box \textquotesingle{}enable\+\_\+virtual\+\_\+calib\+\_\+check\+Box\textquotesingle{} thus disabling the Virtual Calibration, typically called automatically when the user enables the selected the \textquotesingle{}Measured Values\textquotesingle{} option for the \textquotesingle{}Read Type\textquotesingle{}, since Virtual Calibration is only possible to do when the application is reading \textquotesingle{}RAW Values\textquotesingle{} from the device. \mbox{\Hypertarget{class_main_window_a391748217297638ec7660b45a04a5dfa}\label{class_main_window_a391748217297638ec7660b45a04a5dfa}} 
+\index{MainWindow@{MainWindow}!Download\_Device\_Calib\_Table@{Download\_Device\_Calib\_Table}}
+\index{Download\_Device\_Calib\_Table@{Download\_Device\_Calib\_Table}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Download\_Device\_Calib\_Table}{Download\_Device\_Calib\_Table}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Download\+\_\+\+Device\+\_\+\+Calib\+\_\+\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Downloads/\+Reads from a Multiple-\/\+Sensor device the calibration tables, parameters, headers, to all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_main_window_a391748217297638ec7660b45a04a5dfa}{Download\+\_\+\+Device\+\_\+\+Calib\+\_\+\+Table()}} \mbox{\Hypertarget{class_main_window_a5e4b065180350c6580164e33d6435132}\label{class_main_window_a5e4b065180350c6580164e33d6435132}} 
+\index{MainWindow@{MainWindow}!EnableRAWValues@{EnableRAWValues}}
+\index{EnableRAWValues@{EnableRAWValues}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{EnableRAWValues}{EnableRAWValues}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Enable\+RAWValues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a5e4b065180350c6580164e33d6435132}{Enable\+RAWValues()}} -\/ Enables \textquotesingle{}RAW Values\textquotesingle{} option for the \textquotesingle{}Read Type\textquotesingle{}, typically called automatically when the user enables the \textquotesingle{}Virtual Calibration\textquotesingle{} tab.
+
+Disables the \textquotesingle{}measured\+\_\+radio\+Button\textquotesingle{} and enables the \textquotesingle{}RAW\+\_\+radio\+Button\textquotesingle{}, typically called automatically when the user enables the \textquotesingle{}Virtual Calibration\textquotesingle{} tab, since Virtual Calibration requires reading \textquotesingle{}RAW Values\textquotesingle{} from the device. \mbox{\Hypertarget{class_main_window_afec498c01de892b94da4ee570362cdf2}\label{class_main_window_afec498c01de892b94da4ee570362cdf2}} 
+\index{MainWindow@{MainWindow}!Export\_Device\_Calibrations@{Export\_Device\_Calibrations}}
+\index{Export\_Device\_Calibrations@{Export\_Device\_Calibrations}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Export\_Device\_Calibrations}{Export\_Device\_Calibrations}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Export\+\_\+\+Device\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Exports/\+Saves the device calibrations of Multiple-\/\+Sensor Interface on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{} to a text file(name and path) selected by the user. 
+
+void \mbox{\hyperlink{class_main_window_afec498c01de892b94da4ee570362cdf2}{Export\+\_\+\+Device\+\_\+\+Calibrations()}} \mbox{\Hypertarget{class_main_window_a06b7afac9c1fb093c15cb6fb68935b20}\label{class_main_window_a06b7afac9c1fb093c15cb6fb68935b20}} 
+\index{MainWindow@{MainWindow}!Export\_Virtual\_Calibrations@{Export\_Virtual\_Calibrations}}
+\index{Export\_Virtual\_Calibrations@{Export\_Virtual\_Calibrations}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Export\_Virtual\_Calibrations}{Export\_Virtual\_Calibrations}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Export\+\_\+\+Virtual\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Exports/\+Saves the virtual calibrations of Multiple-\/\+Sensor Interface on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector\textquotesingle{} to a text file(name and path) selected by the user. 
+
+void \mbox{\hyperlink{class_main_window_a06b7afac9c1fb093c15cb6fb68935b20}{Export\+\_\+\+Virtual\+\_\+\+Calibrations()}} \mbox{\Hypertarget{class_main_window_a80fc7e0175cb77f6927c9e145c65599b}\label{class_main_window_a80fc7e0175cb77f6927c9e145c65599b}} 
+\index{MainWindow@{MainWindow}!Import\_Device\_Calibrations@{Import\_Device\_Calibrations}}
+\index{Import\_Device\_Calibrations@{Import\_Device\_Calibrations}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Import\_Device\_Calibrations}{Import\_Device\_Calibrations}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Import\+\_\+\+Device\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Imports/\+Reads the device calibrations of Multiple-\/\+Sensor Interface from a text file(name and path) selected by the user, and saves its content on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_main_window_a80fc7e0175cb77f6927c9e145c65599b}{Import\+\_\+\+Device\+\_\+\+Calibrations()}} \mbox{\Hypertarget{class_main_window_a9dd05a4eb33a1f4af631a4c614f90633}\label{class_main_window_a9dd05a4eb33a1f4af631a4c614f90633}} 
+\index{MainWindow@{MainWindow}!Import\_Virtual\_Calibrations@{Import\_Virtual\_Calibrations}}
+\index{Import\_Virtual\_Calibrations@{Import\_Virtual\_Calibrations}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Import\_Virtual\_Calibrations}{Import\_Virtual\_Calibrations}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Import\+\_\+\+Virtual\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Imports/\+Reads the virtual calibrations of Multiple-\/\+Sensor Interface from a text file(name and path) selected by the user, and saves its content on all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_main_window_a9dd05a4eb33a1f4af631a4c614f90633}{Import\+\_\+\+Virtual\+\_\+\+Calibrations()}} \mbox{\Hypertarget{class_main_window_a83bf2e832826d8983805292ecd53e60d}\label{class_main_window_a83bf2e832826d8983805292ecd53e60d}} 
+\index{MainWindow@{MainWindow}!ModeMultipleCH\_Changed@{ModeMultipleCH\_Changed}}
+\index{ModeMultipleCH\_Changed@{ModeMultipleCH\_Changed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ModeMultipleCH\_Changed}{ModeMultipleCH\_Changed}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Mode\+Multiple\+CH\+\_\+\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a83bf2e832826d8983805292ecd53e60d}{Mode\+Multiple\+CH\+\_\+\+Changed()}} -\/ When the user selects \textquotesingle{}multi\textquotesingle{} sensor channel mode it disables the \textquotesingle{}select\+\_\+\+CH\+\_\+mode\+\_\+combo\+Box\textquotesingle{} combo\+Box
+
+When the user selects \textquotesingle{}multi\textquotesingle{} sensor channel mode it disables the \textquotesingle{}select\+\_\+\+CH\+\_\+mode\+\_\+combo\+Box\textquotesingle{} combo\+Box, that only should work for selecting a sensor channel on \textquotesingle{}single\textquotesingle{} sensor channel mode. \mbox{\Hypertarget{class_main_window_a385fb91f579cd995f9912e668af3d21c}\label{class_main_window_a385fb91f579cd995f9912e668af3d21c}} 
+\index{MainWindow@{MainWindow}!Reset\_Counters@{Reset\_Counters}}
+\index{Reset\_Counters@{Reset\_Counters}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Reset\_Counters}{Reset\_Counters}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Reset\+\_\+\+Counters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a385fb91f579cd995f9912e668af3d21c}{Reset\+\_\+\+Counters()}} -\/ Resets the sensor counters of the Multiple Sensor Interface device.
+
+Resets the sensor counters of the Multiple Sensor Interface device. Typically called after clicking on the button \textquotesingle{}Reset Counters Now\textquotesingle{}. \mbox{\Hypertarget{class_main_window_a8b9bbe9b919fa4766326eaa06049d10a}\label{class_main_window_a8b9bbe9b919fa4766326eaa06049d10a}} 
+\index{MainWindow@{MainWindow}!SaveModeMultipleCH@{SaveModeMultipleCH}}
+\index{SaveModeMultipleCH@{SaveModeMultipleCH}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{SaveModeMultipleCH}{SaveModeMultipleCH}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Save\+Mode\+Multiple\+CH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a8b9bbe9b919fa4766326eaa06049d10a}{Save\+Mode\+Multiple\+CH()}} -\/ Saves on the Multiple-\/\+Sensor device the \textquotesingle{}multi\textquotesingle{} or \textquotesingle{}single\textquotesingle{} sensor channel mode configuration selected by the user.
+
+Saves on the Multiple-\/\+Sensor device the \textquotesingle{}multi\textquotesingle{} or \textquotesingle{}single\textquotesingle{} sensor channel mode configuration selected by the user. Called when the user click the \textquotesingle{}Save\textquotesingle{} button of the \textquotesingle{}Select multiple CH or single CH\textquotesingle{} group\+Box. \mbox{\Hypertarget{class_main_window_a93cba3836d48e3c2c70d26b0c1e1bfb4}\label{class_main_window_a93cba3836d48e3c2c70d26b0c1e1bfb4}} 
+\index{MainWindow@{MainWindow}!SetConnectioStatusLabel\_ERROR@{SetConnectioStatusLabel\_ERROR}}
+\index{SetConnectioStatusLabel\_ERROR@{SetConnectioStatusLabel\_ERROR}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{SetConnectioStatusLabel\_ERROR}{SetConnectioStatusLabel\_ERROR}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Set\+Connectio\+Status\+Label\+\_\+\+ERROR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_a93cba3836d48e3c2c70d26b0c1e1bfb4}{Set\+Connectio\+Status\+Label\+\_\+\+ERROR()}} -\/ Sets/\+Displays the \textquotesingle{}Connection Status\textquotesingle{} group\+Box of the application, to \textquotesingle{}ERROR\textquotesingle{} state (with red color).
+
+Sets/\+Displays the \textquotesingle{}Connection Status\textquotesingle{} group\+Box of the application, to \textquotesingle{}ERROR\textquotesingle{} state (with red color). \mbox{\Hypertarget{class_main_window_ada5ade70df46608d3291d4823e92e605}\label{class_main_window_ada5ade70df46608d3291d4823e92e605}} 
+\index{MainWindow@{MainWindow}!SetConnectioStatusLabel\_OK@{SetConnectioStatusLabel\_OK}}
+\index{SetConnectioStatusLabel\_OK@{SetConnectioStatusLabel\_OK}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{SetConnectioStatusLabel\_OK}{SetConnectioStatusLabel\_OK}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Set\+Connectio\+Status\+Label\+\_\+\+OK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_ada5ade70df46608d3291d4823e92e605}{Set\+Connectio\+Status\+Label\+\_\+\+OK()}} -\/ Sets/\+Displays the \textquotesingle{}Connection Status\textquotesingle{} group\+Box of the application, to \textquotesingle{}OK\textquotesingle{} state (with green color).
+
+Sets/\+Displays the \textquotesingle{}Connection Status\textquotesingle{} group\+Box of the application, to \textquotesingle{}OK\textquotesingle{} state (with green color). \mbox{\Hypertarget{class_main_window_a680791cb2ab9980b7eba9750380ee4f7}\label{class_main_window_a680791cb2ab9980b7eba9750380ee4f7}} 
+\index{MainWindow@{MainWindow}!Show\_Error\_Log@{Show\_Error\_Log}}
+\index{Show\_Error\_Log@{Show\_Error\_Log}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Show\_Error\_Log}{Show\_Error\_Log}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Show\+\_\+\+Error\+\_\+\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Shows the \textquotesingle{}ERROR LOG\textquotesingle{} dialog window with information about errors when sending/receiving data between PC and Multiple-\/\+Sensor device. 
+
+void \mbox{\hyperlink{class_main_window_a680791cb2ab9980b7eba9750380ee4f7}{Show\+\_\+\+Error\+\_\+\+Log()}} \mbox{\Hypertarget{class_main_window_a7814a7d7a848cbcc8c0c5e41ce111a5b}\label{class_main_window_a7814a7d7a848cbcc8c0c5e41ce111a5b}} 
+\index{MainWindow@{MainWindow}!Show\_User\_Guide@{Show\_User\_Guide}}
+\index{Show\_User\_Guide@{Show\_User\_Guide}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Show\_User\_Guide}{Show\_User\_Guide}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Show\+\_\+\+User\+\_\+\+Guide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Opens the \textquotesingle{}html\textquotesingle{} user guide on the web browser. 
+
+void \mbox{\hyperlink{class_main_window_a7814a7d7a848cbcc8c0c5e41ce111a5b}{Show\+\_\+\+User\+\_\+\+Guide()}} \mbox{\Hypertarget{class_main_window_a8c9d7e9a766af4385ae1570817b67221}\label{class_main_window_a8c9d7e9a766af4385ae1570817b67221}} 
+\index{MainWindow@{MainWindow}!Update\_Counters\_Virtual\_Calibration\_Measurements\_Display@{Update\_Counters\_Virtual\_Calibration\_Measurements\_Display}}
+\index{Update\_Counters\_Virtual\_Calibration\_Measurements\_Display@{Update\_Counters\_Virtual\_Calibration\_Measurements\_Display}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Update\_Counters\_Virtual\_Calibration\_Measurements\_Display}{Update\_Counters\_Virtual\_Calibration\_Measurements\_Display}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Update\+\_\+\+Counters\+\_\+\+Virtual\+\_\+\+Calibration\+\_\+\+Measurements\+\_\+\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the current visible Virtual Counter Measurements for the sensor channels of the Multiple-\/\+Sensor Interface. 
+
+void \mbox{\hyperlink{class_main_window_a8c9d7e9a766af4385ae1570817b67221}{Update\+\_\+\+Counters\+\_\+\+Virtual\+\_\+\+Calibration\+\_\+\+Measurements\+\_\+\+Display()}}
+
+Update the visible \textquotesingle{}virtual\textquotesingle{} counter measurements of the sensor channels, the virtual counter measurements are the measurements for the current/last received counter values from Multiple-\/\+Sensor device, calculated by the PC Multiple-\/\+Sensor GUI app using a counter calib function (Measured\+\_\+total = C3$\ast$(COUNTER$^\wedge$3) + C2$\ast$(COUNTER$^\wedge$2) + C1$\ast$\+COUNTER) + C0) with 4 parameters/constants used as the calibration for the counter measurements, that is stored on PC along with the app. \mbox{\Hypertarget{class_main_window_aa9921d7ce41411b3022551f37a2074f4}\label{class_main_window_aa9921d7ce41411b3022551f37a2074f4}} 
+\index{MainWindow@{MainWindow}!Update\_Sensors\_Display@{Update\_Sensors\_Display}}
+\index{Update\_Sensors\_Display@{Update\_Sensors\_Display}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Update\_Sensors\_Display}{Update\_Sensors\_Display}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Update\+\_\+\+Sensors\+\_\+\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the current visible values/measurements for all active/requested sensor channels of the Multiple-\/\+Sensor Interface. 
+
+void \mbox{\hyperlink{class_main_window_aa9921d7ce41411b3022551f37a2074f4}{Update\+\_\+\+Sensors\+\_\+\+Display()}}
+
+Update the current visible values or measurements of the sensor channels, depending what option is selected \textquotesingle{}RAW Values\textquotesingle{} or \textquotesingle{}Measured Values\textquotesingle{}, for all active/requested (defined by \textquotesingle{}multi\textquotesingle{} or \textquotesingle{}single\textquotesingle{} channel mode) sensor channels of the Multiple-\/\+Sensor Interface. \mbox{\Hypertarget{class_main_window_acb5590abfeda9a62c62fce8ad5dcb267}\label{class_main_window_acb5590abfeda9a62c62fce8ad5dcb267}} 
+\index{MainWindow@{MainWindow}!Update\_Sensors\_Graphic\_View@{Update\_Sensors\_Graphic\_View}}
+\index{Update\_Sensors\_Graphic\_View@{Update\_Sensors\_Graphic\_View}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Update\_Sensors\_Graphic\_View}{Update\_Sensors\_Graphic\_View}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Update\+\_\+\+Sensors\+\_\+\+Graphic\+\_\+\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_main_window_acb5590abfeda9a62c62fce8ad5dcb267}{Update\+\_\+\+Sensors\+\_\+\+Graphic\+\_\+\+View()}} -\/ Calculates and updates/display the bar views of sensor channels.
+
+Using the \textquotesingle{}RAW values\textquotesingle{} of the sensor channels and also the \textquotesingle{}min\+\_\+value\textquotesingle{}, \textquotesingle{}max\+\_\+value\textquotesingle{} selected by the user, if calculates the value and updates/display the bar views of sensor channels. \mbox{\Hypertarget{class_main_window_a4abc6ca491572dcf5a10a6d1588db619}\label{class_main_window_a4abc6ca491572dcf5a10a6d1588db619}} 
+\index{MainWindow@{MainWindow}!Update\_Virtual\_Calibration\_Measurements\_Display@{Update\_Virtual\_Calibration\_Measurements\_Display}}
+\index{Update\_Virtual\_Calibration\_Measurements\_Display@{Update\_Virtual\_Calibration\_Measurements\_Display}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Update\_Virtual\_Calibration\_Measurements\_Display}{Update\_Virtual\_Calibration\_Measurements\_Display}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Update\+\_\+\+Virtual\+\_\+\+Calibration\+\_\+\+Measurements\+\_\+\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the current visible Virtual Measurements for the sensor channels of the Multiple-\/\+Sensor Interface. 
+
+void \mbox{\hyperlink{class_main_window_a4abc6ca491572dcf5a10a6d1588db619}{Update\+\_\+\+Virtual\+\_\+\+Calibration\+\_\+\+Measurements\+\_\+\+Display()}}
+
+Update the visible \textquotesingle{}virtual\textquotesingle{} measurements of the sensor channels, the virtual measurements are the measurements for the current/last received values from Multiple-\/\+Sensor device, calculated by the PC Multiple-\/\+Sensor GUI app using a calibration table that is stored on PC along with the app. \mbox{\Hypertarget{class_main_window_ab482c3080bde3ec6ca50add9fe189355}\label{class_main_window_ab482c3080bde3ec6ca50add9fe189355}} 
+\index{MainWindow@{MainWindow}!Upload\_Device\_Calib\_Table@{Upload\_Device\_Calib\_Table}}
+\index{Upload\_Device\_Calib\_Table@{Upload\_Device\_Calib\_Table}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Upload\_Device\_Calib\_Table}{Upload\_Device\_Calib\_Table}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Upload\+\_\+\+Device\+\_\+\+Calib\+\_\+\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Uploads/\+Saves to a Multiple-\/\+Sensor device the calibration tables, parameters, headers, from all \textquotesingle{}QStandard\+Item\+Model\textquotesingle{} entries of \textquotesingle{}model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_main_window_ab482c3080bde3ec6ca50add9fe189355}{Upload\+\_\+\+Device\+\_\+\+Calib\+\_\+\+Table()}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+cpp\end{DoxyCompactItemize}

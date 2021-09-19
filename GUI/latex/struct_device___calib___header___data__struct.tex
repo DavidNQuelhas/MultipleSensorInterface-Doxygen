@@ -1,0 +1,40 @@
+\hypertarget{struct_device___calib___header___data__struct}{}\doxysection{Device\+\_\+\+Calib\+\_\+\+Header\+\_\+\+Data\+\_\+struct Struct Reference}
+\label{struct_device___calib___header___data__struct}\index{Device\_Calib\_Header\_Data\_struct@{Device\_Calib\_Header\_Data\_struct}}
+
+
+{\ttfamily \#include $<$worker.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a844d2df362aed0b2dc8217d8e0eec879}\label{struct_device___calib___header___data__struct_a844d2df362aed0b2dc8217d8e0eec879}} 
+char {\bfseries device\+\_\+calib\+\_\+units\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a9667571435a9dd87950cc65735982b5f}\label{struct_device___calib___header___data__struct_a9667571435a9dd87950cc65735982b5f}} 
+char {\bfseries counters\+\_\+calib\+\_\+units\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a216f70c5a70607864701f6916ec6ef61}\label{struct_device___calib___header___data__struct_a216f70c5a70607864701f6916ec6ef61}} 
+float {\bfseries counters\+\_\+calib\+\_\+constants\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS\mbox{]}\mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a1da2c5cfa79ae19a1d6457bf6a2efdd9}\label{struct_device___calib___header___data__struct_a1da2c5cfa79ae19a1d6457bf6a2efdd9}} 
+unsigned char {\bfseries calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a830927d79148acd789be706ccf709ff9}\label{struct_device___calib___header___data__struct_a830927d79148acd789be706ccf709ff9}} 
+unsigned char {\bfseries number\+\_\+table\+\_\+lines} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a27cb339b756fdbdbd522ef64a68fafc0}\label{struct_device___calib___header___data__struct_a27cb339b756fdbdbd522ef64a68fafc0}} 
+unsigned char {\bfseries calib\+\_\+channel\+\_\+mode\+\_\+bool} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_device___calib___header___data__struct_a9b6dd2c3682c0d9b4f73385de137fa06}\label{struct_device___calib___header___data__struct_a9b6dd2c3682c0d9b4f73385de137fa06}} 
+char {\bfseries jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textquotesingle{}typedef Device\+Calib\+Header\+Data\textquotesingle{} ; \textquotesingle{}struct \mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+\_\+\+Calib\+\_\+\+Header\+\_\+\+Data\+\_\+struct}}\textquotesingle{} -\/ Structure containing all data of table headers for all calibration tables to the Multiple-\/\+Sensor Interface.
+
+{\bfseries{Description}} Structure containing all data of table headers for all calibration tables to the Multiple-\/\+Sensor Interface. This includes the calibration units of all device calibration tables, and calibration units of all counter calibration functions. Also all the parameters/constants that define the calibration functions for counter measurements. Also what calibration tables are active, number of valid lines of each calib table, and what is the sensor channel mode and jumper configuration that is valid for each calib table. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/worker.\+h\end{DoxyCompactItemize}

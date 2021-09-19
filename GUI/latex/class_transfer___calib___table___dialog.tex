@@ -1,0 +1,189 @@
+\hypertarget{class_transfer___calib___table___dialog}{}\doxysection{Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog Class Reference}
+\label{class_transfer___calib___table___dialog}\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transfer___calib___table___dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_a455891fdbdf8cab6e618db06b86945cd}{Start\+\_\+\+Transfer\+\_\+\+Calib\+\_\+\+Table}} ()
+\begin{DoxyCompactList}\small\item\em After user clicks the button (upload or download) it starts the worker thread that does the upload or download. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_a456c929c6626fa38a4d134d973658eb2}{Data\+\_\+\+Ready}} (const \mbox{\hyperlink{struct_data___struct}{Data}} data)
+\begin{DoxyCompactList}\small\item\em Function to save status data/info returned by the worker thread (with the messages and error counter), to be called just after the worker thread finishes the upload/download. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_abbab0ca30d2314210feb0999e84f81df}{Call\+\_\+\+On\+\_\+\+Process\+\_\+\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em Function to update this dialog window with info/status about the completion and success(and any errors) of the upload/download. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transfer___calib___table___dialog_ac18c06a771bae1e32a253aeeb47cbf36}{Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog}} (QWidget $\ast$parent, \mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $\ast$worker\+\_\+args\+\_\+ptr, char flag\+\_\+transfer\+\_\+mode\+\_\+bool)
+\begin{DoxyCompactList}\small\item\em The constructor of the class of the dialog used for showing the progress of upload/download of calibration data between PC and Multiple-\/\+Sensor device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a8f59fb06b6da00371923d9612c05bc64}\label{class_transfer___calib___table___dialog_a8f59fb06b6da00371923d9612c05bc64}} 
+\mbox{\hyperlink{struct_data___struct}{Data}} {\bfseries ret\+\_\+data\+\_\+worker}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_a4fd67a5b779ab194ecbbb5a8de6bf418}{Data\+\_\+\+Copy}} (\mbox{\hyperlink{struct_data___struct}{Data}} $\ast$data\+\_\+dest, \mbox{\hyperlink{struct_data___struct}{Data}} const \&data\+\_\+src)
+\begin{DoxyCompactList}\small\item\em Copy the content of a variable of the type \textquotesingle{}Data\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a525e20cc6f2b8c742f368f932e424616}\label{class_transfer___calib___table___dialog_a525e20cc6f2b8c742f368f932e424616}} 
+\mbox{\hyperlink{class_worker___handler}{Worker\+\_\+\+Handler}} $\ast$ {\bfseries worker}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ade8915e2a44f1462437b9c692cc43425}\label{class_transfer___calib___table___dialog_ade8915e2a44f1462437b9c692cc43425}} 
+\mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $\ast$ {\bfseries m\+\_\+worker\+\_\+args\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a47221bc58522c05721f833fe898e92c4}\label{class_transfer___calib___table___dialog_a47221bc58522c05721f833fe898e92c4}} 
+char {\bfseries m\+\_\+flag\+\_\+transfer\+\_\+mode\+\_\+bool}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a84ce9a15cef67d8a9740c5042fa06f50}\label{class_transfer___calib___table___dialog_a84ce9a15cef67d8a9740c5042fa06f50}} 
+int {\bfseries m\+\_\+max\+\_\+\+N\+\_\+steps\+\_\+progress\+\_\+bar}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ac33ef91b7aaabca97a1995c05837c7af}\label{class_transfer___calib___table___dialog_ac33ef91b7aaabca97a1995c05837c7af}} 
+int {\bfseries m\+\_\+current\+\_\+progress\+\_\+bar}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_aa7c816ec91b35ad7f0dfd11da3a6f914}\label{class_transfer___calib___table___dialog_aa7c816ec91b35ad7f0dfd11da3a6f914}} 
+QDialog $\ast$ {\bfseries progress\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ab233203e6a504dfbd2c68aa762e26bdd}\label{class_transfer___calib___table___dialog_ab233203e6a504dfbd2c68aa762e26bdd}} 
+QGrid\+Layout $\ast$ {\bfseries progress\+\_\+dialog\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a9953ddcdf756204466e4aed06ad8f3f2}\label{class_transfer___calib___table___dialog_a9953ddcdf756204466e4aed06ad8f3f2}} 
+QWidget $\ast$ {\bfseries title\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a426fb41fa3eac7b2fafc479a889ac9c0}\label{class_transfer___calib___table___dialog_a426fb41fa3eac7b2fafc479a889ac9c0}} 
+QGrid\+Layout $\ast$ {\bfseries title\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ae1f936983459d143d65d347532fd0a72}\label{class_transfer___calib___table___dialog_ae1f936983459d143d65d347532fd0a72}} 
+QWidget $\ast$ {\bfseries status\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_adb2f20390621ef7d72382331a4471e8b}\label{class_transfer___calib___table___dialog_adb2f20390621ef7d72382331a4471e8b}} 
+QGrid\+Layout $\ast$ {\bfseries status\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a45ce4314e6e42c6f61684886a17a1e1d}\label{class_transfer___calib___table___dialog_a45ce4314e6e42c6f61684886a17a1e1d}} 
+QLabel $\ast$ {\bfseries title\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_abd10925be9760bd44df8583cf931a6b5}\label{class_transfer___calib___table___dialog_abd10925be9760bd44df8583cf931a6b5}} 
+QProgress\+Bar $\ast$ {\bfseries progress\+\_\+bar}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ab3b8b8b812efd2392497759e27a4da94}\label{class_transfer___calib___table___dialog_ab3b8b8b812efd2392497759e27a4da94}} 
+QLabel $\ast$ {\bfseries process\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ac6c8f3fe0d7294729004cfac02785909}\label{class_transfer___calib___table___dialog_ac6c8f3fe0d7294729004cfac02785909}} 
+QLabel $\ast$ {\bfseries status\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ab6df9f8887f4639b215a8b3a11c02066}\label{class_transfer___calib___table___dialog_ab6df9f8887f4639b215a8b3a11c02066}} 
+QWidget $\ast$ {\bfseries button\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a47091fe68c2a247d4b4bffd92300df66}\label{class_transfer___calib___table___dialog_a47091fe68c2a247d4b4bffd92300df66}} 
+QGrid\+Layout $\ast$ {\bfseries button\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_af3b8bbf9a97693448811eaaa3d5cec45}\label{class_transfer___calib___table___dialog_af3b8bbf9a97693448811eaaa3d5cec45}} 
+QPush\+Button $\ast$ {\bfseries pause\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ae19150429bc13ab4b13764534d418382}\label{class_transfer___calib___table___dialog_ae19150429bc13ab4b13764534d418382}} 
+QPush\+Button $\ast$ {\bfseries stop\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a1e36444084bde45ea24e877917377ded}\label{class_transfer___calib___table___dialog_a1e36444084bde45ea24e877917377ded}} 
+QPush\+Button $\ast$ {\bfseries start\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_a84c2f5c6096bb10867c928936c63314a}\label{class_transfer___calib___table___dialog_a84c2f5c6096bb10867c928936c63314a}} 
+QPush\+Button $\ast$ {\bfseries close\+\_\+button}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_transfer___calib___table___dialog}{Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog}} -\/ Dialog window for showing the progress of upload/download of calibration data between PC and Multiple-\/\+Sensor device.
+
+{\bfseries{Description}} Class of the dialog window used for showing to the user the progress of the transfer (download or upload) between a PC and a Multiple-\/\+Sensor device, of calibration tables (including the table headers) and also the calibration parameters for the counter calibration functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_ac18c06a771bae1e32a253aeeb47cbf36}\label{class_transfer___calib___table___dialog_ac18c06a771bae1e32a253aeeb47cbf36}} 
+\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}!Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}!Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Transfer\_Calib\_Table\_Dialog()}{Transfer\_Calib\_Table\_Dialog()}}
+{\footnotesize\ttfamily Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog\+::\+Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent,  }\item[{\mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $\ast$}]{worker\+\_\+args\+\_\+ptr,  }\item[{char}]{flag\+\_\+transfer\+\_\+mode\+\_\+bool }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor of the class of the dialog used for showing the progress of upload/download of calibration data between PC and Multiple-\/\+Sensor device. 
+
+explicit \mbox{\hyperlink{class_transfer___calib___table___dialog_ac18c06a771bae1e32a253aeeb47cbf36}{Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog(\+QWidget $\ast$parent, Worker\+\_\+\+Arguments $\ast$worker\+\_\+args\+\_\+ptr, char flag\+\_\+transfer\+\_\+mode\+\_\+bool)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$parent} & -\/ The main widget/window where this dialog belongs (relevant for deleting instance of this class when no longer required). \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$worker\+\_\+args\+\_\+ptr} & -\/ A variable of type \textquotesingle{}Worker\+\_\+\+Arguments\textquotesingle{} (structure) with all the required data(info and references (of variables) required for setting up an instance of \textquotesingle{}\mbox{\hyperlink{class_worker___handler}{Worker\+\_\+\+Handler}}\textquotesingle{} for then executing the upload/download between PC and device \\
+\hline
+\mbox{\texttt{ in}}  & {\em flag\+\_\+transfer\+\_\+mode\+\_\+bool} & -\/ A boolean variable (of type \textquotesingle{}char\textquotesingle{}, \textquotesingle{}0\textquotesingle{} -\/ false, \textquotesingle{}1\textquotesingle{} -\/ true) used to request what direction is the data transfer, this is\+: \textquotesingle{}0\textquotesingle{} indicates download (PC reads the calib tables/data from the device), \textquotesingle{}1\textquotesingle{} indicates upload (PC sends new calib tables/data to the device). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transfer___calib___table___dialog_abbab0ca30d2314210feb0999e84f81df}\label{class_transfer___calib___table___dialog_abbab0ca30d2314210feb0999e84f81df}} 
+\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}!Call\_On\_Process\_Finished@{Call\_On\_Process\_Finished}}
+\index{Call\_On\_Process\_Finished@{Call\_On\_Process\_Finished}!Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Call\_On\_Process\_Finished}{Call\_On\_Process\_Finished}}
+{\footnotesize\ttfamily void Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog\+::\+Call\+\_\+\+On\+\_\+\+Process\+\_\+\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function to update this dialog window with info/status about the completion and success(and any errors) of the upload/download. 
+
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_abbab0ca30d2314210feb0999e84f81df}{Call\+\_\+\+On\+\_\+\+Process\+\_\+\+Finished()}}
+
+The \textquotesingle{}Call\+\_\+\+On\+\_\+\+Process\+\_\+\+Finished\textquotesingle{} function updates this dialog window with info/status about the completion and success(and any errors) of the upload/download of calibration tables/data between the PC and the device. \mbox{\Hypertarget{class_transfer___calib___table___dialog_a4fd67a5b779ab194ecbbb5a8de6bf418}\label{class_transfer___calib___table___dialog_a4fd67a5b779ab194ecbbb5a8de6bf418}} 
+\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}!Data\_Copy@{Data\_Copy}}
+\index{Data\_Copy@{Data\_Copy}!Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Data\_Copy()}{Data\_Copy()}}
+{\footnotesize\ttfamily void Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog\+::\+Data\+\_\+\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___struct}{Data}} $\ast$}]{data\+\_\+dest,  }\item[{\mbox{\hyperlink{struct_data___struct}{Data}} const \&}]{data\+\_\+src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Copy the content of a variable of the type \textquotesingle{}Data\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_a4fd67a5b779ab194ecbbb5a8de6bf418}{Data\+\_\+\+Copy(\+Data $\ast$data\+\_\+dest, Data const \&data\+\_\+src)}}
+
+Copy the content of variable of the type \textquotesingle{}Data\textquotesingle{} (\textquotesingle{}Data\textquotesingle{} is used passing info/data between the worker thread and the \mbox{\hyperlink{class_main_window}{Main\+Window}} about the status and/or errors of the upload/download process). \mbox{\Hypertarget{class_transfer___calib___table___dialog_a456c929c6626fa38a4d134d973658eb2}\label{class_transfer___calib___table___dialog_a456c929c6626fa38a4d134d973658eb2}} 
+\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}!Data\_Ready@{Data\_Ready}}
+\index{Data\_Ready@{Data\_Ready}!Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Data\_Ready}{Data\_Ready}}
+{\footnotesize\ttfamily void Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog\+::\+Data\+\_\+\+Ready (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_data___struct}{Data}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function to save status data/info returned by the worker thread (with the messages and error counter), to be called just after the worker thread finishes the upload/download. 
+
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_a456c929c6626fa38a4d134d973658eb2}{Data\+\_\+\+Ready(const Data data)}}
+
+The \textquotesingle{}Data\+\_\+\+Ready\textquotesingle{} function is set to be called immediately after the worker thread finishes the upload or download of calibration data between PC and device, to save status data/info returned by the worker thread (with the messages and error counter). \mbox{\Hypertarget{class_transfer___calib___table___dialog_a455891fdbdf8cab6e618db06b86945cd}\label{class_transfer___calib___table___dialog_a455891fdbdf8cab6e618db06b86945cd}} 
+\index{Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}!Start\_Transfer\_Calib\_Table@{Start\_Transfer\_Calib\_Table}}
+\index{Start\_Transfer\_Calib\_Table@{Start\_Transfer\_Calib\_Table}!Transfer\_Calib\_Table\_Dialog@{Transfer\_Calib\_Table\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Start\_Transfer\_Calib\_Table}{Start\_Transfer\_Calib\_Table}}
+{\footnotesize\ttfamily void Transfer\+\_\+\+Calib\+\_\+\+Table\+\_\+\+Dialog\+::\+Start\+\_\+\+Transfer\+\_\+\+Calib\+\_\+\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+After user clicks the button (upload or download) it starts the worker thread that does the upload or download. 
+
+void \mbox{\hyperlink{class_transfer___calib___table___dialog_a455891fdbdf8cab6e618db06b86945cd}{Start\+\_\+\+Transfer\+\_\+\+Calib\+\_\+\+Table()}}
+
+The \textquotesingle{}Start\+\_\+\+Transfer\+\_\+\+Calib\+\_\+\+Table\textquotesingle{} is the function called after the user clicks the button (upload or download), and it will start the worker thread that does the upload or download of calibration data between PC and device. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{class_virtual___calibrate___sensors___dialog}{}\doxysection{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog Class Reference}
+\label{class_virtual___calibrate___sensors___dialog}\index{Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}}
+
+
+{\ttfamily \#include $<$virtual\+\_\+calibrate\+\_\+sensors\+\_\+dialog.\+h$>$}
+
+Inheritance diagram for Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_virtual___calibrate___sensors___dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_virtual___calibrate___sensors___dialog_a98040dd32f14c7d2f1635a71d0174c26}{Save\+\_\+\+Virtual\+\_\+\+Sensors\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Saves calibration data of currently selected sensor channel from \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog to the correspondent program variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_virtual___calibrate___sensors___dialog_a4cb15f8fc4653f86211cf5ab20fa674f}{Update\+\_\+\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Reads sensor calibration data stored on the program variables, and sets/updates items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog_a5cad50f0604b501bbf90b9b3e07ed173}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} (int $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+virtual\+\_\+calib\+\_\+dialog\+\_\+ptr, char($\ast$virtual\+\_\+calib\+\_\+units\+\_\+vector\+\_\+ptr)\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}, QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector\+\_\+ptr, \mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$counters\+\_\+virtual\+\_\+calib\+\_\+ptr, unsigned char $\ast$virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\+\_\+ptr, char $\ast$virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\+\_\+ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_virtual___calibrate___sensors___dialog_a72fa13dc560db2ec8fe1f1aa0976146d}\label{class_virtual___calibrate___sensors___dialog_a72fa13dc560db2ec8fe1f1aa0976146d}} 
+unsigned char $\ast$ {\bfseries m\+\_\+virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{class_virtual___calibrate___sensors___dialog_abd21e4bef9d199e3e700f332981d3436}\label{class_virtual___calibrate___sensors___dialog_abd21e4bef9d199e3e700f332981d3436}} 
+char $\ast$ {\bfseries m\+\_\+virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\+\_\+ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} -\/ Class of the dialog window used for configuring the virtual calibrations, that are used by the Multiple-\/\+Sensor software (PC) to calculate sensor measurements.
+
+{\bfseries{Description}} Class of the dialog window used for configuring the virtual calibrations. The virtual calibrations are only available to use on the PC, not on the sensors board. The virtual calibration are just like the device calibrations, they translate a RAW value of the sensor (frequency, voltage, or number of counts/cycles) to a sensor measurement or counter measurement. These are a 2 column table(for LCR channels and ADC channels) that translates a RAW value of the sensor (frequency, voltage) to a sensor measurement , and 4 float constants used on a function(counters of LCR/frequency channels) that translates a RAW\+\_\+counter\+\_\+value of the sensor (number of counts/cycles) to a counter measurement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_virtual___calibrate___sensors___dialog_a5cad50f0604b501bbf90b9b3e07ed173}\label{class_virtual___calibrate___sensors___dialog_a5cad50f0604b501bbf90b9b3e07ed173}} 
+\index{Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}!Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}}
+\index{Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}!Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Virtual\_Calibrate\_Sensors\_Dialog()}{Virtual\_Calibrate\_Sensors\_Dialog()}}
+{\footnotesize\ttfamily Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}\item[{int $\ast$}]{previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+virtual\+\_\+calib\+\_\+dialog\+\_\+ptr,  }\item[{char($\ast$)}]{virtual\+\_\+calib\+\_\+units\+\_\+vector\+\_\+ptr\mbox{[}\+N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]},  }\item[{QStandard\+Item\+Model $\ast$$\ast$}]{model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector\+\_\+ptr,  }\item[{\mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$}]{counters\+\_\+virtual\+\_\+calib\+\_\+ptr,  }\item[{unsigned char $\ast$}]{virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\+\_\+ptr,  }\item[{char $\ast$}]{virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+explicit \mbox{\hyperlink{class_virtual___calibrate___sensors___dialog_a5cad50f0604b501bbf90b9b3e07ed173}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog(int $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+virtual\+\_\+calib\+\_\+dialog\+\_\+ptr,char ($\ast$virtual\+\_\+calib\+\_\+units\+\_\+vector\+\_\+ptr)\mbox{[}\+N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}, QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+virtual\+\_\+calib\+\_\+vector\+\_\+ptr, counters\+\_\+calib $\ast$counters\+\_\+virtual\+\_\+calib\+\_\+ptr, unsigned char $\ast$virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\+\_\+ptr, char $\ast$virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\+\_\+ptr)}}
+
+The constructor of the class used for configuring the virtual calibration tables of measurements on LCR/frequency/\+ADC sensor channels , and configuring the constants of virtual calibration function of counter measurements on frequency sensor channels. \textquotesingle{}virtual calibration\textquotesingle{} means the measurements are calculated on the computer program by applying the \textquotesingle{}virtual calibration\textquotesingle{} on the received data. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog\+\_\+ptr} & Pointer to variable that stores the selected channel number that was previously selected by the user on \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em ($\ast$calib\+\_\+units\+\_\+vector\+\_\+ptr)\mbox{[}\+N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}} & Pointer to array(vector) where are stored the calibration units for all the sensor channels (each entry of this array is a pointer to a C string). \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr} & Pointer to array(vector) where are stored the calibration tables for all the sensor channels \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$counters\+\_\+calib\+\_\+ptr} & Pointer to structure (\textquotesingle{}counters\+\_\+calib\textquotesingle{}) where are stored the constants of the calibration function used to calculate the counter measurements \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\+\_\+ptr} & Pointer to array(vector) where are stored the channel mode of the virtual calibrations for all the sensor channels \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\+\_\+ptr} & Pointer to array(vector) where are stored the jumper configuration of the virtual calibrations for all the sensor channels \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_virtual___calibrate___sensors___dialog_a98040dd32f14c7d2f1635a71d0174c26}\label{class_virtual___calibrate___sensors___dialog_a98040dd32f14c7d2f1635a71d0174c26}} 
+\index{Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}!Save\_Virtual\_Sensors\_Calibrations@{Save\_Virtual\_Sensors\_Calibrations}}
+\index{Save\_Virtual\_Sensors\_Calibrations@{Save\_Virtual\_Sensors\_Calibrations}!Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Save\_Virtual\_Sensors\_Calibrations}{Save\_Virtual\_Sensors\_Calibrations}}
+{\footnotesize\ttfamily void Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Save\+\_\+\+Virtual\+\_\+\+Sensors\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Saves calibration data of currently selected sensor channel from \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog to the correspondent program variables. 
+
+void \mbox{\hyperlink{class_virtual___calibrate___sensors___dialog_a98040dd32f14c7d2f1635a71d0174c26}{Save\+\_\+\+Virtual\+\_\+\+Sensors\+\_\+\+Calibrations()}}
+
+This function calls the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog_a4afddc40ee601de3b7e78dad75bf553f}{Save\+\_\+\+Sensors\+\_\+\+Calibrations()}}\textquotesingle{} from parent class, and also saves other information of the virtual calibration table, namely\+: the channel mode (saved to \textquotesingle{}virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\mbox{[}\mbox{]}\textquotesingle{}) and jumper configuration (saved to \textquotesingle{}virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\mbox{[}\mbox{]}\textquotesingle{}). \mbox{\Hypertarget{class_virtual___calibrate___sensors___dialog_a4cb15f8fc4653f86211cf5ab20fa674f}\label{class_virtual___calibrate___sensors___dialog_a4cb15f8fc4653f86211cf5ab20fa674f}} 
+\index{Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}!Update\_Virtual\_Calibrate\_Sensors\_Dialog@{Update\_Virtual\_Calibrate\_Sensors\_Dialog}}
+\index{Update\_Virtual\_Calibrate\_Sensors\_Dialog@{Update\_Virtual\_Calibrate\_Sensors\_Dialog}!Virtual\_Calibrate\_Sensors\_Dialog@{Virtual\_Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Update\_Virtual\_Calibrate\_Sensors\_Dialog}{Update\_Virtual\_Calibrate\_Sensors\_Dialog}}
+{\footnotesize\ttfamily void Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Update\+\_\+\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Reads sensor calibration data stored on the program variables, and sets/updates items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_virtual___calibrate___sensors___dialog_a4cb15f8fc4653f86211cf5ab20fa674f}{Update\+\_\+\+Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog()}}
+
+This function calls the \textquotesingle{}Update\+\_\+\+Sensors\+\_\+\+Calibrations()\textquotesingle{} from parent class, and also updates other information of the currenlty visible virtual calibration table, namely\+: the channel mode (read from \textquotesingle{}virtual\+\_\+calib\+\_\+channel\+\_\+mode\+\_\+bool\+\_\+vector\mbox{[}\mbox{]}\textquotesingle{}) and jumper configuration (read from \textquotesingle{}virtual\+\_\+calib\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+vector\mbox{[}\mbox{]}\textquotesingle{}). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/virtual\+\_\+calibrate\+\_\+sensors\+\_\+dialog.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/virtual\+\_\+calibrate\+\_\+sensors\+\_\+dialog.\+cpp\end{DoxyCompactItemize}

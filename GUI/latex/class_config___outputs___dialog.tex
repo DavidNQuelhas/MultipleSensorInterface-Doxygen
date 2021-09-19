@@ -1,0 +1,148 @@
+\hypertarget{class_config___outputs___dialog}{}\doxysection{Config\+\_\+\+Outputs\+\_\+\+Dialog Class Reference}
+\label{class_config___outputs___dialog}\index{Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Config\+\_\+\+Outputs\+\_\+\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config___outputs___dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_config___outputs___dialog_aec65baaa69848ebe8bc856783a9c9282}{Config\+\_\+\+Outputs\+\_\+\+Dialog}} (Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session\+\_\+serial, int $\ast$previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog\+\_\+ptr, char communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool)
+\begin{DoxyCompactList}\small\item\em Constructor of the class used on the dialog windows used to configure the digital outputs of Multiple-\/\+Sensor Interface device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a8463043c47be59651e919be721ee21fd}\label{class_config___outputs___dialog_a8463043c47be59651e919be721ee21fd}} 
+QWidget $\ast$ {\bfseries config\+\_\+outputs\+\_\+widget}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_aed066b44a8fb1c3c49acbeef9eaf3ea6}\label{class_config___outputs___dialog_aed066b44a8fb1c3c49acbeef9eaf3ea6}} 
+void {\bfseries Cancel\+\_\+\+Dialog} ()
+\item 
+void \mbox{\hyperlink{class_config___outputs___dialog_a1796995aefb6ddfe5c80d1e290555de3}{Send\+\_\+\+Config\+\_\+\+Outputs}} ()
+\begin{DoxyCompactList}\small\item\em Send to the Multiple-\/\+Sensor device the configurations on \textquotesingle{}Config Outputs Dialog\textquotesingle{} inserted/edited by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_config___outputs___dialog_aaab2412a23dd45a81692a2fc88bfecd0}{Update\+\_\+\+Config\+\_\+\+Outputs\+\_\+\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Update the \textquotesingle{}Config Outputs Dialog\textquotesingle{} with the boolean output functions read from the Multiple-\/\+Sensor device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a81bcca08c089d7aad84d4be971097b1b}\label{class_config___outputs___dialog_a81bcca08c089d7aad84d4be971097b1b}} 
+void {\bfseries Set\+\_\+\+Status\+\_\+\+Label\+\_\+\+Valid} ()
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_aa15766732aac8a2ecac9abcbe2c12c32}\label{class_config___outputs___dialog_aa15766732aac8a2ecac9abcbe2c12c32}} 
+void {\bfseries Set\+\_\+\+Status\+\_\+\+Label\+\_\+\+Invalid} ()
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_afc3dc7d620c1f697ba4aaadd8fe3f3f7}\label{class_config___outputs___dialog_afc3dc7d620c1f697ba4aaadd8fe3f3f7}} 
+void {\bfseries Set\+\_\+\+Status\+\_\+\+Label\+\_\+\+Error} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_afd420d90703f7a7bc3ef64d2f3363aad}\label{class_config___outputs___dialog_afd420d90703f7a7bc3ef64d2f3363aad}} 
+QGrid\+Layout $\ast$ {\bfseries config\+\_\+outputs\+\_\+dialog\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a5c6b5d12c288502009081c1a386db4ab}\label{class_config___outputs___dialog_a5c6b5d12c288502009081c1a386db4ab}} 
+QLabel $\ast$ {\bfseries select\+\_\+output\+\_\+active\+\_\+level\+\_\+label\+\_\+vector} \mbox{[}N\+\_\+\+DIGITAL\+\_\+\+OUT\mbox{]}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a1f1d5e013644f797e4c9d8ba3dfa09a6}\label{class_config___outputs___dialog_a1f1d5e013644f797e4c9d8ba3dfa09a6}} 
+QLine\+Edit $\ast$ {\bfseries select\+\_\+output\+\_\+active\+\_\+level\+\_\+bool\+\_\+func\+\_\+vector} \mbox{[}N\+\_\+\+DIGITAL\+\_\+\+OUT\mbox{]}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a3125ab4d3e0ef9b4b0296446d5ee7283}\label{class_config___outputs___dialog_a3125ab4d3e0ef9b4b0296446d5ee7283}} 
+QWidget $\ast$ {\bfseries button\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a75ebd8617367f3274153242055e3e8de}\label{class_config___outputs___dialog_a75ebd8617367f3274153242055e3e8de}} 
+QGrid\+Layout $\ast$ {\bfseries button\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a6619fa13b31433a4a8fecead152b4cd6}\label{class_config___outputs___dialog_a6619fa13b31433a4a8fecead152b4cd6}} 
+QPush\+Button $\ast$ {\bfseries OK\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_aff1b62bff42783e95155c7be21ad0fc0}\label{class_config___outputs___dialog_aff1b62bff42783e95155c7be21ad0fc0}} 
+QPush\+Button $\ast$ {\bfseries cancel\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a9326913566ad1bbb62568fdb439c7a7b}\label{class_config___outputs___dialog_a9326913566ad1bbb62568fdb439c7a7b}} 
+QLabel $\ast$ {\bfseries status\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_adf3b39457845b7f2076f60788d16cb23}\label{class_config___outputs___dialog_adf3b39457845b7f2076f60788d16cb23}} 
+QGrid\+Layout $\ast$ {\bfseries config\+\_\+outputs\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_ad526fd2d3f3e340d0bb0a9ada196a134}\label{class_config___outputs___dialog_ad526fd2d3f3e340d0bb0a9ada196a134}} 
+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$ {\bfseries m\+\_\+\+USB\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_af4c447e47a28d0f613df959f92a91473}\label{class_config___outputs___dialog_af4c447e47a28d0f613df959f92a91473}} 
+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$ {\bfseries m\+\_\+serial\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a5385c62f030c0638bfaaf8d69d0ccb79}\label{class_config___outputs___dialog_a5385c62f030c0638bfaaf8d69d0ccb79}} 
+int $\ast$ {\bfseries m\+\_\+previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{class_config___outputs___dialog_a98b671a4601330cb364be2cdf39797f9}\label{class_config___outputs___dialog_a98b671a4601330cb364be2cdf39797f9}} 
+char {\bfseries m\+\_\+communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_config___outputs___dialog}{Config\+\_\+\+Outputs\+\_\+\+Dialog}} -\/ Class of the dialog window used for configuring the outputs of the sensors board (OUT0, OUT1, OUT2).
+
+{\bfseries{Description}} \mbox{\hyperlink{class_config___outputs___dialog}{Config\+\_\+\+Outputs\+\_\+\+Dialog}} is the class for the dialog used for configuring the outputs of the sensors board (OUT0, OUT1, OUT2) Each output is defined by a boolean expression ( using the logical operators \textquotesingle{}+\textquotesingle{}, \textquotesingle{}.\textquotesingle{}, \textquotesingle{}/\textquotesingle{}, and considering priorities of sub-\/expressions inside brackets \textquotesingle{}(\textquotesingle{},\textquotesingle{})\textquotesingle{} ), where the digital inputs are the variables \+: \textquotesingle{}M?\textquotesingle{}, \textquotesingle{}R?\textquotesingle{}, \textquotesingle{}C?\textquotesingle{}, \textquotesingle{}K?\textquotesingle{} . the \textquotesingle{}?\textquotesingle{} should be a character between \textquotesingle{}0\textquotesingle{} and \textquotesingle{}9\textquotesingle{} indicating what is the sensor channel number. \textquotesingle{}M?\textquotesingle{} variables are digital inputs made by using the sensor measurement, \textquotesingle{}C?\textquotesingle{} variables are digital inputs made by using the RAW value of sensor \mbox{[}in Hz or V\mbox{]}, \textquotesingle{}C\textquotesingle{} variables are digital inputs made by using the RAW counter value, \textquotesingle{}K\textquotesingle{} variables are digital inputs made by using the counter measurement . 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_config___outputs___dialog_aec65baaa69848ebe8bc856783a9c9282}\label{class_config___outputs___dialog_aec65baaa69848ebe8bc856783a9c9282}} 
+\index{Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}!Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}}
+\index{Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}!Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Config\_Outputs\_Dialog()}{Config\_Outputs\_Dialog()}}
+{\footnotesize\ttfamily Config\+\_\+\+Outputs\+\_\+\+Dialog\+::\+Config\+\_\+\+Outputs\+\_\+\+Dialog (\begin{DoxyParamCaption}\item[{Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$}]{session,  }\item[{Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$}]{session\+\_\+serial,  }\item[{int $\ast$}]{previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog\+\_\+ptr,  }\item[{char}]{communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor of the class used on the dialog windows used to configure the digital outputs of Multiple-\/\+Sensor Interface device. 
+
+explicit \mbox{\hyperlink{class_config___outputs___dialog_aec65baaa69848ebe8bc856783a9c9282}{Config\+\_\+\+Outputs\+\_\+\+Dialog\+::\+Config\+\_\+\+Outputs\+\_\+\+Dialog(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session\+\_\+serial, int $\ast$previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog\+\_\+ptr, char communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$session} & Variable with information of a currently used/available USB session on the main window of the Multiple-\/\+Sensor Interface. \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$session\+\_\+serial} & Variable with information of a currently used/available serial/\+RS485 session on the main window of the Multiple-\/\+Sensor Interface. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog\+\_\+ptr} & Pointer to variable that stores the output number that was previously selected by the user on \textquotesingle{}Config Outputs Dialog\textquotesingle{}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool} & Is as boolean used to signal if currently the program is communicating with the Multiple-\/\+Sensor device through the USB driver(=0) of through the serial/\+RS485 driver(=1). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_config___outputs___dialog_a1796995aefb6ddfe5c80d1e290555de3}\label{class_config___outputs___dialog_a1796995aefb6ddfe5c80d1e290555de3}} 
+\index{Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}!Send\_Config\_Outputs@{Send\_Config\_Outputs}}
+\index{Send\_Config\_Outputs@{Send\_Config\_Outputs}!Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Send\_Config\_Outputs}{Send\_Config\_Outputs}}
+{\footnotesize\ttfamily void Config\+\_\+\+Outputs\+\_\+\+Dialog\+::\+Send\+\_\+\+Config\+\_\+\+Outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Send to the Multiple-\/\+Sensor device the configurations on \textquotesingle{}Config Outputs Dialog\textquotesingle{} inserted/edited by the user. 
+
+void \mbox{\hyperlink{class_config___outputs___dialog_a1796995aefb6ddfe5c80d1e290555de3}{Config\+\_\+\+Outputs\+\_\+\+Dialog\+::\+Send\+\_\+\+Config\+\_\+\+Outputs()}}
+
+This function will send the configurations on \textquotesingle{}Config Outputs Dialog\textquotesingle{} inserted/edited by the user (for selected channel number) to the Multiple-\/\+Sensor device, for this the function will call \textquotesingle{}Write\+Output\+Config(...)\textquotesingle{}(by USB) or \textquotesingle{}Write\+Output\+Config\+\_\+\+Modbus\+\_\+\+LCR(...)\textquotesingle{}(by serial). \mbox{\Hypertarget{class_config___outputs___dialog_aaab2412a23dd45a81692a2fc88bfecd0}\label{class_config___outputs___dialog_aaab2412a23dd45a81692a2fc88bfecd0}} 
+\index{Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}!Update\_Config\_Outputs\_Dialog@{Update\_Config\_Outputs\_Dialog}}
+\index{Update\_Config\_Outputs\_Dialog@{Update\_Config\_Outputs\_Dialog}!Config\_Outputs\_Dialog@{Config\_Outputs\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Update\_Config\_Outputs\_Dialog}{Update\_Config\_Outputs\_Dialog}}
+{\footnotesize\ttfamily void Config\+\_\+\+Outputs\+\_\+\+Dialog\+::\+Update\+\_\+\+Config\+\_\+\+Outputs\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the \textquotesingle{}Config Outputs Dialog\textquotesingle{} with the boolean output functions read from the Multiple-\/\+Sensor device. 
+
+void \mbox{\hyperlink{class_config___outputs___dialog_aaab2412a23dd45a81692a2fc88bfecd0}{Config\+\_\+\+Outputs\+\_\+\+Dialog\+::\+Update\+\_\+\+Config\+\_\+\+Outputs\+\_\+\+Dialog()}}
+
+This function will update the dialog fields named \textquotesingle{}Boolean function for output for N?\textquotesingle{}, so they display the current/updated configurations read from Multiple-\/\+Sensor device; for this the function will call \textquotesingle{}Read\+Output\+Config(...)\textquotesingle{}(by USB) or \textquotesingle{}Read\+Output\+Config\+\_\+\+Modbus\+\_\+\+LCR(...)\textquotesingle{}(by serial) to read configurations from the device. This function should be called after creating the dialog \textquotesingle{}Config Outputs Dialog\textquotesingle{}, so the displayed output boolean functions viewed on the dialog window match what was read from Multiple-\/\+Sensor device. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+cpp\end{DoxyCompactItemize}

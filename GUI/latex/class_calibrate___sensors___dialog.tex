@@ -1,0 +1,450 @@
+\hypertarget{class_calibrate___sensors___dialog}{}\doxysection{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog Class Reference}
+\label{class_calibrate___sensors___dialog}\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+
+
+{\ttfamily \#include $<$calibrate\+\_\+sensors\+\_\+dialog.\+h$>$}
+
+Inheritance diagram for Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_calibrate___sensors___dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_abb20c044159ecc545edb0dc7e019b08d}\label{class_calibrate___sensors___dialog_abb20c044159ecc545edb0dc7e019b08d}} 
+void {\bfseries Call\+\_\+\+Create\+\_\+\+Copy\+\_\+\+Model\+\_\+\+Table} (int N\+\_\+channels)
+\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a8eadf62cf52e34a70038bfc22577250c}{Set\+\_\+\+Calib\+\_\+\+Headers}} (char $\ast$header\+\_\+name\+\_\+col0, char $\ast$header\+\_\+name\+\_\+col1)
+\begin{DoxyCompactList}\small\item\em Set/save the column names of the table header to be used/displayed on the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a4afddc40ee601de3b7e78dad75bf553f}{Save\+\_\+\+Sensors\+\_\+\+Calibrations}} ()
+\begin{DoxyCompactList}\small\item\em Saves calibration data of currently selected sensor channel from \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog to the correspondent program variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aa56f704b732e21f745dba32da6d30f2d}\label{class_calibrate___sensors___dialog_aa56f704b732e21f745dba32da6d30f2d}} 
+void {\bfseries Cancel\+\_\+\+Dialog} ()
+\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_ad3e557f595f12e572664dcd2cce445b0}{Update\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Reads sensor calibration data stored on the program variables, and sets/updates items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a2ac5394c394771e170ec6c8cbeb7ce0f}{Set\+\_\+\+Rows\+\_\+\+Color}} (int start\+\_\+row, int end\+\_\+row, QColor color)
+\begin{DoxyCompactList}\small\item\em Set the color of the rows between (and including) the row numbered \textquotesingle{}start\+\_\+row\textquotesingle{} and row numbered \textquotesingle{}end\+\_\+row\textquotesingle{}, of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_aa8fe397d263dd0990f574b31896ff77e}{Add\+\_\+\+New\+\_\+\+Row}} ()
+\begin{DoxyCompactList}\small\item\em Add a new row at the end of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_calibrate___sensors___dialog_a54d0aca059c8776a17b3aa76810b373f}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} (int $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog\+\_\+ptr, char($\ast$calib\+\_\+units\+\_\+vector\+\_\+ptr)\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}, QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr, \mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$counters\+\_\+calib\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em The constructor of the base class used for configuring the calibration tables of measurements on LCR/frequency/\+ADC sensor channels , and configuring the constants of calibration function of counter measurements on frequency sensor channels. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_calibrate___sensors___dialog_a856cfe5737ac5b1081c0e23c17c3f32f}{Calib\+\_\+\+Table\+\_\+\+Row\+\_\+\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of rows of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. \end{DoxyCompactList}\item 
+QStandard\+Item\+Model $\ast$ \mbox{\hyperlink{class_calibrate___sensors___dialog_af7873ae37615b37810f9c3859e6e618c}{Create\+\_\+\+Copy\+\_\+\+Model\+\_\+\+Table}} (QStandard\+Item\+Model $\ast$src\+\_\+model\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Make a copy of the of one QStandard\+Item\+Model to another QStandard\+Item\+Model (used to save/display a calibration table). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_calibrate___sensors___dialog_ad5f7c4690610568c6b64d856210ce84b}{Read\+\_\+\+Measurement\+\_\+\+From\+\_\+\+Calib\+\_\+\+Table}} (QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector, int sensor\+\_\+number, float RAW\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Reads (calculates) a measurement from the selected calibration table in a similar way to the Multiple-\/\+Sensor device; this is it will read from the calibration table the two points closest tot he selected RAW\+\_\+value, then it will calculate a line ( measurement = a$\ast$\+RAW\+\_\+value + b) passing on those 2 points, it will calculate measurement from the mentioned equation for the selected RAW\+\_\+value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ae9dec40f4952d06a2e0d314cb0152477}\label{class_calibrate___sensors___dialog_ae9dec40f4952d06a2e0d314cb0152477}} 
+QWidget $\ast$ {\bfseries calibrate\+\_\+sensors\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_af78d9eca5dbb54829ec5e95bc9a6aa0c}\label{class_calibrate___sensors___dialog_af78d9eca5dbb54829ec5e95bc9a6aa0c}} 
+QSpin\+Box $\ast$ {\bfseries select\+\_\+channel\+\_\+number\+\_\+spin\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ad02838e8b28c3f957cb7e9654143308a}\label{class_calibrate___sensors___dialog_ad02838e8b28c3f957cb7e9654143308a}} 
+QWidget $\ast$ {\bfseries top\+\_\+select\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a195cda20a56e7e60704fb2ca594f339a}\label{class_calibrate___sensors___dialog_a195cda20a56e7e60704fb2ca594f339a}} 
+QGrid\+Layout $\ast$ {\bfseries top\+\_\+select\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a2f414965f052442821daf872a64c7c91}\label{class_calibrate___sensors___dialog_a2f414965f052442821daf872a64c7c91}} 
+QGroup\+Box $\ast$ {\bfseries calib\+\_\+channel\+\_\+mode\+\_\+group\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ad3864f3fd9ab2c1c1d01cea0859506c9}\label{class_calibrate___sensors___dialog_ad3864f3fd9ab2c1c1d01cea0859506c9}} 
+QGrid\+Layout $\ast$ {\bfseries calib\+\_\+channel\+\_\+mode\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a4e50c162e1aefc49e5466b3d3c28590c}\label{class_calibrate___sensors___dialog_a4e50c162e1aefc49e5466b3d3c28590c}} 
+QLabel $\ast$ {\bfseries calib\+\_\+channel\+\_\+mode\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a229c80588ba085ab85824820bca3e2a6}\label{class_calibrate___sensors___dialog_a229c80588ba085ab85824820bca3e2a6}} 
+QCombo\+Box $\ast$ {\bfseries calib\+\_\+channel\+\_\+mode\+\_\+combo\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a631301a287a940a5d47d073b9d4bb323}\label{class_calibrate___sensors___dialog_a631301a287a940a5d47d073b9d4bb323}} 
+QLabel $\ast$ {\bfseries calib\+\_\+channel\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a230acb10b9f184bc78a951b2e9369df9}\label{class_calibrate___sensors___dialog_a230acb10b9f184bc78a951b2e9369df9}} 
+QCombo\+Box $\ast$ {\bfseries calib\+\_\+channel\+\_\+jumper\+\_\+selection\+\_\+osc\+\_\+tuning\+\_\+range\+\_\+combo\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a2385528a7116162c46888f4c2614d149}\label{class_calibrate___sensors___dialog_a2385528a7116162c46888f4c2614d149}} 
+QLabel $\ast$ {\bfseries info\+\_\+label\+\_\+for\+\_\+current\+\_\+sensor\+\_\+channel}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ae849dde1bbc7840e9be6be35f74980f2}\label{class_calibrate___sensors___dialog_ae849dde1bbc7840e9be6be35f74980f2}} 
+QWidget $\ast$ {\bfseries button\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ab1bc1f93bf8b4b0dea09b05552680cbf}\label{class_calibrate___sensors___dialog_ab1bc1f93bf8b4b0dea09b05552680cbf}} 
+QGrid\+Layout $\ast$ {\bfseries button\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ab0dabd69d60fe0e9875a706beb7e5da3}\label{class_calibrate___sensors___dialog_ab0dabd69d60fe0e9875a706beb7e5da3}} 
+QPush\+Button $\ast$ {\bfseries OK\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a1aa2eca5aef5d4f23e1d21974bd3f0d1}\label{class_calibrate___sensors___dialog_a1aa2eca5aef5d4f23e1d21974bd3f0d1}} 
+QPush\+Button $\ast$ {\bfseries cancel\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a037b26942f5cdf6d2b11805cdae47da6}\label{class_calibrate___sensors___dialog_a037b26942f5cdf6d2b11805cdae47da6}} 
+QPush\+Button $\ast$ {\bfseries zero\+\_\+calibration\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aed87501dfdc3d49255394c8f85934db1}\label{class_calibrate___sensors___dialog_aed87501dfdc3d49255394c8f85934db1}} 
+QGroup\+Box $\ast$ {\bfseries calib\+\_\+table\+\_\+group\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aab3e19ec36cfec72d3781aa214f50314}\label{class_calibrate___sensors___dialog_aab3e19ec36cfec72d3781aa214f50314}} 
+QGrid\+Layout $\ast$ {\bfseries calib\+\_\+table\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a0aad0cfe2097a71a9315f7a9f8fca9ea}\label{class_calibrate___sensors___dialog_a0aad0cfe2097a71a9315f7a9f8fca9ea}} 
+QPush\+Button $\ast$ {\bfseries add\+\_\+new\+\_\+row\+\_\+calib\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a99ff76f53457c47fda66abcc38ace689}\label{class_calibrate___sensors___dialog_a99ff76f53457c47fda66abcc38ace689}} 
+QPush\+Button $\ast$ {\bfseries remove\+\_\+row\+\_\+calib\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a377f8c3af509133993bb9f3af91c15ce}\label{class_calibrate___sensors___dialog_a377f8c3af509133993bb9f3af91c15ce}} 
+QPush\+Button $\ast$ {\bfseries adapt\+\_\+table\+\_\+calib\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a5cc5bc8042e2f2cd2a3b0d0078533cae}\label{class_calibrate___sensors___dialog_a5cc5bc8042e2f2cd2a3b0d0078533cae}} 
+QGroup\+Box $\ast$ {\bfseries calib\+\_\+counters\+\_\+group\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a3c0c8dfe85fd35fa180c3cdb9646f645}\label{class_calibrate___sensors___dialog_a3c0c8dfe85fd35fa180c3cdb9646f645}} 
+QGrid\+Layout $\ast$ {\bfseries calib\+\_\+counters\+\_\+group\+Box\+\_\+layout}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_afe7b12c9cc586161c38dffe8be6d136f}{Calibrate\+\_\+\+Zero\+\_\+\+Offset}} ()
+\begin{DoxyCompactList}\small\item\em Creates the dialog window for the \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment; f2(x)=f1(x)+offset, where the offset is calculated by a point(\+RAW\+\_\+value, measurement). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a73b8c9addc41cc47e3e0771338c57bd9}{Calibrate\+\_\+\+Zero\+\_\+\+Offset\+\_\+part2}} ()
+\begin{DoxyCompactList}\small\item\em Executes the \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment; f2(x)=f1(x)+offset, where the offset is calculated by a point(\+RAW\+\_\+value, measurement). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_af27b4d7c9567796d7bda7ace0cd879fc}\label{class_calibrate___sensors___dialog_af27b4d7c9567796d7bda7ace0cd879fc}} 
+void {\bfseries Remove\+\_\+\+Selected\+\_\+\+Row} ()
+\item 
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a9f138911d1434407ed404fa607bfdd63}{Adapt\+\_\+\+Calib\+\_\+\+Table}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a9cc0038e4e51e16cbedf96f2846d7973}\label{class_calibrate___sensors___dialog_a9cc0038e4e51e16cbedf96f2846d7973}} 
+QGrid\+Layout $\ast$ {\bfseries calibrate\+\_\+sensors\+\_\+dialog\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a4f9cfd8da54d3bf620aead181ed6a4a3}\label{class_calibrate___sensors___dialog_a4f9cfd8da54d3bf620aead181ed6a4a3}} 
+QLabel $\ast$ {\bfseries select\+\_\+channel\+\_\+number\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aba261ea26b376b573da7ffc4c3ac3a29}\label{class_calibrate___sensors___dialog_aba261ea26b376b573da7ffc4c3ac3a29}} 
+QWidget $\ast$ {\bfseries select\+\_\+channel\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a5b1301d32c0a584157a62f692e77a129}\label{class_calibrate___sensors___dialog_a5b1301d32c0a584157a62f692e77a129}} 
+QGrid\+Layout $\ast$ {\bfseries select\+\_\+channel\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aa1d79e5598f2015f96931ffd943e14a0}\label{class_calibrate___sensors___dialog_aa1d79e5598f2015f96931ffd943e14a0}} 
+QWidget $\ast$ {\bfseries select\+\_\+units\+\_\+using\+\_\+calibration\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aad30ad899511054dd3dcd78184ec0e61}\label{class_calibrate___sensors___dialog_aad30ad899511054dd3dcd78184ec0e61}} 
+QGrid\+Layout $\ast$ {\bfseries select\+\_\+units\+\_\+using\+\_\+calibration\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aea70761cfc0f55ffff65096219dac461}\label{class_calibrate___sensors___dialog_aea70761cfc0f55ffff65096219dac461}} 
+QLabel $\ast$ {\bfseries select\+\_\+units\+\_\+using\+\_\+calibration\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ae5fab1275cbd93c459bb8ba8562ddbc7}\label{class_calibrate___sensors___dialog_ae5fab1275cbd93c459bb8ba8562ddbc7}} 
+QLine\+Edit $\ast$ {\bfseries select\+\_\+units\+\_\+using\+\_\+calibration\+\_\+box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a815127ed7a29c9d2ef835f23db2243f0}\label{class_calibrate___sensors___dialog_a815127ed7a29c9d2ef835f23db2243f0}} 
+QStandard\+Item\+Model $\ast$ {\bfseries current\+\_\+model\+\_\+table\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a9eb6f3d267e312217a10293cd85a87c9}\label{class_calibrate___sensors___dialog_a9eb6f3d267e312217a10293cd85a87c9}} 
+QTable\+View $\ast$ {\bfseries table\+\_\+view\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ab651161507aee22cf4bd4bd9f008923b}\label{class_calibrate___sensors___dialog_ab651161507aee22cf4bd4bd9f008923b}} 
+QStandard\+Item\+Model $\ast$$\ast$ {\bfseries model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a84e6c8a2097c7a71f5578f5ea8f6474d}\label{class_calibrate___sensors___dialog_a84e6c8a2097c7a71f5578f5ea8f6474d}} 
+QItem\+Selection\+Model $\ast$ {\bfseries selectionM}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a772c79a1875b42a9d6e54d32c55ebe26}\label{class_calibrate___sensors___dialog_a772c79a1875b42a9d6e54d32c55ebe26}} 
+QModel\+Index\+List {\bfseries selectionL}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a1a2bba1584f9850c6b8c6a1d1ae4cfbb}\label{class_calibrate___sensors___dialog_a1a2bba1584f9850c6b8c6a1d1ae4cfbb}} 
+QWidget $\ast$ {\bfseries calib\+\_\+counters\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a85190ffe2c8d3e5e4ba35b526523ff00}\label{class_calibrate___sensors___dialog_a85190ffe2c8d3e5e4ba35b526523ff00}} 
+QGrid\+Layout $\ast$ {\bfseries calib\+\_\+counters\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a298353cec9afb1b52d91c6da487565b3}\label{class_calibrate___sensors___dialog_a298353cec9afb1b52d91c6da487565b3}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries C3\+\_\+counter\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a5aa0938bb0fc41005b35325103a34e4e}\label{class_calibrate___sensors___dialog_a5aa0938bb0fc41005b35325103a34e4e}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries C2\+\_\+counter\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aaf88455e6e5f381ccf6e7aec170c7465}\label{class_calibrate___sensors___dialog_aaf88455e6e5f381ccf6e7aec170c7465}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries C1\+\_\+counter\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a22760a72e02bfb7487de73ae9d17a5cb}\label{class_calibrate___sensors___dialog_a22760a72e02bfb7487de73ae9d17a5cb}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries C0\+\_\+counter\+\_\+calib}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a7aaccbe7f92ee69ecb176abc604fef24}\label{class_calibrate___sensors___dialog_a7aaccbe7f92ee69ecb176abc604fef24}} 
+QWidget $\ast$ {\bfseries units\+\_\+measurement\+\_\+total\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_abbfeec46258f161d3a147da56ff15fdb}\label{class_calibrate___sensors___dialog_abbfeec46258f161d3a147da56ff15fdb}} 
+QGrid\+Layout $\ast$ {\bfseries units\+\_\+measurement\+\_\+total\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a7a9d9b5f906efc718a62de374de283cb}\label{class_calibrate___sensors___dialog_a7a9d9b5f906efc718a62de374de283cb}} 
+QLine\+Edit $\ast$ {\bfseries units\+\_\+measurement\+\_\+total\+\_\+line\+Edit}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a7a1fe585defcccb1853af20b9bb54d60}\label{class_calibrate___sensors___dialog_a7a1fe585defcccb1853af20b9bb54d60}} 
+QTab\+Widget $\ast$ {\bfseries calib\+\_\+tab\+Widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a2811e66c139406964d2de5aea1b6d58a}\label{class_calibrate___sensors___dialog_a2811e66c139406964d2de5aea1b6d58a}} 
+QWidget $\ast$ {\bfseries table\+\_\+button\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a289279e525e45ec60e763e0642d5ef0b}\label{class_calibrate___sensors___dialog_a289279e525e45ec60e763e0642d5ef0b}} 
+QGrid\+Layout $\ast$ {\bfseries table\+\_\+button\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_abc576c3fe1911c6ad88beccdae9bb7df}\label{class_calibrate___sensors___dialog_abc576c3fe1911c6ad88beccdae9bb7df}} 
+QGroup\+Box $\ast$ {\bfseries zero\+\_\+calibration\+\_\+group\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a29721e62e47cee6ff4e852aae5e4ad92}\label{class_calibrate___sensors___dialog_a29721e62e47cee6ff4e852aae5e4ad92}} 
+QGrid\+Layout $\ast$ {\bfseries zero\+\_\+calibration\+\_\+group\+Box\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a56a05ca5d98650a917407bbd1ecab5a7}\label{class_calibrate___sensors___dialog_a56a05ca5d98650a917407bbd1ecab5a7}} 
+QGrid\+Layout $\ast$ {\bfseries calibrate\+\_\+sensors\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a689d1f2e4e736f273cbb349adb7edc14}\label{class_calibrate___sensors___dialog_a689d1f2e4e736f273cbb349adb7edc14}} 
+int $\ast$ {\bfseries m\+\_\+previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a3cf18ce3c8a8cb9e11e62d3bce34e7f6}\label{class_calibrate___sensors___dialog_a3cf18ce3c8a8cb9e11e62d3bce34e7f6}} 
+char($\ast$ {\bfseries m\+\_\+calib\+\_\+units\+\_\+vector\+\_\+ptr} )\mbox{[}N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a03c7fb6cc657b573041598e1151cd9c9}\label{class_calibrate___sensors___dialog_a03c7fb6cc657b573041598e1151cd9c9}} 
+\mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$ {\bfseries m\+\_\+counters\+\_\+calib\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a0602b7da66e4e1940ac4637ed1f21ef0}\label{class_calibrate___sensors___dialog_a0602b7da66e4e1940ac4637ed1f21ef0}} 
+char {\bfseries m\+\_\+headers\+\_\+list} \mbox{[}2\mbox{]}\mbox{[}100\mbox{]}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a89631fe3e0982526ebc4bacbe9582260}\label{class_calibrate___sensors___dialog_a89631fe3e0982526ebc4bacbe9582260}} 
+QDialog $\ast$ {\bfseries calib\+\_\+zero\+\_\+dialog}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a2f18709704b9a33abce260656e147d95}\label{class_calibrate___sensors___dialog_a2f18709704b9a33abce260656e147d95}} 
+QRadio\+Button $\ast$ {\bfseries select\+\_\+automatic\+\_\+calib\+\_\+zero\+\_\+offset}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_afae4449392f70351db6c2c2a7f1af5db}\label{class_calibrate___sensors___dialog_afae4449392f70351db6c2c2a7f1af5db}} 
+QRadio\+Button $\ast$ {\bfseries select\+\_\+manual\+\_\+calib\+\_\+zero\+\_\+offset}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_aec5535b5d36f7eb0416ef989e52028e0}\label{class_calibrate___sensors___dialog_aec5535b5d36f7eb0416ef989e52028e0}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries raw\+\_\+value\+\_\+to\+\_\+correct\+\_\+offset\+\_\+spin\+Box}
+\item 
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a487f5b736d2f5294031a31d8c958eb00}\label{class_calibrate___sensors___dialog_a487f5b736d2f5294031a31d8c958eb00}} 
+QDouble\+Spin\+Box $\ast$ {\bfseries measurement\+\_\+to\+\_\+correct\+\_\+offset\+\_\+spin\+Box}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} -\/ Class of the dialog window used for configuring the calibration tables of measurements on LCR/frequency/\+ADC sensor channels , and configuring the constants of calibration function of counter measurements on frequency sensor channels.
+
+{\bfseries{Description}} \mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}} is the base class for the dialog used for configuring the LCR or ADC sensors calibration (applied over the RAW data) Classes that will inherit this class are \textquotesingle{}\mbox{\hyperlink{class_device___calibrate___sensors___dialog}{Device\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} (used for configuring the device calibrations) and \textquotesingle{}\mbox{\hyperlink{class_virtual___calibrate___sensors___dialog}{Virtual\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} (used for configuring the virtual calibrations that are only available to use on the PC, not on the sensors board) . 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a54d0aca059c8776a17b3aa76810b373f}\label{class_calibrate___sensors___dialog_a54d0aca059c8776a17b3aa76810b373f}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Calibrate\_Sensors\_Dialog()}{Calibrate\_Sensors\_Dialog()}}
+{\footnotesize\ttfamily Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}\item[{int $\ast$}]{previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog\+\_\+ptr,  }\item[{char($\ast$)}]{calib\+\_\+units\+\_\+vector\+\_\+ptr\mbox{[}\+N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]},  }\item[{QStandard\+Item\+Model $\ast$$\ast$}]{model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr,  }\item[{\mbox{\hyperlink{structcounters__calib__struct}{counters\+\_\+calib}} $\ast$}]{counters\+\_\+calib\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor of the base class used for configuring the calibration tables of measurements on LCR/frequency/\+ADC sensor channels , and configuring the constants of calibration function of counter measurements on frequency sensor channels. 
+
+explicit \mbox{\hyperlink{class_calibrate___sensors___dialog_a54d0aca059c8776a17b3aa76810b373f}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog(int $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog\+\_\+ptr,char ($\ast$calib\+\_\+units\+\_\+vector\+\_\+ptr)\mbox{[}\+N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}, QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr, counters\+\_\+calib $\ast$counters\+\_\+calib\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$previous\+\_\+ch\+\_\+number\+\_\+for\+\_\+saved\+\_\+calib\+\_\+dialog\+\_\+ptr} & Pointer to variable that stores the selected channel number that was previously selected by the user on \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em ($\ast$calib\+\_\+units\+\_\+vector\+\_\+ptr)\mbox{[}\+N\+\_\+\+CHARS\+\_\+\+CALIB\+\_\+\+UNITS\mbox{]}} & Pointer to array(vector) where are stored the calibration units for all the sensor channels (each entry of this array is a pointer to a C string). \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr} & Pointer to array(vector) where are stored the calibration tables for all the sensor channels \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$counters\+\_\+calib\+\_\+ptr} & Pointer to structure (\textquotesingle{}counters\+\_\+calib\textquotesingle{}) where are stored the constants of the calibration function used to calculate the counter measurements \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a9f138911d1434407ed404fa607bfdd63}\label{class_calibrate___sensors___dialog_a9f138911d1434407ed404fa607bfdd63}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Adapt\_Calib\_Table@{Adapt\_Calib\_Table}}
+\index{Adapt\_Calib\_Table@{Adapt\_Calib\_Table}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Adapt\_Calib\_Table}{Adapt\_Calib\_Table}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Adapt\+\_\+\+Calib\+\_\+\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a9f138911d1434407ed404fa607bfdd63}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Adapt\+\_\+\+Calib\+\_\+\+Table()}} -\/ Calculate 2 extra calibration samples (at start and end of the calibration table), in order to extend the calibration table to cover all the possible values of the input RAW\+\_\+value.
+
+Calculate 2 extra calibration samples (at start and end of the calibration table), in order to extend the calibration table to cover all the possible values of the input RAW\+\_\+value. For this the slope of the last 2 points(\+RAW\+\_\+value, measurement) at the top and at the bottom of the calibration table is calculated, and so the 2 calculated slopes(at start and end of table) are used to calculate an additional point on each side of the table (one for representing a very small measurement and other for very big measurement), so extending the coverage of the calibration table on each side by extending it with a straight-\/line with same slope as the previous line segment defined by the last 2 points (at the top or the bottom of the calibration table). \mbox{\Hypertarget{class_calibrate___sensors___dialog_aa8fe397d263dd0990f574b31896ff77e}\label{class_calibrate___sensors___dialog_aa8fe397d263dd0990f574b31896ff77e}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Add\_New\_Row@{Add\_New\_Row}}
+\index{Add\_New\_Row@{Add\_New\_Row}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Add\_New\_Row}{Add\_New\_Row}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Add\+\_\+\+New\+\_\+\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Add a new row at the end of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_aa8fe397d263dd0990f574b31896ff77e}{Add\+\_\+\+New\+\_\+\+Row()}} \mbox{\Hypertarget{class_calibrate___sensors___dialog_a856cfe5737ac5b1081c0e23c17c3f32f}\label{class_calibrate___sensors___dialog_a856cfe5737ac5b1081c0e23c17c3f32f}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Calib\_Table\_Row\_Count@{Calib\_Table\_Row\_Count}}
+\index{Calib\_Table\_Row\_Count@{Calib\_Table\_Row\_Count}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Calib\_Table\_Row\_Count()}{Calib\_Table\_Row\_Count()}}
+{\footnotesize\ttfamily int Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Calib\+\_\+\+Table\+\_\+\+Row\+\_\+\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of rows of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. 
+
+int \mbox{\hyperlink{class_calibrate___sensors___dialog_a856cfe5737ac5b1081c0e23c17c3f32f}{Calib\+\_\+\+Table\+\_\+\+Row\+\_\+\+Count()}}
+
+\begin{DoxyReturn}{Returns}
+(int) The number of rows of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_afe7b12c9cc586161c38dffe8be6d136f}\label{class_calibrate___sensors___dialog_afe7b12c9cc586161c38dffe8be6d136f}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Calibrate\_Zero\_Offset@{Calibrate\_Zero\_Offset}}
+\index{Calibrate\_Zero\_Offset@{Calibrate\_Zero\_Offset}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Calibrate\_Zero\_Offset}{Calibrate\_Zero\_Offset}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Calibrate\+\_\+\+Zero\+\_\+\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Creates the dialog window for the \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment; f2(x)=f1(x)+offset, where the offset is calculated by a point(\+RAW\+\_\+value, measurement). 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_afe7b12c9cc586161c38dffe8be6d136f}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Calibrate\+\_\+\+Zero\+\_\+\+Offset()}}
+
+PART1 -\/ Creates the dialog window for the \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment. \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment\+: Will move all the points on a calibration table by adding an offset value to the calibration function(\textquotesingle{}table\textquotesingle{}), so this is f2(x)=f1(x)+offset where the offset is calculated by a point(\+RAW\+\_\+value, measurement) provided by the user that is desired to be perfectly matched by the calibration function(\textquotesingle{}table\textquotesingle{}). \mbox{\Hypertarget{class_calibrate___sensors___dialog_a73b8c9addc41cc47e3e0771338c57bd9}\label{class_calibrate___sensors___dialog_a73b8c9addc41cc47e3e0771338c57bd9}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Calibrate\_Zero\_Offset\_part2@{Calibrate\_Zero\_Offset\_part2}}
+\index{Calibrate\_Zero\_Offset\_part2@{Calibrate\_Zero\_Offset\_part2}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Calibrate\_Zero\_Offset\_part2}{Calibrate\_Zero\_Offset\_part2}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Calibrate\+\_\+\+Zero\+\_\+\+Offset\+\_\+part2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Executes the \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment; f2(x)=f1(x)+offset, where the offset is calculated by a point(\+RAW\+\_\+value, measurement). 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a73b8c9addc41cc47e3e0771338c57bd9}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Calibrate\+\_\+\+Zero\+\_\+\+Offset\+\_\+part2()}}
+
+PART2 -\/ Executes the \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment. \textquotesingle{}Calibrate Zero Offset\textquotesingle{} adjustment\+: Will move all the points on a calibration table by adding an offset value to the calibration function(\textquotesingle{}table\textquotesingle{}), so this is f2(x)=f1(x)+offset where the offset is calculated by a point(\+RAW\+\_\+value, measurement) provided by the user that is desired to be perfectly matched by the calibration function(\textquotesingle{}table\textquotesingle{}). \mbox{\Hypertarget{class_calibrate___sensors___dialog_af7873ae37615b37810f9c3859e6e618c}\label{class_calibrate___sensors___dialog_af7873ae37615b37810f9c3859e6e618c}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Create\_Copy\_Model\_Table@{Create\_Copy\_Model\_Table}}
+\index{Create\_Copy\_Model\_Table@{Create\_Copy\_Model\_Table}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Create\_Copy\_Model\_Table()}{Create\_Copy\_Model\_Table()}}
+{\footnotesize\ttfamily QStandard\+Item\+Model $\ast$ Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Create\+\_\+\+Copy\+\_\+\+Model\+\_\+\+Table (\begin{DoxyParamCaption}\item[{QStandard\+Item\+Model $\ast$}]{src\+\_\+model\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Make a copy of the of one QStandard\+Item\+Model to another QStandard\+Item\+Model (used to save/display a calibration table). 
+
+QStandard\+Item\+Model $\ast$\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Create\+\_\+\+Copy\+\_\+\+Model\+\_\+\+Table(\+QStandard\+Item\+Model $\ast$src\+\_\+model\+\_\+table)
+
+This function copies one QStandard\+Item\+Model table to another table, usually to copy a calibration table from the array on \textquotesingle{}$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr\textquotesingle{} to the calibration table currently displayed on the dialog \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. The various calibration tables are saved on the array on \textquotesingle{}$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr\textquotesingle{}. Only one calibration table is currently shown on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog (that is saved on variable \textquotesingle{}current\+\_\+model\+\_\+table\+\_\+calib\textquotesingle{}). The currently shown calibration table is on a separated variable because is being edited by the user, thus whenever the dialog is opened or \textquotesingle{}Select Channel\textquotesingle{} spin\+Box is changed, it is copied the from the array on \textquotesingle{}$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr\textquotesingle{} to \textquotesingle{}current\+\_\+model\+\_\+table\+\_\+calib\textquotesingle{} (that is the table currently show/visible on the dialog window). Whenever the user clicks the \textquotesingle{}OK\textquotesingle{} button, it means it finished editing the table contents of the currently selected sensor channel, and then the program uses again Create\+\_\+\+Copy\+\_\+\+Model\+\_\+\+Table(...) to copy the data currently shown/visible on \textquotesingle{}current\+\_\+model\+\_\+table\+\_\+calib\textquotesingle{} (with calibration table data inserted/edited by the user) back to the correspondent table on the array on \textquotesingle{}$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr\textquotesingle{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$src\+\_\+model\+\_\+table} & Pointer to the table (of type \textquotesingle{}QStandard\+Item\+Model\textquotesingle{}) that will have its contents copied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QStandard\+Item\+Model$\ast$ Memory address of the new table created and filled (copied) with same content as on the table referenced by \textquotesingle{}$\ast$src\+\_\+model\+\_\+table\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ad5f7c4690610568c6b64d856210ce84b}\label{class_calibrate___sensors___dialog_ad5f7c4690610568c6b64d856210ce84b}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Read\_Measurement\_From\_Calib\_Table@{Read\_Measurement\_From\_Calib\_Table}}
+\index{Read\_Measurement\_From\_Calib\_Table@{Read\_Measurement\_From\_Calib\_Table}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Read\_Measurement\_From\_Calib\_Table()}{Read\_Measurement\_From\_Calib\_Table()}}
+{\footnotesize\ttfamily float Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Read\+\_\+\+Measurement\+\_\+\+From\+\_\+\+Calib\+\_\+\+Table (\begin{DoxyParamCaption}\item[{QStandard\+Item\+Model $\ast$$\ast$}]{model\+\_\+tables\+\_\+calib\+\_\+vector,  }\item[{int}]{sensor\+\_\+number,  }\item[{float}]{RAW\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads (calculates) a measurement from the selected calibration table in a similar way to the Multiple-\/\+Sensor device; this is it will read from the calibration table the two points closest tot he selected RAW\+\_\+value, then it will calculate a line ( measurement = a$\ast$\+RAW\+\_\+value + b) passing on those 2 points, it will calculate measurement from the mentioned equation for the selected RAW\+\_\+value. 
+
+static float \mbox{\hyperlink{class_calibrate___sensors___dialog_ad5f7c4690610568c6b64d856210ce84b}{Read\+\_\+\+Measurement\+\_\+\+From\+\_\+\+Calib\+\_\+\+Table(\+QStandard\+Item\+Model $\ast$$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector, int sensor\+\_\+number, float RAW\+\_\+value)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em model\+\_\+tables\+\_\+calib\+\_\+vector} & Pointer to array(vector) where are stored the calibration tables for all the sensor channels. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+number} & The sensor channel number that is to be read(calculated) from the calibration table. \\
+\hline
+\mbox{\texttt{ in}}  & {\em RAW\+\_\+value} & The RAW\+\_\+value of sensor channel that is to be read (calculated) from the calibration table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the read (calculated) measurement for the given RAW\+\_\+value from the selected calibration table (sensor channel). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a4afddc40ee601de3b7e78dad75bf553f}\label{class_calibrate___sensors___dialog_a4afddc40ee601de3b7e78dad75bf553f}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Save\_Sensors\_Calibrations@{Save\_Sensors\_Calibrations}}
+\index{Save\_Sensors\_Calibrations@{Save\_Sensors\_Calibrations}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Save\_Sensors\_Calibrations}{Save\_Sensors\_Calibrations}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Save\+\_\+\+Sensors\+\_\+\+Calibrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Saves calibration data of currently selected sensor channel from \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog to the correspondent program variables. 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a4afddc40ee601de3b7e78dad75bf553f}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Save\+\_\+\+Sensors\+\_\+\+Calibrations()}}
+
+This function saves all the calibration data of currently selected sensor channel visible on the dialog \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}, on the correspondent program variables (model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr; calib\+\_\+units\+\_\+vector\+\_\+pt; counters\+\_\+calib\+\_\+ptr). Whenever the user clicks the \textquotesingle{}OK\textquotesingle{} button, it means it finished editing the table contents of the currently selected sensor channel, and then the program uses again Create\+\_\+\+Copy\+\_\+\+Model\+\_\+\+Table(...) to copy the data currently shown/visible on \textquotesingle{}current\+\_\+model\+\_\+table\+\_\+calib\textquotesingle{} (with calibration table data inserted/edited by the user) back to the correspondent table on the array on \textquotesingle{}$\ast$model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr\textquotesingle{}. The program also saves the calibration measurement units on the correspondent position on \textquotesingle{}calib\+\_\+units\+\_\+vector\+\_\+ptr\textquotesingle{}, and also saves the counter calibration constants and counter calibration measurement units on correspondent position on \textquotesingle{}counters\+\_\+calib\+\_\+ptr\textquotesingle{}; \textquotesingle{}correspondent position\textquotesingle{} refers to the vector entry/position determined by the currently selected sensor channel. \mbox{\Hypertarget{class_calibrate___sensors___dialog_a8eadf62cf52e34a70038bfc22577250c}\label{class_calibrate___sensors___dialog_a8eadf62cf52e34a70038bfc22577250c}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Set\_Calib\_Headers@{Set\_Calib\_Headers}}
+\index{Set\_Calib\_Headers@{Set\_Calib\_Headers}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Set\_Calib\_Headers}{Set\_Calib\_Headers}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Set\+\_\+\+Calib\+\_\+\+Headers (\begin{DoxyParamCaption}\item[{char $\ast$}]{header\+\_\+name\+\_\+col0,  }\item[{char $\ast$}]{header\+\_\+name\+\_\+col1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set/save the column names of the table header to be used/displayed on the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a8eadf62cf52e34a70038bfc22577250c}{Set\+\_\+\+Calib\+\_\+\+Headers(char $\ast$header\+\_\+name\+\_\+col0, char $\ast$header\+\_\+name\+\_\+col1)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em header\+\_\+name\+\_\+col0} & Name of the 1st column of the calibration table (Example\+: \textquotesingle{}Freq(\+Hz)\textquotesingle{} or \textquotesingle{}Voltage(\+V)\textquotesingle{}). \\
+\hline
+\mbox{\texttt{ in}}  & {\em header\+\_\+name\+\_\+col1} & Name of the 2nd column of the calibration table (Example\+: \textquotesingle{}Measurement\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_a2ac5394c394771e170ec6c8cbeb7ce0f}\label{class_calibrate___sensors___dialog_a2ac5394c394771e170ec6c8cbeb7ce0f}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Set\_Rows\_Color@{Set\_Rows\_Color}}
+\index{Set\_Rows\_Color@{Set\_Rows\_Color}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Set\_Rows\_Color}{Set\_Rows\_Color}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Set\+\_\+\+Rows\+\_\+\+Color (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+row,  }\item[{int}]{end\+\_\+row,  }\item[{QColor}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set the color of the rows between (and including) the row numbered \textquotesingle{}start\+\_\+row\textquotesingle{} and row numbered \textquotesingle{}end\+\_\+row\textquotesingle{}, of the calibration table currently shown/presented on the \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} dialog window. 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_a2ac5394c394771e170ec6c8cbeb7ce0f}{Set\+\_\+\+Rows\+\_\+\+Color(int start\+\_\+row, int end\+\_\+row, QColor color)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start\+\_\+row} & The number of the first row to be colored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em end\+\_\+row} & The number of the last row to be colored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em color} & The new color to be applied on the selected rows (color as defined on Qt library \textquotesingle{}QColor\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_calibrate___sensors___dialog_ad3e557f595f12e572664dcd2cce445b0}\label{class_calibrate___sensors___dialog_ad3e557f595f12e572664dcd2cce445b0}} 
+\index{Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}!Update\_Calibrate\_Sensors\_Dialog@{Update\_Calibrate\_Sensors\_Dialog}}
+\index{Update\_Calibrate\_Sensors\_Dialog@{Update\_Calibrate\_Sensors\_Dialog}!Calibrate\_Sensors\_Dialog@{Calibrate\_Sensors\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Update\_Calibrate\_Sensors\_Dialog}{Update\_Calibrate\_Sensors\_Dialog}}
+{\footnotesize\ttfamily void Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Update\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Reads sensor calibration data stored on the program variables, and sets/updates items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{}. 
+
+void \mbox{\hyperlink{class_calibrate___sensors___dialog_ad3e557f595f12e572664dcd2cce445b0}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog\+::\+Update\+\_\+\+Calibrate\+\_\+\+Sensors\+\_\+\+Dialog()}}
+
+This function reads the sensor calibration data stored on the program variables (model\+\_\+tables\+\_\+calib\+\_\+vector\+\_\+ptr; calib\+\_\+units\+\_\+vector\+\_\+pt; counters\+\_\+calib\+\_\+ptr), and sets/updates the items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} with the calibration data of currently selected sensor channel. Whenever the user clicks/changes the \textquotesingle{}Select Channel \#\textquotesingle{} spin\+Box, this function should be called to set/update the items visible on dialog \textquotesingle{}\mbox{\hyperlink{class_calibrate___sensors___dialog}{Calibrate\+\_\+\+Sensors\+\_\+\+Dialog}}\textquotesingle{} with sensor calibration data of the currently selected sensor channel. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/calibrate\+\_\+sensors\+\_\+dialog.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/calibrate\+\_\+sensors\+\_\+dialog.\+cpp\end{DoxyCompactItemize}

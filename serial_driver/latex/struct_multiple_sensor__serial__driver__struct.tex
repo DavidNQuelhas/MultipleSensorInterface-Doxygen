@@ -1,0 +1,70 @@
+\hypertarget{struct_multiple_sensor__serial__driver__struct}{}\doxysection{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+struct Struct Reference}
+\label{struct_multiple_sensor__serial__driver__struct}\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+
+
+{\ttfamily \#include $<$multiple\+\_\+sensor\+\_\+modbus\+\_\+driver.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct_aa358768cbc9b8ed27055d5b41726d79a}{is\+Connected}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct_ace070b4c971a807feb76c2ff180206ce}{serial\+\_\+device}}
+\item 
+char \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct_a6d9c229aa99cc157baaf084f3ae84e6a}{port\+\_\+name}} \mbox{[}\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a64978012d4687a29cefb5ca3c971c3fa}{SERIAL\+\_\+\+PORT\+\_\+\+NAME\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct_ac494c5257b8fc73e76562b7e227bf96d}{board\+\_\+\+ID}}
+\item 
+int \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct_a058146b0dcf719556edf6d8bfb4711a0}{error\+\_\+code\+\_\+recent}}
+\item 
+int \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct_a5f24f8a34fdb710aff04cb571180360c}{error\+\_\+at\+\_\+\+CH\+\_\+number\+\_\+or\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textquotesingle{}typedef Multiple\+Sensor\+\_\+serial\+\_\+driver\textquotesingle{} ; \textquotesingle{}struct \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+struct}}\textquotesingle{} -\/ Structure containing all variables required to interact with the Multiple-\/\+Sensor Interface by RS485/serial
+
+{\bfseries{Description}} Structure containing all variables required to interact with the Multiple-\/\+Sensor Interface by RS485/serial 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_multiple_sensor__serial__driver__struct_ac494c5257b8fc73e76562b7e227bf96d}\label{struct_multiple_sensor__serial__driver__struct_ac494c5257b8fc73e76562b7e227bf96d}} 
+\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}!board\_ID@{board\_ID}}
+\index{board\_ID@{board\_ID}!MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+\doxysubsubsection{\texorpdfstring{board\_ID}{board\_ID}}
+{\footnotesize\ttfamily unsigned char board\+\_\+\+ID}
+
+\mbox{\Hypertarget{struct_multiple_sensor__serial__driver__struct_a5f24f8a34fdb710aff04cb571180360c}\label{struct_multiple_sensor__serial__driver__struct_a5f24f8a34fdb710aff04cb571180360c}} 
+\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}!error\_at\_CH\_number\_or\_position@{error\_at\_CH\_number\_or\_position}}
+\index{error\_at\_CH\_number\_or\_position@{error\_at\_CH\_number\_or\_position}!MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+\doxysubsubsection{\texorpdfstring{error\_at\_CH\_number\_or\_position}{error\_at\_CH\_number\_or\_position}}
+{\footnotesize\ttfamily int error\+\_\+at\+\_\+\+CH\+\_\+number\+\_\+or\+\_\+position}
+
+\mbox{\Hypertarget{struct_multiple_sensor__serial__driver__struct_a058146b0dcf719556edf6d8bfb4711a0}\label{struct_multiple_sensor__serial__driver__struct_a058146b0dcf719556edf6d8bfb4711a0}} 
+\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}!error\_code\_recent@{error\_code\_recent}}
+\index{error\_code\_recent@{error\_code\_recent}!MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+\doxysubsubsection{\texorpdfstring{error\_code\_recent}{error\_code\_recent}}
+{\footnotesize\ttfamily int error\+\_\+code\+\_\+recent}
+
+\mbox{\Hypertarget{struct_multiple_sensor__serial__driver__struct_aa358768cbc9b8ed27055d5b41726d79a}\label{struct_multiple_sensor__serial__driver__struct_aa358768cbc9b8ed27055d5b41726d79a}} 
+\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+\doxysubsubsection{\texorpdfstring{isConnected}{isConnected}}
+{\footnotesize\ttfamily int is\+Connected}
+
+\mbox{\Hypertarget{struct_multiple_sensor__serial__driver__struct_a6d9c229aa99cc157baaf084f3ae84e6a}\label{struct_multiple_sensor__serial__driver__struct_a6d9c229aa99cc157baaf084f3ae84e6a}} 
+\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}!port\_name@{port\_name}}
+\index{port\_name@{port\_name}!MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+\doxysubsubsection{\texorpdfstring{port\_name}{port\_name}}
+{\footnotesize\ttfamily char port\+\_\+name\mbox{[}\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a64978012d4687a29cefb5ca3c971c3fa}{SERIAL\+\_\+\+PORT\+\_\+\+NAME\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}}
+
+\mbox{\Hypertarget{struct_multiple_sensor__serial__driver__struct_ace070b4c971a807feb76c2ff180206ce}\label{struct_multiple_sensor__serial__driver__struct_ace070b4c971a807feb76c2ff180206ce}} 
+\index{MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}!serial\_device@{serial\_device}}
+\index{serial\_device@{serial\_device}!MultipleSensor\_serial\_driver\_struct@{MultipleSensor\_serial\_driver\_struct}}
+\doxysubsubsection{\texorpdfstring{serial\_device}{serial\_device}}
+{\footnotesize\ttfamily void$\ast$ serial\+\_\+device}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/serial\+\_\+driver/multiple\+\_\+sensor\+\_\+modbus\+\_\+driver/\mbox{\hyperlink{multiple__sensor__modbus__driver_8h}{multiple\+\_\+sensor\+\_\+modbus\+\_\+driver.\+h}}\end{DoxyCompactItemize}

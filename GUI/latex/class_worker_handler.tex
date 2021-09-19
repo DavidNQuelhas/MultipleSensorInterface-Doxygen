@@ -1,0 +1,101 @@
+\hypertarget{class_worker_handler}{}\doxysection{Worker\+Handler Class Reference}
+\label{class_worker_handler}\index{WorkerHandler@{WorkerHandler}}
+
+
+{\ttfamily \#include $<$Worker\+Handler.\+h$>$}
+
+Inheritance diagram for Worker\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_worker_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_handler_abba5fe4bfc38db195a94d2d70bb1caa9}\label{class_worker_handler_abba5fe4bfc38db195a94d2d70bb1caa9}} 
+void {\bfseries cancel} ()
+\item 
+\mbox{\Hypertarget{class_worker_handler_aab25049144ae09e898b7f91c99b66d4e}\label{class_worker_handler_aab25049144ae09e898b7f91c99b66d4e}} 
+void {\bfseries toggle\+Paused} ()
+\item 
+\mbox{\Hypertarget{class_worker_handler_a6a35c12087b43f4492a37160e0239870}\label{class_worker_handler_a6a35c12087b43f4492a37160e0239870}} 
+void {\bfseries start\+Work} (const QList$<$ \mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $>$ \&list)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_handler_abd10829762cc799e1687f475d2d67377}\label{class_worker_handler_abd10829762cc799e1687f475d2d67377}} 
+void {\bfseries max\+Progress\+Range\+Changed} (int max\+Range)
+\item 
+\mbox{\Hypertarget{class_worker_handler_a720bc1a0d78c90a5ca38bb0036620b49}\label{class_worker_handler_a720bc1a0d78c90a5ca38bb0036620b49}} 
+void {\bfseries progress\+Value\+Changed} (int value)
+\item 
+\mbox{\Hypertarget{class_worker_handler_a80f3b6404bdad919b492cde268db1099}\label{class_worker_handler_a80f3b6404bdad919b492cde268db1099}} 
+void {\bfseries progress\+Text\+Changed} (const QString \&text)
+\item 
+\mbox{\Hypertarget{class_worker_handler_ac414a667aa3943d4ea22522ed72b88aa}\label{class_worker_handler_ac414a667aa3943d4ea22522ed72b88aa}} 
+void {\bfseries status\+Text\+Changed} (const QString \&text)
+\item 
+\mbox{\Hypertarget{class_worker_handler_a56ce5201ea4ef627fe7c84eeeb3ae091}\label{class_worker_handler_a56ce5201ea4ef627fe7c84eeeb3ae091}} 
+void {\bfseries finished} ()
+\item 
+\mbox{\Hypertarget{class_worker_handler_a456f63c764c114ea1f71e2efde4af2cb}\label{class_worker_handler_a456f63c764c114ea1f71e2efde4af2cb}} 
+void {\bfseries result\+Ready} (const \mbox{\hyperlink{struct_data___struct}{Data}} ret\+\_\+data)
+\item 
+\mbox{\Hypertarget{class_worker_handler_a405bb28145bc4bc5651b10e2457024c7}\label{class_worker_handler_a405bb28145bc4bc5651b10e2457024c7}} 
+void {\bfseries \+\_\+\+\_\+pause} ()
+\item 
+\mbox{\Hypertarget{class_worker_handler_a6d5216a83e779b93a7595f23d30ef307}\label{class_worker_handler_a6d5216a83e779b93a7595f23d30ef307}} 
+void {\bfseries \+\_\+\+\_\+cancel} ()
+\item 
+\mbox{\Hypertarget{class_worker_handler_a2cc9c8f9bfeb3a423e5b776fc1fef60f}\label{class_worker_handler_a2cc9c8f9bfeb3a423e5b776fc1fef60f}} 
+void {\bfseries \+\_\+\+\_\+start\+Work} (const QList$<$ \mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $>$ \&list)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_handler_a1b22546366c7590ffc059c7c0711aeef}\label{class_worker_handler_a1b22546366c7590ffc059c7c0711aeef}} 
+{\bfseries Worker\+Handler} (QObject $\ast$parent=0)
+\item 
+\mbox{\Hypertarget{class_worker_handler_a327c69ece976eecaad143eb2cb418974}\label{class_worker_handler_a327c69ece976eecaad143eb2cb418974}} 
+bool {\bfseries is\+Paused} ()
+\item 
+\mbox{\Hypertarget{class_worker_handler_a5501418be0964003644938f2b7c1820a}\label{class_worker_handler_a5501418be0964003644938f2b7c1820a}} 
+bool {\bfseries is\+Running} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_handler_a8a461007c30633d5cf38566bac1ef9b0}\label{class_worker_handler_a8a461007c30633d5cf38566bac1ef9b0}} 
+void {\bfseries on\+Finish} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_handler_a200454f626f32c4fba23be2468ee1d0f}\label{class_worker_handler_a200454f626f32c4fba23be2468ee1d0f}} 
+QWait\+Condition {\bfseries m\+\_\+pause\+Cond}
+\item 
+\mbox{\Hypertarget{class_worker_handler_ad26bb45f15f70764b9d6cc76d210b0be}\label{class_worker_handler_ad26bb45f15f70764b9d6cc76d210b0be}} 
+bool {\bfseries m\+\_\+pause}
+\item 
+\mbox{\Hypertarget{class_worker_handler_a85b4b0ac17297378a4fb5b6e658dbd09}\label{class_worker_handler_a85b4b0ac17297378a4fb5b6e658dbd09}} 
+bool {\bfseries m\+\_\+is\+Running}
+\item 
+\mbox{\Hypertarget{class_worker_handler_a888a1a63de0c1f9cc3de70a6aca79f91}\label{class_worker_handler_a888a1a63de0c1f9cc3de70a6aca79f91}} 
+\mbox{\hyperlink{class_worker}{Worker}} $\ast$ {\bfseries worker}
+\item 
+\mbox{\Hypertarget{class_worker_handler_a4d00c128af6192e28b9c983c0bfd7c7a}\label{class_worker_handler_a4d00c128af6192e28b9c983c0bfd7c7a}} 
+QThread $\ast$ {\bfseries worker\+Thread}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_worker_handler}{Worker\+Handler}} -\/ Class to create/launch a separate thread of class \textquotesingle{}\mbox{\hyperlink{class_worker}{Worker}}\textquotesingle{} (for transferring calibration tables between the PC and a Multiple-\/\+Sensor Interface device).
+
+{\bfseries{Description}} Class with the methods/instructions to create/launch a separate thread that will run the instructions on the class \textquotesingle{}\mbox{\hyperlink{class_worker}{Worker}}\textquotesingle{} (for transferring calibration tables between the PC and a Multiple-\/\+Sensor Interface device), thus avoiding any blocking of the main window (UI -\/ User Interface). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/Worker\+Handler.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/Worker\+Handler.\+cpp\end{DoxyCompactItemize}

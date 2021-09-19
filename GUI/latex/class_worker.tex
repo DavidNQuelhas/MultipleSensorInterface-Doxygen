@@ -1,0 +1,83 @@
+\hypertarget{class_worker}{}\doxysection{Worker Class Reference}
+\label{class_worker}\index{Worker@{Worker}}
+
+
+{\ttfamily \#include $<$worker.\+h$>$}
+
+Inheritance diagram for Worker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_worker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_a3c0a30d2b799adf44fa209a3a6106412}\label{class_worker_a3c0a30d2b799adf44fa209a3a6106412}} 
+void {\bfseries Cancel} ()
+\item 
+\mbox{\Hypertarget{class_worker_ab47aafa11c6159743e8c07b448fb1b86}\label{class_worker_ab47aafa11c6159743e8c07b448fb1b86}} 
+void {\bfseries Pause} ()
+\item 
+\mbox{\Hypertarget{class_worker_a7f8d9dd719724fc05cf9b2868635a77e}\label{class_worker_a7f8d9dd719724fc05cf9b2868635a77e}} 
+void {\bfseries Set\+\_\+\+Pause\+\_\+\+Condition} (QWait\+Condition \&pause\+\_\+condition)
+\item 
+\mbox{\Hypertarget{class_worker_ac4e29ecf85fcf3e85b71650a27a37369}\label{class_worker_ac4e29ecf85fcf3e85b71650a27a37369}} 
+void {\bfseries Start\+\_\+\+Work} (const QList$<$ \mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $>$ \&list)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_a91052982229f664cd0c40531c0f90582}\label{class_worker_a91052982229f664cd0c40531c0f90582}} 
+void {\bfseries max\+\_\+progress\+\_\+range\+\_\+changed\+\_\+signal} (int max\+\_\+range)
+\item 
+\mbox{\Hypertarget{class_worker_a137ea02f7d1f1d24cf0431c9f2b493b0}\label{class_worker_a137ea02f7d1f1d24cf0431c9f2b493b0}} 
+void {\bfseries progress\+\_\+value\+\_\+changed\+\_\+signal} (int value)
+\item 
+\mbox{\Hypertarget{class_worker_abc5aebeef393c9f08be4c38a89e734a0}\label{class_worker_abc5aebeef393c9f08be4c38a89e734a0}} 
+void {\bfseries progress\+\_\+text\+\_\+changed\+\_\+signal} (const QString \&text)
+\item 
+\mbox{\Hypertarget{class_worker_a4f62c2ada888e57660fa0f84818bd81c}\label{class_worker_a4f62c2ada888e57660fa0f84818bd81c}} 
+void {\bfseries status\+\_\+text\+\_\+changed\+\_\+signal} (const QString \&text)
+\item 
+\mbox{\Hypertarget{class_worker_adb3fbadd1ab3e39cff3a5af4ed59cb90}\label{class_worker_adb3fbadd1ab3e39cff3a5af4ed59cb90}} 
+void {\bfseries finished\+\_\+signal} ()
+\item 
+\mbox{\Hypertarget{class_worker_ae92046906ea268759a3076cc0e183693}\label{class_worker_ae92046906ea268759a3076cc0e183693}} 
+void {\bfseries result\+\_\+ready\+\_\+signal} (\mbox{\hyperlink{struct_data___struct}{Data}} ret\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_a3290234525f8aad4f10f73305c9d1859}\label{class_worker_a3290234525f8aad4f10f73305c9d1859}} 
+{\bfseries Worker} (QObject $\ast$parent=0)
+\item 
+\mbox{\Hypertarget{class_worker_a9e5f412dc5b567149c21011bfa86ca00}\label{class_worker_a9e5f412dc5b567149c21011bfa86ca00}} 
+void {\bfseries Process\+\_\+\+Return\+\_\+\+Value} (int return\+\_\+value\+\_\+of\+\_\+operation, char is\+\_\+operation\+\_\+on\+\_\+header\+\_\+bool, const char $\ast$ret\+\_\+message\+\_\+str\+\_\+in\+\_\+case\+\_\+of\+\_\+success, const char $\ast$ret\+\_\+message\+\_\+str\+\_\+in\+\_\+case\+\_\+of\+\_\+error, const char $\ast$log\+\_\+msg\+\_\+str\+\_\+ptr\+\_\+in\+\_\+case\+\_\+of\+\_\+error, int $\ast$current\+\_\+value\+\_\+progress\+\_\+bar\+\_\+ptr, \mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments}} $\ast$item\+\_\+args\+\_\+ptr, \mbox{\hyperlink{struct_data___struct}{Data\+\_\+\+Struct}} $\ast$ret\+\_\+data\+\_\+ptr, int $\ast$error\+\_\+retry\+\_\+counter\+\_\+ptr, int $\ast$channel\+\_\+number\+\_\+ptr, int $\ast$row\+\_\+number\+\_\+ptr, float RAW\+\_\+value, float measurement)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_worker_a9211f288239062feb1312fa89b8f7490}\label{class_worker_a9211f288239062feb1312fa89b8f7490}} 
+QMutex {\bfseries m\+\_\+sync}
+\item 
+\mbox{\Hypertarget{class_worker_a6d8d6fb6d16bc53a95e72228eb746c02}\label{class_worker_a6d8d6fb6d16bc53a95e72228eb746c02}} 
+QWait\+Condition $\ast$ {\bfseries m\+\_\+pause\+\_\+cond}
+\item 
+\mbox{\Hypertarget{class_worker_a7ca2485d7b67c779a142337e682f71da}\label{class_worker_a7ca2485d7b67c779a142337e682f71da}} 
+volatile bool {\bfseries m\+\_\+pause}
+\item 
+\mbox{\Hypertarget{class_worker_a7f6f03f3245130f9ff54829fc0f6f6eb}\label{class_worker_a7f6f03f3245130f9ff54829fc0f6f6eb}} 
+volatile bool {\bfseries m\+\_\+stop}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_worker}{Worker}} -\/ Separate thread for transferring (download or upload) calibration tables between the PC and a Multiple-\/\+Sensor Interface device, by using USB and RS485/serial drivers of the Multiple-\/\+Sensor Interface.
+
+{\bfseries{Description}} Instructions to be executed on a separate thread, that execute the operations of transferring (download or upload) calibration tables between the PC and a Multiple-\/\+Sensor Interface device, implemented by using the functions of the USB and RS485/serial drivers of the Multiple-\/\+Sensor Interface. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/worker.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/worker.\+cpp\end{DoxyCompactItemize}

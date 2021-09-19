@@ -1,0 +1,1556 @@
+\hypertarget{multiple__sensor__modbus__driver_8h}{}\doxysection{C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/serial\+\_\+driver/multiple\+\_\+sensor\+\_\+modbus\+\_\+driver/multiple\+\_\+sensor\+\_\+modbus\+\_\+driver.h File Reference}
+\label{multiple__sensor__modbus__driver_8h}\index{C:/Users/DavidQ/projects/MultipleSensor/Repository/GitHub/MultipleSensorInterface/serial\_driver/multiple\_sensor\_modbus\_driver/multiple\_sensor\_modbus\_driver.h@{C:/Users/DavidQ/projects/MultipleSensor/Repository/GitHub/MultipleSensorInterface/serial\_driver/multiple\_sensor\_modbus\_driver/multiple\_sensor\_modbus\_driver.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af501ddb3e0a1c78f5f13edc05fa02328}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT}}
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a92cb97216b2c7d5b54d993f8f5d4f83c}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+CALL}}
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}}~\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af501ddb3e0a1c78f5f13edc05fa02328}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT}} \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a92cb97216b2c7d5b54d993f8f5d4f83c}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+CALL}}
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a280aaf3d0928a63213c3316ec141909b}{GS\+\_\+\+ASCII}}~29
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d6bf2d469d72bc3ed35079382767968}{US\+\_\+\+ASCII}}~31
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7fc8832e42896bb1dea686751f404eb0}{N\+\_\+\+LCR\+\_\+\+CHANNELS}}~6
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa63b81a7669146464a606e90ce8aafe8}{N\+\_\+\+ADC\+\_\+\+CHANNELS}}~4
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a984c8dd4cb0fcef97581a0ccffc03970}{N\+\_\+\+DIGITAL\+\_\+\+OUT}}~3
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7b6917bda27e53562879f712d8e3fd9f}{SENSOR\+\_\+\+CALIB\+\_\+\+SUCCESS}}~1003
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae367a8cda257dc58d5ffe261e3a52546}{SERIAL\+\_\+\+CONNECTED}}~1002
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a2e61c1ad66492b01969ec7e98f8b0592}{SERIAL\+\_\+\+COMMAND\+\_\+\+OK}}~1001
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9e63769f75b2a818222e1b749e9c8d47}{SERIAL\+\_\+\+COMMAND\+\_\+\+ERROR}}~-\/1002
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9294d2c44a3f3d6c949f5465a1e68641}{SERIAL\+\_\+\+CONNECTION\+\_\+\+ERROR}}~-\/1003
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a4a9f24938b90400d1030958544bf1439}{SENSOR\+\_\+\+CALIB\+\_\+\+FAILED}}~-\/1004
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a96a4562dda11b4239e8fc09ec05b91df}{SENSOR\+\_\+\+READ\+\_\+\+FAIL\+\_\+\+DUE\+\_\+\+MISSING\+\_\+\+CALIB}}~-\/1005
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7de59f3091cb276f2f53d908db3a6b25}{SERIAL\+\_\+\+SET\+\_\+\+BAUD\+\_\+\+RATE\+\_\+\+ERROR}}~-\/1006
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a1fa6507051a6453ddac77c2bc9091928}{SERIAL\+\_\+\+SET\+\_\+\+DATA\+\_\+\+BITS\+\_\+\+ERROR}}~-\/1007
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ad45573659836d74145ee3e21490acf61}{SERIAL\+\_\+\+SET\+\_\+\+PARITY\+\_\+\+ERROR}}~-\/1008
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a4289e56fd38410bec7785ee402a19504}{SERIAL\+\_\+\+SET\+\_\+\+STOP\+\_\+\+BITS\+\_\+\+ERROR}}~-\/1009
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a1e9957b87fd1a604aac139f0a95c8b54}{SERIAL\+\_\+\+SET\+\_\+\+FLOW\+\_\+\+CONTROL\+\_\+\+ERROR}}~-\/1010
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5239aa1bca4bce1d6d3ba79e664652ac}{SERIAL\+\_\+\+WAIT\+\_\+\+TIMEOUT\+\_\+\+ERROR}}~-\/1011
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9f2a2d67b8a2ef86ff820dbe4f96bb84}{SERIAL\+\_\+\+REPLY\+\_\+\+WITH\+\_\+\+INVALID\+\_\+\+DATA}}~-\/1012
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aba51915c87d64af47fb1cc59348961c9}{OK}}~1
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a163911d2f204ff2dad445b0626fedf11}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+MISSING\+\_\+\+STRING\+\_\+\+TERMINATOR}}~-\/2004
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af73c796eddba7ecc626e4bdfd78abd83}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+INVALID\+\_\+\+VARIABLE}}~-\/2005
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae66d006727097b547e1cf1d25a0f0755}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+PARENTHESIS\+\_\+\+PAIRS\+\_\+\+MISMATCH}}~-\/2006
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_afcb5f5a243f2135d80fa62908fe46473}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+MISSING\+\_\+\+OPERATOR}}~-\/2007
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af5b5154116bc998cc13a0aef90474dd5}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+OPERATION\+\_\+\+MISSING\+\_\+1\+ST\+\_\+\+VARIABLE}}~-\/2008
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a0788588a6e1ced4c80506f293755ef20}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+OPERATION\+\_\+\+MISSING\+\_\+2\+ND\+\_\+\+VARIABLE}}~-\/2009
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a4f72009800e9dfa6ed9088bf8bbd46d9}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+INVALID\+\_\+\+CHARACTER}}~-\/2010
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a44e78f87e36c207d2be01aa7798a8d29}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+PARENTHESES\+\_\+\+NOT\+\_\+\+MATCHING}}~-\/2011
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ad040d7a090aaeecbafcee9e796e38b33}{ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+EMPTY\+\_\+\+PARENTHESES}}~-\/2012
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ad003f9c90e54f05bdf4563c36f4088c4}{SERIAL\+\_\+\+REPLY\+\_\+\+WITH\+\_\+\+INVALID\+\_\+\+DATA\+\_\+firmware}}~0x70
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab80971be5978c5377512bca8cadfdad8}{TRUE\+\_\+\+BOOL}}~1
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a0a2aafe215acb7685ca2f5a4a9132995}{FALSE\+\_\+\+BOOL}}~0
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a57c6678f6c93116467949f59a63ddf14}{WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+us\+\_\+1}}~5000
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa33e10bc159f82063a9d7074fae3427f}{WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+us\+\_\+2}}~50000
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa029c2c290fe7547c09add9b2e023953}{WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+ms\+\_\+1}}~5
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a1e5dd616b65cc0662a0c41c8c2281544}{WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+ms\+\_\+2}}~25
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af3e026758bba817b84d5d1817081930d}{SERIAL\+\_\+\+WAIT\+\_\+\+TIMEOUT}}~500
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa78adcc701efab48eb06c83226f592fe}{MAX\+\_\+\+SIZE\+\_\+\+SERIAL\+\_\+\+SEND\+\_\+\+BUFFER}}~65
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ac380df93a26790fd76460fb57170654f}{MAX\+\_\+\+SIZE\+\_\+\+SERIAL\+\_\+\+RECEIVE\+\_\+\+BUFFER}}~65
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa2e339058b943a0233148af74b6218af}{CALIB\+\_\+\+UNITS\+\_\+\+SIZE\+\_\+\+STR}}~20
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ad4dd39b0783477af68cec49cfdaff32e}{CALIB\+\_\+\+TABLE\+\_\+\+MAX\+\_\+\+ROWS\+\_\+\+TO\+\_\+\+PROCESS\+\_\+\+ON\+\_\+\+MULTI\+\_\+\+MODE}}~12
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a21e63c42fdfe9b8406cd11cfca309fb7}{CALIB\+\_\+\+TABLE\+\_\+\+MAX\+\_\+\+ROWS\+\_\+\+TO\+\_\+\+PROCESS\+\_\+\+ON\+\_\+\+SINGLE\+\_\+\+MODE}}~32
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a180e6061807932ccdbd28a24f0144b38}{INF\+\_\+4byte\+\_\+float}}~2000000000.\+0
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a80330ba31f2bd8ea6c3cb4f09b38516e}{COUNTER\+\_\+\+CALIB\+\_\+\+ROW\+\_\+\+NUMBER}}~240
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a64978012d4687a29cefb5ca3c971c3fa}{SERIAL\+\_\+\+PORT\+\_\+\+NAME\+\_\+\+MAX\+\_\+\+SIZE}}~50
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab19797e32791c39dcd84ee7ad1b1a4f1}{MAX\+\_\+\+N\+\_\+\+CHAR\+\_\+\+USART}}~13
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a8609d0b413302dab0f8374d709972495}{MAX\+\_\+\+CHARACTERS\+\_\+\+OF\+\_\+\+MESSAGE}}~60
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a73b59e61017f17819626aa153c4d5ae8}{BOOL\+\_\+\+FUNC\+\_\+\+N\+\_\+\+BYTES}}~54
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a11f8e820e69c60b5fe651285d32d312a}{BOOL\+\_\+\+FUNC\+\_\+\+MAX\+\_\+\+LENGTH}}~50
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a6c3a72bc0e40227ac2c8d256e5e0e5fa}{SELECT\+\_\+\+MEASUREMENT\+\_\+\+TIME\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x01
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a1309fa036d677bb8aa3be8b8759f0eeb}{QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7e7a73505e0bd5544fd5c9dd23a97dab}{QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x16
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a014ad41a0a032365fc6e2b86f36d0f0e}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x20
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af4cf2f9d44bc7159afcae27095397dad}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x30
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ac031bcb83ffc359cec557a25c3192add}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x40
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a586abe0961ec0dd44ebc5cbee10ee900}{QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x87
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a0adbd91c96d76789445288c59e63b3fd}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x91
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a8c4362be63119a0a98f4ac9c96cc249e}{QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x95
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae46acebece6befc966b5652d35c1705a}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x96
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5ca68d13e0b9cd82609c9ed4044aa30f}{QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x50
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aaaa45e5ffb0211e3155c15a3c93e4cdb}{RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x58
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a494b00108204a2e952f691452678cea7}{QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x60
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a3f9d25eced969511dac92ce58367a385}{SET\+\_\+\+OR\+\_\+\+GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x98
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_adc2199ec879d50eb3db8769964a183d5}{MULTIPLE\+\_\+\+SENSOR\+\_\+\+FIRMWARE\+\_\+\+ERROR\+\_\+\+Modbus\+RTU}}~0x\+FF
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9979ff47ff5b344d84a936aab2f73a63}{QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a3f0e8e85d5299c11191f5e664aba305b}{QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a2a78575a7270cb5eacd80b602ae0d370}{SAVE\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9b3b4592d4f47b7b182d44636fae01c3}{QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab2f7b803aa6a78262e6ded5dce51fcef}{SAVE\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa2c3ebd637f7a729ec2abba375d1b544}{QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_acf613afb004ada8505f5e6eac1879415}{SAVE\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a578816cd6610bdbe015856bf5a037ef6}{QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aed051da940c6c73a182288f1a63ea458}{QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af70fee45ffcd4548528005ca2973f915}{QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9a8500d1d42b5093abdb8fa21ff17c42}{SAVE\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a8b2a8cc8713c99be4c325793275f44d2}{QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a98963274c20a3c5576b7679f1bcdf859}{QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a43bb7d8c33916b2e426332e9fee9510d}{SAVE\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x06
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a39958637056c9b31190ab2a7f4c928b1}{QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae4fa40a2a98220fce79be6da9f1d3045}{QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7dfe2f375e0cfe3da16c47a94ea820a8}{RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x06
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a83e97cb0a29731b466c23a8933a5f35a}{GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ad013157ae4ea36cf6fa796a1b030c263}{SET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x06
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_affab39ae23fdda0343ef40f215986357}{TIMEOUT\+\_\+\+CYCLES\+\_\+\+Modbus\+RTU}}~10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ad923e61aa3017d83933eab071414f0ac}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~21
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a8e98ea917f8f7ab3c8d36ec9be4d6ef0}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~29
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ac32d834f1d3ed497dc561524583ef59c}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~45
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a1ff98e97bafd3cdcf8ede51fd08a3c16}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~29
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a72f1184f70616a26dfd3e438f90cf1a3}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9bd62258ec656d5031b862375765b666}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~21
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a0e7fdfe65e30d582eefa702e40c927ca}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a56fad081582102520f2abc5986e3fcd0}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~5+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a73b59e61017f17819626aa153c4d5ae8}{BOOL\+\_\+\+FUNC\+\_\+\+N\+\_\+\+BYTES}}
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aef2760ea1555c234e4edf4a469c1cbe3}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~11
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab2fbdb1471355b50e66520f90ce4353d}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a370a817dd0daafafdc6ff73b9a9217df}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+READ\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU}}~7
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a1800c91539a66c01879f01ebf4509ef7}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~29
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab8efe869c40ea5535cbfc6e6c8e5a73b}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab5f5477ae16a62622fdf633374541f61}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~7
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae077943023c339c7cec60bc2c8129130}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a9015ebd81a7190cc16f2f574afd39924}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~13
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7e0475574d5eb5956a90816a773c9203}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a0cf7e54353c0be84009365f60e258796}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~8
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a08b10bcc20e2ea1648a0eaa4bf24a169}{REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~51
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+struct}} \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} void \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a3bd378e9665643f80cb3df0bfaffc2c0}{print\+\_\+\+ERROR\+\_\+\+MSG\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (int error\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Prints the error message correspondent to the error code that was returned by the modbus driver of Multiple-\/\+Sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5afe4714f399ee1145ff66c6e66e56a5}{Open\+Device\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, char $\ast$serial\+\_\+port\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Open the RS485/serial connection to the Multiple-\/\+Sensor device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a2b4ec09bbea86818d8859b8b9206731d}{Save\+Sensor\+Configs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value, char compare\+\_\+is\+\_\+greater\+\_\+than, char sensor\+\_\+prescaler, char sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]}, float sensor\+\_\+trigger\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the trigger states that activates the digital outputs of the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af98546f5f458fff9e46ff74b075f4289}{Read\+Frequency\+Measurement\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int32\+\_\+t $\ast$integer\+\_\+\+CH\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Read the frequency of the all the sensor channels in Hertz, save them as a integer vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae626e0ac371e4e16a84f0f1d78b28e1b}{Read\+ADCValue\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, float $\ast$ADC\+\_\+values\+\_\+vector\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the ADC values in Volt (V) for all the ADC channels (ADC-\/\+Analogue to digital converter). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af6690cbf7f6de2f31fcce294c6713cbd}{Read\+Measurements\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, float $\ast$measurements\+\_\+values\+\_\+vector\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the measurements for the LCR+\+ADC channels in the units defined on the calibration table . (ADC-\/\+Analogue to Digital Converter). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a2b3c30b2320c5136badbcb3f769b87b6}{Read\+Counters\+Measurements\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, float $\ast$counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the measurements for the counters of the LCR channels in the units defined on the counters calibration . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ade3637aa2c2726886a272fdc5d5fa3f5}{Read\+Sensor\+Configs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char $\ast$make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr, char $\ast$compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr, char $\ast$sensor\+\_\+prescaler\+\_\+ptr, char $\ast$sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr, float $\ast$sensor\+\_\+trigger\+\_\+value\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the various configurations of the sensor channel selected on configs\+\_\+for\+\_\+channel\+\_\+number. Please pass on the arguments the pointers to the variables were the read configuration will be saved. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a45c6171df43abb99afb46fd9e4ebabe9}{Read\+Output\+Config\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Reads the boolean equation of the selected digital output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a64c21e01d8a32707febed870278ba296}{Write\+Output\+Config\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Writes the boolean equation of the selected digital output to the device, before writing to the device it checks the validity of the boolean function inserted by the user, in case the boolean function has an error returns the correspondent error code and inside the session struct sets \char`\"{}error\+\_\+at\+\_\+\+CH\+\_\+number\+\_\+or\+\_\+position\char`\"{} to the value of the position were the error occured. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a99f8b94b9c5a967de60a7538b94e13e9}{Read\+Outputs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char $\ast$outputs\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Read the outputs of the multi-\/sensors device, INACTIVE=0x00, ACTIVE=0x01. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a001a001f8afd2f31d340abc9462bec90}{Save\+Mode\+CHConfig\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool, int selected\+\_\+channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Save the selected L,C,R sensors channel mode on the multi-\/sensors device, if in single-\/channel mode the update frequency of the sensor measurement is faster because only one channel is monitored in multi-\/channel mode the device monitors the 6 channels using time-\/multiplexing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a27c14d669dd9fb6c3b90b4ee9b56b948}{Read\+Mode\+CHConfig\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char $\ast$mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr, int $\ast$selected\+\_\+channel\+\_\+number\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the selected L,C,R sensor channel mode on the multi-\/sensors device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab11b42c12f36273cc0666bca096f6373}{Read\+Sensor\+Counters\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, long int $\ast$integer\+\_\+\+CH\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Reads/downloads the counter values (units\+: cycles) of each sensor channel signal, save them on a (long int) vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a3ef6eb690c52e3b0772700acec3fd124}{Reset\+Sensor\+Counters\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session)
+\begin{DoxyCompactList}\small\item\em Resets the counter values (units\+: cycles) of each sensor channel signal. resets $<$=$>$ set to zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5f4e215959750289c2cf7b2f8f76e085}{Get\+Board\+IDCode\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char $\ast$board\+\_\+\+ID\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Get the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af349aadd5f8edd741db8cbd5b94157b3}{Set\+Board\+IDCode\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, unsigned char new\+\_\+board\+\_\+\+ID)
+\begin{DoxyCompactList}\small\item\em Set the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a6a33ad9a75b15ce1c4936ebcefa90295}{Read\+Line\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int channel\+\_\+number, int line\+\_\+number, float $\ast$RAW\+\_\+value\+\_\+ptr, float $\ast$measurement\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em function to download/read from the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_afa55fc0466a4c0190beac742067a8807}{Write\+Line\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int channel\+\_\+number, int line\+\_\+number, float RAW\+\_\+value, float measurement)
+\begin{DoxyCompactList}\small\item\em function to upload/write to the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ac544067f7ca95086fd7ad314cdb1fbac}{Write\+Header\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int channel\+\_\+number, unsigned char calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool, unsigned char number\+\_\+table\+\_\+lines, unsigned char calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch, char jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range, char $\ast$units\+\_\+str, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Writes/uploads the header of the calibration table for the selected channel number on the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa1c43868dcb824f5a5a6850b387f027c}{Read\+Header\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int channel\+\_\+number, unsigned char $\ast$calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr, unsigned char $\ast$number\+\_\+table\+\_\+lines\+\_\+ptr, unsigned char $\ast$calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr, char $\ast$jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr, char $\ast$units\+\_\+str\+\_\+ptr, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Reads/downloads the header of the calibration table for the selected channel number on the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa20b50f591cda596ce7a9edc8dccf1f0}{Write\+Counters\+Calib\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int channel\+\_\+number, float C0, float C1, float C2, float C3)
+\begin{DoxyCompactList}\small\item\em Writes the counter calibration constants for the selected channel number on the device, the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a8a225936289e689cbaaf364f7d4ee5c8}{Read\+Counters\+Calib\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session, int channel\+\_\+number, float $\ast$C0\+\_\+ptr, float $\ast$C1\+\_\+ptr, float $\ast$C2\+\_\+ptr, float $\ast$C3\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Reads the counter calibration constants for the selected channel number on the device the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} void \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a17c2c86b8fd32b391d3c14e5c661a1a9}{Close\+Device\+\_\+\+Serial\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$session)
+\begin{DoxyCompactList}\small\item\em Close the RS485/serial connection to the Multiple-\/\+Sensor device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a11f8e820e69c60b5fe651285d32d312a}\label{multiple__sensor__modbus__driver_8h_a11f8e820e69c60b5fe651285d32d312a}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!BOOL\_FUNC\_MAX\_LENGTH@{BOOL\_FUNC\_MAX\_LENGTH}}
+\index{BOOL\_FUNC\_MAX\_LENGTH@{BOOL\_FUNC\_MAX\_LENGTH}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{BOOL\_FUNC\_MAX\_LENGTH}{BOOL\_FUNC\_MAX\_LENGTH}}
+{\footnotesize\ttfamily \#define BOOL\+\_\+\+FUNC\+\_\+\+MAX\+\_\+\+LENGTH~50}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a73b59e61017f17819626aa153c4d5ae8}\label{multiple__sensor__modbus__driver_8h_a73b59e61017f17819626aa153c4d5ae8}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!BOOL\_FUNC\_N\_BYTES@{BOOL\_FUNC\_N\_BYTES}}
+\index{BOOL\_FUNC\_N\_BYTES@{BOOL\_FUNC\_N\_BYTES}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{BOOL\_FUNC\_N\_BYTES}{BOOL\_FUNC\_N\_BYTES}}
+{\footnotesize\ttfamily \#define BOOL\+\_\+\+FUNC\+\_\+\+N\+\_\+\+BYTES~54}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ad4dd39b0783477af68cec49cfdaff32e}\label{multiple__sensor__modbus__driver_8h_ad4dd39b0783477af68cec49cfdaff32e}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_MULTI\_MODE@{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_MULTI\_MODE}}
+\index{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_MULTI\_MODE@{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_MULTI\_MODE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_MULTI\_MODE}{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_MULTI\_MODE}}
+{\footnotesize\ttfamily \#define CALIB\+\_\+\+TABLE\+\_\+\+MAX\+\_\+\+ROWS\+\_\+\+TO\+\_\+\+PROCESS\+\_\+\+ON\+\_\+\+MULTI\+\_\+\+MODE~12}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a21e63c42fdfe9b8406cd11cfca309fb7}\label{multiple__sensor__modbus__driver_8h_a21e63c42fdfe9b8406cd11cfca309fb7}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_SINGLE\_MODE@{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_SINGLE\_MODE}}
+\index{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_SINGLE\_MODE@{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_SINGLE\_MODE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_SINGLE\_MODE}{CALIB\_TABLE\_MAX\_ROWS\_TO\_PROCESS\_ON\_SINGLE\_MODE}}
+{\footnotesize\ttfamily \#define CALIB\+\_\+\+TABLE\+\_\+\+MAX\+\_\+\+ROWS\+\_\+\+TO\+\_\+\+PROCESS\+\_\+\+ON\+\_\+\+SINGLE\+\_\+\+MODE~32}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa2e339058b943a0233148af74b6218af}\label{multiple__sensor__modbus__driver_8h_aa2e339058b943a0233148af74b6218af}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!CALIB\_UNITS\_SIZE\_STR@{CALIB\_UNITS\_SIZE\_STR}}
+\index{CALIB\_UNITS\_SIZE\_STR@{CALIB\_UNITS\_SIZE\_STR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{CALIB\_UNITS\_SIZE\_STR}{CALIB\_UNITS\_SIZE\_STR}}
+{\footnotesize\ttfamily \#define CALIB\+\_\+\+UNITS\+\_\+\+SIZE\+\_\+\+STR~20}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a80330ba31f2bd8ea6c3cb4f09b38516e}\label{multiple__sensor__modbus__driver_8h_a80330ba31f2bd8ea6c3cb4f09b38516e}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!COUNTER\_CALIB\_ROW\_NUMBER@{COUNTER\_CALIB\_ROW\_NUMBER}}
+\index{COUNTER\_CALIB\_ROW\_NUMBER@{COUNTER\_CALIB\_ROW\_NUMBER}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{COUNTER\_CALIB\_ROW\_NUMBER}{COUNTER\_CALIB\_ROW\_NUMBER}}
+{\footnotesize\ttfamily \#define COUNTER\+\_\+\+CALIB\+\_\+\+ROW\+\_\+\+NUMBER~240}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ad040d7a090aaeecbafcee9e796e38b33}\label{multiple__sensor__modbus__driver_8h_ad040d7a090aaeecbafcee9e796e38b33}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_EMPTY\_PARENTHESES@{ERROR\_BOOL\_FUNC\_EMPTY\_PARENTHESES}}
+\index{ERROR\_BOOL\_FUNC\_EMPTY\_PARENTHESES@{ERROR\_BOOL\_FUNC\_EMPTY\_PARENTHESES}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_EMPTY\_PARENTHESES}{ERROR\_BOOL\_FUNC\_EMPTY\_PARENTHESES}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+EMPTY\+\_\+\+PARENTHESES~-\/2012}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a4f72009800e9dfa6ed9088bf8bbd46d9}\label{multiple__sensor__modbus__driver_8h_a4f72009800e9dfa6ed9088bf8bbd46d9}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_INVALID\_CHARACTER@{ERROR\_BOOL\_FUNC\_INVALID\_CHARACTER}}
+\index{ERROR\_BOOL\_FUNC\_INVALID\_CHARACTER@{ERROR\_BOOL\_FUNC\_INVALID\_CHARACTER}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_INVALID\_CHARACTER}{ERROR\_BOOL\_FUNC\_INVALID\_CHARACTER}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+INVALID\+\_\+\+CHARACTER~-\/2010}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af73c796eddba7ecc626e4bdfd78abd83}\label{multiple__sensor__modbus__driver_8h_af73c796eddba7ecc626e4bdfd78abd83}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_INVALID\_VARIABLE@{ERROR\_BOOL\_FUNC\_INVALID\_VARIABLE}}
+\index{ERROR\_BOOL\_FUNC\_INVALID\_VARIABLE@{ERROR\_BOOL\_FUNC\_INVALID\_VARIABLE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_INVALID\_VARIABLE}{ERROR\_BOOL\_FUNC\_INVALID\_VARIABLE}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+INVALID\+\_\+\+VARIABLE~-\/2005}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_afcb5f5a243f2135d80fa62908fe46473}\label{multiple__sensor__modbus__driver_8h_afcb5f5a243f2135d80fa62908fe46473}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_MISSING\_OPERATOR@{ERROR\_BOOL\_FUNC\_MISSING\_OPERATOR}}
+\index{ERROR\_BOOL\_FUNC\_MISSING\_OPERATOR@{ERROR\_BOOL\_FUNC\_MISSING\_OPERATOR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_MISSING\_OPERATOR}{ERROR\_BOOL\_FUNC\_MISSING\_OPERATOR}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+MISSING\+\_\+\+OPERATOR~-\/2007}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a163911d2f204ff2dad445b0626fedf11}\label{multiple__sensor__modbus__driver_8h_a163911d2f204ff2dad445b0626fedf11}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_MISSING\_STRING\_TERMINATOR@{ERROR\_BOOL\_FUNC\_MISSING\_STRING\_TERMINATOR}}
+\index{ERROR\_BOOL\_FUNC\_MISSING\_STRING\_TERMINATOR@{ERROR\_BOOL\_FUNC\_MISSING\_STRING\_TERMINATOR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_MISSING\_STRING\_TERMINATOR}{ERROR\_BOOL\_FUNC\_MISSING\_STRING\_TERMINATOR}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+MISSING\+\_\+\+STRING\+\_\+\+TERMINATOR~-\/2004}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af5b5154116bc998cc13a0aef90474dd5}\label{multiple__sensor__modbus__driver_8h_af5b5154116bc998cc13a0aef90474dd5}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_1ST\_VARIABLE@{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_1ST\_VARIABLE}}
+\index{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_1ST\_VARIABLE@{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_1ST\_VARIABLE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_1ST\_VARIABLE}{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_1ST\_VARIABLE}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+OPERATION\+\_\+\+MISSING\+\_\+1\+ST\+\_\+\+VARIABLE~-\/2008}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a0788588a6e1ced4c80506f293755ef20}\label{multiple__sensor__modbus__driver_8h_a0788588a6e1ced4c80506f293755ef20}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_2ND\_VARIABLE@{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_2ND\_VARIABLE}}
+\index{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_2ND\_VARIABLE@{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_2ND\_VARIABLE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_2ND\_VARIABLE}{ERROR\_BOOL\_FUNC\_OPERATION\_MISSING\_2ND\_VARIABLE}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+OPERATION\+\_\+\+MISSING\+\_\+2\+ND\+\_\+\+VARIABLE~-\/2009}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a44e78f87e36c207d2be01aa7798a8d29}\label{multiple__sensor__modbus__driver_8h_a44e78f87e36c207d2be01aa7798a8d29}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_PARENTHESES\_NOT\_MATCHING@{ERROR\_BOOL\_FUNC\_PARENTHESES\_NOT\_MATCHING}}
+\index{ERROR\_BOOL\_FUNC\_PARENTHESES\_NOT\_MATCHING@{ERROR\_BOOL\_FUNC\_PARENTHESES\_NOT\_MATCHING}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_PARENTHESES\_NOT\_MATCHING}{ERROR\_BOOL\_FUNC\_PARENTHESES\_NOT\_MATCHING}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+PARENTHESES\+\_\+\+NOT\+\_\+\+MATCHING~-\/2011}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ae66d006727097b547e1cf1d25a0f0755}\label{multiple__sensor__modbus__driver_8h_ae66d006727097b547e1cf1d25a0f0755}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ERROR\_BOOL\_FUNC\_PARENTHESIS\_PAIRS\_MISMATCH@{ERROR\_BOOL\_FUNC\_PARENTHESIS\_PAIRS\_MISMATCH}}
+\index{ERROR\_BOOL\_FUNC\_PARENTHESIS\_PAIRS\_MISMATCH@{ERROR\_BOOL\_FUNC\_PARENTHESIS\_PAIRS\_MISMATCH}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_BOOL\_FUNC\_PARENTHESIS\_PAIRS\_MISMATCH}{ERROR\_BOOL\_FUNC\_PARENTHESIS\_PAIRS\_MISMATCH}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+BOOL\+\_\+\+FUNC\+\_\+\+PARENTHESIS\+\_\+\+PAIRS\+\_\+\+MISMATCH~-\/2006}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a0a2aafe215acb7685ca2f5a4a9132995}\label{multiple__sensor__modbus__driver_8h_a0a2aafe215acb7685ca2f5a4a9132995}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!FALSE\_BOOL@{FALSE\_BOOL}}
+\index{FALSE\_BOOL@{FALSE\_BOOL}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{FALSE\_BOOL}{FALSE\_BOOL}}
+{\footnotesize\ttfamily \#define FALSE\+\_\+\+BOOL~0}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a83e97cb0a29731b466c23a8933a5f35a}\label{multiple__sensor__modbus__driver_8h_a83e97cb0a29731b466c23a8933a5f35a}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+\index{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a280aaf3d0928a63213c3316ec141909b}\label{multiple__sensor__modbus__driver_8h_a280aaf3d0928a63213c3316ec141909b}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!GS\_ASCII@{GS\_ASCII}}
+\index{GS\_ASCII@{GS\_ASCII}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{GS\_ASCII}{GS\_ASCII}}
+{\footnotesize\ttfamily \#define GS\+\_\+\+ASCII~29}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a180e6061807932ccdbd28a24f0144b38}\label{multiple__sensor__modbus__driver_8h_a180e6061807932ccdbd28a24f0144b38}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!INF\_4byte\_float@{INF\_4byte\_float}}
+\index{INF\_4byte\_float@{INF\_4byte\_float}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{INF\_4byte\_float}{INF\_4byte\_float}}
+{\footnotesize\ttfamily \#define INF\+\_\+4byte\+\_\+float~2000000000.\+0}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a8609d0b413302dab0f8374d709972495}\label{multiple__sensor__modbus__driver_8h_a8609d0b413302dab0f8374d709972495}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MAX\_CHARACTERS\_OF\_MESSAGE@{MAX\_CHARACTERS\_OF\_MESSAGE}}
+\index{MAX\_CHARACTERS\_OF\_MESSAGE@{MAX\_CHARACTERS\_OF\_MESSAGE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_CHARACTERS\_OF\_MESSAGE}{MAX\_CHARACTERS\_OF\_MESSAGE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+CHARACTERS\+\_\+\+OF\+\_\+\+MESSAGE~60}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab19797e32791c39dcd84ee7ad1b1a4f1}\label{multiple__sensor__modbus__driver_8h_ab19797e32791c39dcd84ee7ad1b1a4f1}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MAX\_N\_CHAR\_USART@{MAX\_N\_CHAR\_USART}}
+\index{MAX\_N\_CHAR\_USART@{MAX\_N\_CHAR\_USART}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_N\_CHAR\_USART}{MAX\_N\_CHAR\_USART}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+N\+\_\+\+CHAR\+\_\+\+USART~13}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ac380df93a26790fd76460fb57170654f}\label{multiple__sensor__modbus__driver_8h_ac380df93a26790fd76460fb57170654f}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MAX\_SIZE\_SERIAL\_RECEIVE\_BUFFER@{MAX\_SIZE\_SERIAL\_RECEIVE\_BUFFER}}
+\index{MAX\_SIZE\_SERIAL\_RECEIVE\_BUFFER@{MAX\_SIZE\_SERIAL\_RECEIVE\_BUFFER}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_SIZE\_SERIAL\_RECEIVE\_BUFFER}{MAX\_SIZE\_SERIAL\_RECEIVE\_BUFFER}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+SIZE\+\_\+\+SERIAL\+\_\+\+RECEIVE\+\_\+\+BUFFER~65}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa78adcc701efab48eb06c83226f592fe}\label{multiple__sensor__modbus__driver_8h_aa78adcc701efab48eb06c83226f592fe}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MAX\_SIZE\_SERIAL\_SEND\_BUFFER@{MAX\_SIZE\_SERIAL\_SEND\_BUFFER}}
+\index{MAX\_SIZE\_SERIAL\_SEND\_BUFFER@{MAX\_SIZE\_SERIAL\_SEND\_BUFFER}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_SIZE\_SERIAL\_SEND\_BUFFER}{MAX\_SIZE\_SERIAL\_SEND\_BUFFER}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+SIZE\+\_\+\+SERIAL\+\_\+\+SEND\+\_\+\+BUFFER~65}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_adc2199ec879d50eb3db8769964a183d5}\label{multiple__sensor__modbus__driver_8h_adc2199ec879d50eb3db8769964a183d5}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU@{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}}
+\index{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU@{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}}
+{\footnotesize\ttfamily \#define MULTIPLE\+\_\+\+SENSOR\+\_\+\+FIRMWARE\+\_\+\+ERROR\+\_\+\+Modbus\+RTU~0x\+FF}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a92cb97216b2c7d5b54d993f8f5d4f83c}\label{multiple__sensor__modbus__driver_8h_a92cb97216b2c7d5b54d993f8f5d4f83c}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MultipleSensor\_serial\_driver\_CALL@{MultipleSensor\_serial\_driver\_CALL}}
+\index{MultipleSensor\_serial\_driver\_CALL@{MultipleSensor\_serial\_driver\_CALL}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MultipleSensor\_serial\_driver\_CALL}{MultipleSensor\_serial\_driver\_CALL}}
+{\footnotesize\ttfamily \#define Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+CALL}
+
+API call macro \mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af501ddb3e0a1c78f5f13edc05fa02328}\label{multiple__sensor__modbus__driver_8h_af501ddb3e0a1c78f5f13edc05fa02328}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MultipleSensor\_serial\_driver\_EXPORT@{MultipleSensor\_serial\_driver\_EXPORT}}
+\index{MultipleSensor\_serial\_driver\_EXPORT@{MultipleSensor\_serial\_driver\_EXPORT}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MultipleSensor\_serial\_driver\_EXPORT}{MultipleSensor\_serial\_driver\_EXPORT}}
+{\footnotesize\ttfamily \#define Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT}
+
+API export macro \mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}\label{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MultipleSensor\_serial\_driver\_EXPORT\_CALL@{MultipleSensor\_serial\_driver\_EXPORT\_CALL}}
+\index{MultipleSensor\_serial\_driver\_EXPORT\_CALL@{MultipleSensor\_serial\_driver\_EXPORT\_CALL}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MultipleSensor\_serial\_driver\_EXPORT\_CALL}{MultipleSensor\_serial\_driver\_EXPORT\_CALL}}
+{\footnotesize\ttfamily \#define Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL~\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af501ddb3e0a1c78f5f13edc05fa02328}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT}} \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a92cb97216b2c7d5b54d993f8f5d4f83c}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+CALL}}}
+
+API export and call macro \mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa63b81a7669146464a606e90ce8aafe8}\label{multiple__sensor__modbus__driver_8h_aa63b81a7669146464a606e90ce8aafe8}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!N\_ADC\_CHANNELS@{N\_ADC\_CHANNELS}}
+\index{N\_ADC\_CHANNELS@{N\_ADC\_CHANNELS}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{N\_ADC\_CHANNELS}{N\_ADC\_CHANNELS}}
+{\footnotesize\ttfamily \#define N\+\_\+\+ADC\+\_\+\+CHANNELS~4}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a984c8dd4cb0fcef97581a0ccffc03970}\label{multiple__sensor__modbus__driver_8h_a984c8dd4cb0fcef97581a0ccffc03970}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!N\_DIGITAL\_OUT@{N\_DIGITAL\_OUT}}
+\index{N\_DIGITAL\_OUT@{N\_DIGITAL\_OUT}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{N\_DIGITAL\_OUT}{N\_DIGITAL\_OUT}}
+{\footnotesize\ttfamily \#define N\+\_\+\+DIGITAL\+\_\+\+OUT~3}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7fc8832e42896bb1dea686751f404eb0}\label{multiple__sensor__modbus__driver_8h_a7fc8832e42896bb1dea686751f404eb0}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!N\_LCR\_CHANNELS@{N\_LCR\_CHANNELS}}
+\index{N\_LCR\_CHANNELS@{N\_LCR\_CHANNELS}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{N\_LCR\_CHANNELS}{N\_LCR\_CHANNELS}}
+{\footnotesize\ttfamily \#define N\+\_\+\+LCR\+\_\+\+CHANNELS~6}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aba51915c87d64af47fb1cc59348961c9}\label{multiple__sensor__modbus__driver_8h_aba51915c87d64af47fb1cc59348961c9}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!OK@{OK}}
+\index{OK@{OK}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{OK}{OK}}
+{\footnotesize\ttfamily \#define OK~1}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7e7a73505e0bd5544fd5c9dd23a97dab}\label{multiple__sensor__modbus__driver_8h_a7e7a73505e0bd5544fd5c9dd23a97dab}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}}
+\index{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x16}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a3f0e8e85d5299c11191f5e664aba305b}\label{multiple__sensor__modbus__driver_8h_a3f0e8e85d5299c11191f5e664aba305b}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}}
+\index{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9b3b4592d4f47b7b182d44636fae01c3}\label{multiple__sensor__modbus__driver_8h_a9b3b4592d4f47b7b182d44636fae01c3}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a494b00108204a2e952f691452678cea7}\label{multiple__sensor__modbus__driver_8h_a494b00108204a2e952f691452678cea7}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+\index{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x60}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af70fee45ffcd4548528005ca2973f915}\label{multiple__sensor__modbus__driver_8h_af70fee45ffcd4548528005ca2973f915}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a1309fa036d677bb8aa3be8b8759f0eeb}\label{multiple__sensor__modbus__driver_8h_a1309fa036d677bb8aa3be8b8759f0eeb}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}}
+\index{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9979ff47ff5b344d84a936aab2f73a63}\label{multiple__sensor__modbus__driver_8h_a9979ff47ff5b344d84a936aab2f73a63}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}}
+\index{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a578816cd6610bdbe015856bf5a037ef6}\label{multiple__sensor__modbus__driver_8h_a578816cd6610bdbe015856bf5a037ef6}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa2c3ebd637f7a729ec2abba375d1b544}\label{multiple__sensor__modbus__driver_8h_aa2c3ebd637f7a729ec2abba375d1b544}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a586abe0961ec0dd44ebc5cbee10ee900}\label{multiple__sensor__modbus__driver_8h_a586abe0961ec0dd44ebc5cbee10ee900}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+\index{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x87}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aed051da940c6c73a182288f1a63ea458}\label{multiple__sensor__modbus__driver_8h_aed051da940c6c73a182288f1a63ea458}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a5ca68d13e0b9cd82609c9ed4044aa30f}\label{multiple__sensor__modbus__driver_8h_a5ca68d13e0b9cd82609c9ed4044aa30f}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+\index{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x50}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ae4fa40a2a98220fce79be6da9f1d3045}\label{multiple__sensor__modbus__driver_8h_ae4fa40a2a98220fce79be6da9f1d3045}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+\index{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a39958637056c9b31190ab2a7f4c928b1}\label{multiple__sensor__modbus__driver_8h_a39958637056c9b31190ab2a7f4c928b1}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+\index{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a8b2a8cc8713c99be4c325793275f44d2}\label{multiple__sensor__modbus__driver_8h_a8b2a8cc8713c99be4c325793275f44d2}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+\index{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a8c4362be63119a0a98f4ac9c96cc249e}\label{multiple__sensor__modbus__driver_8h_a8c4362be63119a0a98f4ac9c96cc249e}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}}
+\index{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x95}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a98963274c20a3c5576b7679f1bcdf859}\label{multiple__sensor__modbus__driver_8h_a98963274c20a3c5576b7679f1bcdf859}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}}
+\index{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab5f5477ae16a62622fdf633374541f61}\label{multiple__sensor__modbus__driver_8h_ab5f5477ae16a62622fdf633374541f61}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_GET\_BOARD\_ID\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_GET\_BOARD\_ID\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_GET\_BOARD\_ID\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_GET\_BOARD\_ID\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_GET\_BOARD\_ID\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_GET\_BOARD\_ID\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU~7}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ad923e61aa3017d83933eab071414f0ac}\label{multiple__sensor__modbus__driver_8h_ad923e61aa3017d83933eab071414f0ac}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU~21}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9bd62258ec656d5031b862375765b666}\label{multiple__sensor__modbus__driver_8h_a9bd62258ec656d5031b862375765b666}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~21}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a1ff98e97bafd3cdcf8ede51fd08a3c16}\label{multiple__sensor__modbus__driver_8h_a1ff98e97bafd3cdcf8ede51fd08a3c16}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~29}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a8e98ea917f8f7ab3c8d36ec9be4d6ef0}\label{multiple__sensor__modbus__driver_8h_a8e98ea917f8f7ab3c8d36ec9be4d6ef0}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU~29}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a08b10bcc20e2ea1648a0eaa4bf24a169}\label{multiple__sensor__modbus__driver_8h_a08b10bcc20e2ea1648a0eaa4bf24a169}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~51}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9015ebd81a7190cc16f2f574afd39924}\label{multiple__sensor__modbus__driver_8h_a9015ebd81a7190cc16f2f574afd39924}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~13}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ac32d834f1d3ed497dc561524583ef59c}\label{multiple__sensor__modbus__driver_8h_ac32d834f1d3ed497dc561524583ef59c}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~45}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a1800c91539a66c01879f01ebf4509ef7}\label{multiple__sensor__modbus__driver_8h_a1800c91539a66c01879f01ebf4509ef7}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU~29}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a56fad081582102520f2abc5986e3fcd0}\label{multiple__sensor__modbus__driver_8h_a56fad081582102520f2abc5986e3fcd0}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU~5+\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a73b59e61017f17819626aa153c4d5ae8}{BOOL\+\_\+\+FUNC\+\_\+\+N\+\_\+\+BYTES}}}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aef2760ea1555c234e4edf4a469c1cbe3}\label{multiple__sensor__modbus__driver_8h_aef2760ea1555c234e4edf4a469c1cbe3}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+Modbus\+RTU~11}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a370a817dd0daafafdc6ff73b9a9217df}\label{multiple__sensor__modbus__driver_8h_a370a817dd0daafafdc6ff73b9a9217df}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_READ\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU@{REPLY\_N\_BYTES\_READ\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_READ\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU@{REPLY\_N\_BYTES\_READ\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_READ\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}{REPLY\_N\_BYTES\_READ\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+READ\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU~7}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab8efe869c40ea5535cbfc6e6c8e5a73b}\label{multiple__sensor__modbus__driver_8h_ab8efe869c40ea5535cbfc6e6c8e5a73b}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a72f1184f70616a26dfd3e438f90cf1a3}\label{multiple__sensor__modbus__driver_8h_a72f1184f70616a26dfd3e438f90cf1a3}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU}{REPLY\_N\_BYTES\_SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a0cf7e54353c0be84009365f60e258796}\label{multiple__sensor__modbus__driver_8h_a0cf7e54353c0be84009365f60e258796}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_SAVE\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_SAVE\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_SAVE\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_SAVE\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7e0475574d5eb5956a90816a773c9203}\label{multiple__sensor__modbus__driver_8h_a7e0475574d5eb5956a90816a773c9203}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_SAVE\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_SAVE\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_SAVE\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_SAVE\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab2fbdb1471355b50e66520f90ce4353d}\label{multiple__sensor__modbus__driver_8h_ab2fbdb1471355b50e66520f90ce4353d}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}{REPLY\_N\_BYTES\_SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a0e7fdfe65e30d582eefa702e40c927ca}\label{multiple__sensor__modbus__driver_8h_a0e7fdfe65e30d582eefa702e40c927ca}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_SAVE\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_SAVE\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SAVE\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_SAVE\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_SAVE\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SAVE\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ae077943023c339c7cec60bc2c8129130}\label{multiple__sensor__modbus__driver_8h_ae077943023c339c7cec60bc2c8129130}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!REPLY\_N\_BYTES\_SET\_BOARD\_ID\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SET\_BOARD\_ID\_CODE\_ModbusRTU}}
+\index{REPLY\_N\_BYTES\_SET\_BOARD\_ID\_CODE\_ModbusRTU@{REPLY\_N\_BYTES\_SET\_BOARD\_ID\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{REPLY\_N\_BYTES\_SET\_BOARD\_ID\_CODE\_ModbusRTU}{REPLY\_N\_BYTES\_SET\_BOARD\_ID\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define REPLY\+\_\+\+N\+\_\+\+BYTES\+\_\+\+SET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU~8}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aaaa45e5ffb0211e3155c15a3c93e4cdb}\label{multiple__sensor__modbus__driver_8h_aaaa45e5ffb0211e3155c15a3c93e4cdb}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+\index{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x58}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7dfe2f375e0cfe3da16c47a94ea820a8}\label{multiple__sensor__modbus__driver_8h_a7dfe2f375e0cfe3da16c47a94ea820a8}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+\index{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x06}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a2a78575a7270cb5eacd80b602ae0d370}\label{multiple__sensor__modbus__driver_8h_a2a78575a7270cb5eacd80b602ae0d370}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+\index{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_acf613afb004ada8505f5e6eac1879415}\label{multiple__sensor__modbus__driver_8h_acf613afb004ada8505f5e6eac1879415}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab2f7b803aa6a78262e6ded5dce51fcef}\label{multiple__sensor__modbus__driver_8h_ab2f7b803aa6a78262e6ded5dce51fcef}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a43bb7d8c33916b2e426332e9fee9510d}\label{multiple__sensor__modbus__driver_8h_a43bb7d8c33916b2e426332e9fee9510d}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+\index{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x06}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a014ad41a0a032365fc6e2b86f36d0f0e}\label{multiple__sensor__modbus__driver_8h_a014ad41a0a032365fc6e2b86f36d0f0e}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x20}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ac031bcb83ffc359cec557a25c3192add}\label{multiple__sensor__modbus__driver_8h_ac031bcb83ffc359cec557a25c3192add}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x40}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af4cf2f9d44bc7159afcae27095397dad}\label{multiple__sensor__modbus__driver_8h_af4cf2f9d44bc7159afcae27095397dad}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x30}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ae46acebece6befc966b5652d35c1705a}\label{multiple__sensor__modbus__driver_8h_ae46acebece6befc966b5652d35c1705a}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x96}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a0adbd91c96d76789445288c59e63b3fd}\label{multiple__sensor__modbus__driver_8h_a0adbd91c96d76789445288c59e63b3fd}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x91}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9a8500d1d42b5093abdb8fa21ff17c42}\label{multiple__sensor__modbus__driver_8h_a9a8500d1d42b5093abdb8fa21ff17c42}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+\index{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a6c3a72bc0e40227ac2c8d256e5e0e5fa}\label{multiple__sensor__modbus__driver_8h_a6c3a72bc0e40227ac2c8d256e5e0e5fa}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU@{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}}
+\index{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU@{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SELECT\+\_\+\+MEASUREMENT\+\_\+\+TIME\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x01}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a4a9f24938b90400d1030958544bf1439}\label{multiple__sensor__modbus__driver_8h_a4a9f24938b90400d1030958544bf1439}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SENSOR\_CALIB\_FAILED@{SENSOR\_CALIB\_FAILED}}
+\index{SENSOR\_CALIB\_FAILED@{SENSOR\_CALIB\_FAILED}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_CALIB\_FAILED}{SENSOR\_CALIB\_FAILED}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+CALIB\+\_\+\+FAILED~-\/1004}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7b6917bda27e53562879f712d8e3fd9f}\label{multiple__sensor__modbus__driver_8h_a7b6917bda27e53562879f712d8e3fd9f}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SENSOR\_CALIB\_SUCCESS@{SENSOR\_CALIB\_SUCCESS}}
+\index{SENSOR\_CALIB\_SUCCESS@{SENSOR\_CALIB\_SUCCESS}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_CALIB\_SUCCESS}{SENSOR\_CALIB\_SUCCESS}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+CALIB\+\_\+\+SUCCESS~1003}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a96a4562dda11b4239e8fc09ec05b91df}\label{multiple__sensor__modbus__driver_8h_a96a4562dda11b4239e8fc09ec05b91df}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SENSOR\_READ\_FAIL\_DUE\_MISSING\_CALIB@{SENSOR\_READ\_FAIL\_DUE\_MISSING\_CALIB}}
+\index{SENSOR\_READ\_FAIL\_DUE\_MISSING\_CALIB@{SENSOR\_READ\_FAIL\_DUE\_MISSING\_CALIB}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_READ\_FAIL\_DUE\_MISSING\_CALIB}{SENSOR\_READ\_FAIL\_DUE\_MISSING\_CALIB}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+READ\+\_\+\+FAIL\+\_\+\+DUE\+\_\+\+MISSING\+\_\+\+CALIB~-\/1005}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9e63769f75b2a818222e1b749e9c8d47}\label{multiple__sensor__modbus__driver_8h_a9e63769f75b2a818222e1b749e9c8d47}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_COMMAND\_ERROR@{SERIAL\_COMMAND\_ERROR}}
+\index{SERIAL\_COMMAND\_ERROR@{SERIAL\_COMMAND\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_COMMAND\_ERROR}{SERIAL\_COMMAND\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+COMMAND\+\_\+\+ERROR~-\/1002}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a2e61c1ad66492b01969ec7e98f8b0592}\label{multiple__sensor__modbus__driver_8h_a2e61c1ad66492b01969ec7e98f8b0592}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_COMMAND\_OK@{SERIAL\_COMMAND\_OK}}
+\index{SERIAL\_COMMAND\_OK@{SERIAL\_COMMAND\_OK}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_COMMAND\_OK}{SERIAL\_COMMAND\_OK}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+COMMAND\+\_\+\+OK~1001}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ae367a8cda257dc58d5ffe261e3a52546}\label{multiple__sensor__modbus__driver_8h_ae367a8cda257dc58d5ffe261e3a52546}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_CONNECTED@{SERIAL\_CONNECTED}}
+\index{SERIAL\_CONNECTED@{SERIAL\_CONNECTED}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_CONNECTED}{SERIAL\_CONNECTED}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+CONNECTED~1002}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9294d2c44a3f3d6c949f5465a1e68641}\label{multiple__sensor__modbus__driver_8h_a9294d2c44a3f3d6c949f5465a1e68641}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_CONNECTION\_ERROR@{SERIAL\_CONNECTION\_ERROR}}
+\index{SERIAL\_CONNECTION\_ERROR@{SERIAL\_CONNECTION\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_CONNECTION\_ERROR}{SERIAL\_CONNECTION\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+CONNECTION\+\_\+\+ERROR~-\/1003}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a64978012d4687a29cefb5ca3c971c3fa}\label{multiple__sensor__modbus__driver_8h_a64978012d4687a29cefb5ca3c971c3fa}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_PORT\_NAME\_MAX\_SIZE@{SERIAL\_PORT\_NAME\_MAX\_SIZE}}
+\index{SERIAL\_PORT\_NAME\_MAX\_SIZE@{SERIAL\_PORT\_NAME\_MAX\_SIZE}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_PORT\_NAME\_MAX\_SIZE}{SERIAL\_PORT\_NAME\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+PORT\+\_\+\+NAME\+\_\+\+MAX\+\_\+\+SIZE~50}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a9f2a2d67b8a2ef86ff820dbe4f96bb84}\label{multiple__sensor__modbus__driver_8h_a9f2a2d67b8a2ef86ff820dbe4f96bb84}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_REPLY\_WITH\_INVALID\_DATA@{SERIAL\_REPLY\_WITH\_INVALID\_DATA}}
+\index{SERIAL\_REPLY\_WITH\_INVALID\_DATA@{SERIAL\_REPLY\_WITH\_INVALID\_DATA}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_REPLY\_WITH\_INVALID\_DATA}{SERIAL\_REPLY\_WITH\_INVALID\_DATA}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+REPLY\+\_\+\+WITH\+\_\+\+INVALID\+\_\+\+DATA~-\/1012}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ad003f9c90e54f05bdf4563c36f4088c4}\label{multiple__sensor__modbus__driver_8h_ad003f9c90e54f05bdf4563c36f4088c4}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_REPLY\_WITH\_INVALID\_DATA\_firmware@{SERIAL\_REPLY\_WITH\_INVALID\_DATA\_firmware}}
+\index{SERIAL\_REPLY\_WITH\_INVALID\_DATA\_firmware@{SERIAL\_REPLY\_WITH\_INVALID\_DATA\_firmware}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_REPLY\_WITH\_INVALID\_DATA\_firmware}{SERIAL\_REPLY\_WITH\_INVALID\_DATA\_firmware}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+REPLY\+\_\+\+WITH\+\_\+\+INVALID\+\_\+\+DATA\+\_\+firmware~0x70}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7de59f3091cb276f2f53d908db3a6b25}\label{multiple__sensor__modbus__driver_8h_a7de59f3091cb276f2f53d908db3a6b25}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_SET\_BAUD\_RATE\_ERROR@{SERIAL\_SET\_BAUD\_RATE\_ERROR}}
+\index{SERIAL\_SET\_BAUD\_RATE\_ERROR@{SERIAL\_SET\_BAUD\_RATE\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_SET\_BAUD\_RATE\_ERROR}{SERIAL\_SET\_BAUD\_RATE\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+SET\+\_\+\+BAUD\+\_\+\+RATE\+\_\+\+ERROR~-\/1006}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a1fa6507051a6453ddac77c2bc9091928}\label{multiple__sensor__modbus__driver_8h_a1fa6507051a6453ddac77c2bc9091928}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_SET\_DATA\_BITS\_ERROR@{SERIAL\_SET\_DATA\_BITS\_ERROR}}
+\index{SERIAL\_SET\_DATA\_BITS\_ERROR@{SERIAL\_SET\_DATA\_BITS\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_SET\_DATA\_BITS\_ERROR}{SERIAL\_SET\_DATA\_BITS\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+SET\+\_\+\+DATA\+\_\+\+BITS\+\_\+\+ERROR~-\/1007}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a1e9957b87fd1a604aac139f0a95c8b54}\label{multiple__sensor__modbus__driver_8h_a1e9957b87fd1a604aac139f0a95c8b54}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_SET\_FLOW\_CONTROL\_ERROR@{SERIAL\_SET\_FLOW\_CONTROL\_ERROR}}
+\index{SERIAL\_SET\_FLOW\_CONTROL\_ERROR@{SERIAL\_SET\_FLOW\_CONTROL\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_SET\_FLOW\_CONTROL\_ERROR}{SERIAL\_SET\_FLOW\_CONTROL\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+SET\+\_\+\+FLOW\+\_\+\+CONTROL\+\_\+\+ERROR~-\/1010}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ad45573659836d74145ee3e21490acf61}\label{multiple__sensor__modbus__driver_8h_ad45573659836d74145ee3e21490acf61}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_SET\_PARITY\_ERROR@{SERIAL\_SET\_PARITY\_ERROR}}
+\index{SERIAL\_SET\_PARITY\_ERROR@{SERIAL\_SET\_PARITY\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_SET\_PARITY\_ERROR}{SERIAL\_SET\_PARITY\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+SET\+\_\+\+PARITY\+\_\+\+ERROR~-\/1008}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a4289e56fd38410bec7785ee402a19504}\label{multiple__sensor__modbus__driver_8h_a4289e56fd38410bec7785ee402a19504}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_SET\_STOP\_BITS\_ERROR@{SERIAL\_SET\_STOP\_BITS\_ERROR}}
+\index{SERIAL\_SET\_STOP\_BITS\_ERROR@{SERIAL\_SET\_STOP\_BITS\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_SET\_STOP\_BITS\_ERROR}{SERIAL\_SET\_STOP\_BITS\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+SET\+\_\+\+STOP\+\_\+\+BITS\+\_\+\+ERROR~-\/1009}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af3e026758bba817b84d5d1817081930d}\label{multiple__sensor__modbus__driver_8h_af3e026758bba817b84d5d1817081930d}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_WAIT\_TIMEOUT@{SERIAL\_WAIT\_TIMEOUT}}
+\index{SERIAL\_WAIT\_TIMEOUT@{SERIAL\_WAIT\_TIMEOUT}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_WAIT\_TIMEOUT}{SERIAL\_WAIT\_TIMEOUT}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+WAIT\+\_\+\+TIMEOUT~500}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a5239aa1bca4bce1d6d3ba79e664652ac}\label{multiple__sensor__modbus__driver_8h_a5239aa1bca4bce1d6d3ba79e664652ac}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SERIAL\_WAIT\_TIMEOUT\_ERROR@{SERIAL\_WAIT\_TIMEOUT\_ERROR}}
+\index{SERIAL\_WAIT\_TIMEOUT\_ERROR@{SERIAL\_WAIT\_TIMEOUT\_ERROR}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_WAIT\_TIMEOUT\_ERROR}{SERIAL\_WAIT\_TIMEOUT\_ERROR}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+WAIT\+\_\+\+TIMEOUT\+\_\+\+ERROR~-\/1011}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ad013157ae4ea36cf6fa796a1b030c263}\label{multiple__sensor__modbus__driver_8h_ad013157ae4ea36cf6fa796a1b030c263}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+\index{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x06}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a3f9d25eced969511dac92ce58367a385}\label{multiple__sensor__modbus__driver_8h_a3f9d25eced969511dac92ce58367a385}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU@{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}}
+\index{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU@{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+OR\+\_\+\+GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x98}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_affab39ae23fdda0343ef40f215986357}\label{multiple__sensor__modbus__driver_8h_affab39ae23fdda0343ef40f215986357}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!TIMEOUT\_CYCLES\_ModbusRTU@{TIMEOUT\_CYCLES\_ModbusRTU}}
+\index{TIMEOUT\_CYCLES\_ModbusRTU@{TIMEOUT\_CYCLES\_ModbusRTU}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_CYCLES\_ModbusRTU}{TIMEOUT\_CYCLES\_ModbusRTU}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+CYCLES\+\_\+\+Modbus\+RTU~10}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab80971be5978c5377512bca8cadfdad8}\label{multiple__sensor__modbus__driver_8h_ab80971be5978c5377512bca8cadfdad8}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!TRUE\_BOOL@{TRUE\_BOOL}}
+\index{TRUE\_BOOL@{TRUE\_BOOL}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{TRUE\_BOOL}{TRUE\_BOOL}}
+{\footnotesize\ttfamily \#define TRUE\+\_\+\+BOOL~1}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a5d6bf2d469d72bc3ed35079382767968}\label{multiple__sensor__modbus__driver_8h_a5d6bf2d469d72bc3ed35079382767968}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!US\_ASCII@{US\_ASCII}}
+\index{US\_ASCII@{US\_ASCII}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{US\_ASCII}{US\_ASCII}}
+{\footnotesize\ttfamily \#define US\+\_\+\+ASCII~31}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa029c2c290fe7547c09add9b2e023953}\label{multiple__sensor__modbus__driver_8h_aa029c2c290fe7547c09add9b2e023953}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_1@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_1}}
+\index{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_1@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_1}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_1}{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_1}}
+{\footnotesize\ttfamily \#define WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+ms\+\_\+1~5}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a1e5dd616b65cc0662a0c41c8c2281544}\label{multiple__sensor__modbus__driver_8h_a1e5dd616b65cc0662a0c41c8c2281544}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_2@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_2}}
+\index{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_2@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_2}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_2}{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_ms\_2}}
+{\footnotesize\ttfamily \#define WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+ms\+\_\+2~25}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a57c6678f6c93116467949f59a63ddf14}\label{multiple__sensor__modbus__driver_8h_a57c6678f6c93116467949f59a63ddf14}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_1@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_1}}
+\index{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_1@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_1}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_1}{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_1}}
+{\footnotesize\ttfamily \#define WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+us\+\_\+1~5000}
+
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa33e10bc159f82063a9d7074fae3427f}\label{multiple__sensor__modbus__driver_8h_aa33e10bc159f82063a9d7074fae3427f}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_2@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_2}}
+\index{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_2@{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_2}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_2}{WAIT\_BETWEEN\_SERIAL\_COMMANDS\_us\_2}}
+{\footnotesize\ttfamily \#define WAIT\+\_\+\+BETWEEN\+\_\+\+SERIAL\+\_\+\+COMMANDS\+\_\+us\+\_\+2~50000}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}\label{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!MultipleSensor\_serial\_driver@{MultipleSensor\_serial\_driver}}
+\index{MultipleSensor\_serial\_driver@{MultipleSensor\_serial\_driver}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{MultipleSensor\_serial\_driver}{MultipleSensor\_serial\_driver}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+struct}} \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}}}
+
+\textquotesingle{}typedef Multiple\+Sensor\+\_\+serial\+\_\+driver\textquotesingle{} ; \textquotesingle{}struct \mbox{\hyperlink{struct_multiple_sensor__serial__driver__struct}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+struct}}\textquotesingle{} -\/ Structure containing all variables required to interact with the Multiple-\/\+Sensor Interface by RS485/serial
+
+{\bfseries{Description}} Structure containing all variables required to interact with the Multiple-\/\+Sensor Interface by RS485/serial 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a17c2c86b8fd32b391d3c14e5c661a1a9}\label{multiple__sensor__modbus__driver_8h_a17c2c86b8fd32b391d3c14e5c661a1a9}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!CloseDevice\_Serial\_MultipleSensor@{CloseDevice\_Serial\_MultipleSensor}}
+\index{CloseDevice\_Serial\_MultipleSensor@{CloseDevice\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{CloseDevice\_Serial\_MultipleSensor()}{CloseDevice\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} void Close\+Device\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+
+
+Close the RS485/serial connection to the Multiple-\/\+Sensor device. 
+
+\DoxyHorRuler{0}
+ void \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a17c2c86b8fd32b391d3c14e5c661a1a9}{Close\+Device\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a5f4e215959750289c2cf7b2f8f76e085}\label{multiple__sensor__modbus__driver_8h_a5f4e215959750289c2cf7b2f8f76e085}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!GetBoardIDCode\_Serial\_MultipleSensor@{GetBoardIDCode\_Serial\_MultipleSensor}}
+\index{GetBoardIDCode\_Serial\_MultipleSensor@{GetBoardIDCode\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{GetBoardIDCode\_Serial\_MultipleSensor()}{GetBoardIDCode\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Get\+Board\+IDCode\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char $\ast$}]{board\+\_\+\+ID\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Get the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5f4e215959750289c2cf7b2f8f76e085}{Get\+Board\+IDCode\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char $\ast$board\+\_\+\+ID\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$board\+\_\+\+ID\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where to save the \textquotesingle{}board\+\_\+\+ID\textquotesingle{} (0 -\/ 254) read from the Multiple-\/\+Sensor Interface device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a5afe4714f399ee1145ff66c6e66e56a5}\label{multiple__sensor__modbus__driver_8h_a5afe4714f399ee1145ff66c6e66e56a5}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!OpenDevice\_Serial\_MultipleSensor@{OpenDevice\_Serial\_MultipleSensor}}
+\index{OpenDevice\_Serial\_MultipleSensor@{OpenDevice\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{OpenDevice\_Serial\_MultipleSensor()}{OpenDevice\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Open\+Device\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{char $\ast$}]{serial\+\_\+port\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Open the RS485/serial connection to the Multiple-\/\+Sensor device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5afe4714f399ee1145ff66c6e66e56a5}{Open\+Device\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, char $\ast$serial\+\_\+port\+\_\+name)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device RS485/serial driver \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$serial\+\_\+port\+\_\+name} & -\/ char -\/ A string (char $\ast$) with the name of the serial port to be used/opened (example\+: \textquotesingle{}COM3\textquotesingle{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a3bd378e9665643f80cb3df0bfaffc2c0}\label{multiple__sensor__modbus__driver_8h_a3bd378e9665643f80cb3df0bfaffc2c0}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!print\_ERROR\_MSG\_Serial\_MultipleSensor@{print\_ERROR\_MSG\_Serial\_MultipleSensor}}
+\index{print\_ERROR\_MSG\_Serial\_MultipleSensor@{print\_ERROR\_MSG\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{print\_ERROR\_MSG\_Serial\_MultipleSensor()}{print\_ERROR\_MSG\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} void print\+\_\+\+ERROR\+\_\+\+MSG\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{int}]{error\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Prints the error message correspondent to the error code that was returned by the modbus driver of Multiple-\/\+Sensor. 
+
+\DoxyHorRuler{0}
+ void \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a3bd378e9665643f80cb3df0bfaffc2c0}{print\+\_\+\+ERROR\+\_\+\+MSG\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(int error\+\_\+code)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em error\+\_\+code} & -\/ int -\/ The \textquotesingle{}error code\textquotesingle{}/\textquotesingle{}return value\textquotesingle{} an integer number from the list \char`\"{}\+Driver of LCR sensors, list of commands return codes\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ae626e0ac371e4e16a84f0f1d78b28e1b}\label{multiple__sensor__modbus__driver_8h_ae626e0ac371e4e16a84f0f1d78b28e1b}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadADCValue\_Serial\_MultipleSensor@{ReadADCValue\_Serial\_MultipleSensor}}
+\index{ReadADCValue\_Serial\_MultipleSensor@{ReadADCValue\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadADCValue\_Serial\_MultipleSensor()}{ReadADCValue\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+ADCValue\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{float $\ast$}]{ADC\+\_\+values\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the ADC values in Volt (V) for all the ADC channels (ADC-\/\+Analogue to digital converter). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ae626e0ac371e4e16a84f0f1d78b28e1b}{Read\+ADCValue\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, float $\ast$\+ADC\+\_\+values\+\_\+vector\+\_\+ptr)}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+ADC\+\_\+values\+\_\+vector\+\_\+ptr} & -\/ float -\/ pointer to the (float) vector were will be saved the values read from the ADC\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a8a225936289e689cbaaf364f7d4ee5c8}\label{multiple__sensor__modbus__driver_8h_a8a225936289e689cbaaf364f7d4ee5c8}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadCountersCalib\_Serial\_MultipleSensor@{ReadCountersCalib\_Serial\_MultipleSensor}}
+\index{ReadCountersCalib\_Serial\_MultipleSensor@{ReadCountersCalib\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadCountersCalib\_Serial\_MultipleSensor()}{ReadCountersCalib\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Counters\+Calib\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{float $\ast$}]{C0\+\_\+ptr,  }\item[{float $\ast$}]{C1\+\_\+ptr,  }\item[{float $\ast$}]{C2\+\_\+ptr,  }\item[{float $\ast$}]{C3\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Reads the counter calibration constants for the selected channel number on the device the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a8a225936289e689cbaaf364f7d4ee5c8}{Read\+Counters\+Calib\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int channel\+\_\+number, float $\ast$\+C0\+\_\+ptr, float $\ast$\+C1\+\_\+ptr, float $\ast$\+C2\+\_\+ptr, float $\ast$\+C3\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ number of the channel that is to be read its counter calibration constants/parameters \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C0\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the offset \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C1\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the counter\+\_\+\+RAW\+\_\+value \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C2\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$2 \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C3\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$3\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a2b3c30b2320c5136badbcb3f769b87b6}\label{multiple__sensor__modbus__driver_8h_a2b3c30b2320c5136badbcb3f769b87b6}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadCountersMeasurements\_Serial\_MultipleSensor@{ReadCountersMeasurements\_Serial\_MultipleSensor}}
+\index{ReadCountersMeasurements\_Serial\_MultipleSensor@{ReadCountersMeasurements\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadCountersMeasurements\_Serial\_MultipleSensor()}{ReadCountersMeasurements\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Counters\+Measurements\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{float $\ast$}]{counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the measurements for the counters of the LCR channels in the units defined on the counters calibration . 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a2b3c30b2320c5136badbcb3f769b87b6}{Read\+Counters\+Measurements\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, float $\ast$counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr} & -\/ float -\/ pointer to the (float) vector were will be saved the values read of the calibrated counters measurements from the LCR channels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af98546f5f458fff9e46ff74b075f4289}\label{multiple__sensor__modbus__driver_8h_af98546f5f458fff9e46ff74b075f4289}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadFrequencyMeasurement\_Serial\_MultipleSensor@{ReadFrequencyMeasurement\_Serial\_MultipleSensor}}
+\index{ReadFrequencyMeasurement\_Serial\_MultipleSensor@{ReadFrequencyMeasurement\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadFrequencyMeasurement\_Serial\_MultipleSensor()}{ReadFrequencyMeasurement\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Frequency\+Measurement\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int32\+\_\+t $\ast$}]{integer\+\_\+\+CH\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Read the frequency of the all the sensor channels in Hertz, save them as a integer vector. 
+
+\DoxyHorRuler{0}
+ int Read\+Frequency\+Measurement\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int $\ast$integer\+\_\+\+CH\+\_\+vector)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$integer\+\_\+\+CH\+\_\+vector} & -\/ int -\/ pointer to the (int) vector were will be saved the frequency in Hertz of each sensor channel signal (integer values)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa1c43868dcb824f5a5a6850b387f027c}\label{multiple__sensor__modbus__driver_8h_aa1c43868dcb824f5a5a6850b387f027c}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadHeaderCalibTable\_Serial\_MultipleSensor@{ReadHeaderCalibTable\_Serial\_MultipleSensor}}
+\index{ReadHeaderCalibTable\_Serial\_MultipleSensor@{ReadHeaderCalibTable\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadHeaderCalibTable\_Serial\_MultipleSensor()}{ReadHeaderCalibTable\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Header\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{unsigned char $\ast$}]{calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr,  }\item[{unsigned char $\ast$}]{number\+\_\+table\+\_\+lines\+\_\+ptr,  }\item[{unsigned char $\ast$}]{calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr,  }\item[{char $\ast$}]{jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr,  }\item[{char $\ast$}]{units\+\_\+str\+\_\+ptr,  }\item[{char $\ast$}]{counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Reads/downloads the header of the calibration table for the selected channel number on the device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa1c43868dcb824f5a5a6850b387f027c}{Read\+Header\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int channel\+\_\+number, unsigned char $\ast$calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr, unsigned char $\ast$number\+\_\+table\+\_\+lines\+\_\+ptr, unsigned char $\ast$calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr, char $\ast$jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr, char $\ast$units\+\_\+str\+\_\+ptr, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be read its calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where will be saved if the calib table is being used by the device to calculate measurements for the respective sensor channel \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$number\+\_\+table\+\_\+lines\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where will be saved the number of valid lines of the calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where will be saved the mode of operation of the device when the calibration table was obtained (\textquotesingle{}1\textquotesingle{} -\/ single channel mode , \textquotesingle{}0\textquotesingle{} -\/ multiple channel mode) \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr} & -\/ char -\/ pointer to variable where will be saved the letter (character A or B) indicating the jumper selection of oscilator tunning range , this parameter is the jumper position of a LCR channel selected by the user on the multiple sensor interface , it can be A or B ( A, B coded in ASCII) \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$units\+\_\+str\+\_\+ptr} & -\/ char -\/ string (char $\ast$) where will be saved the units of the calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr} & -\/ char -\/ string (char $\ast$) where will be saved the units of the counter calibration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a6a33ad9a75b15ce1c4936ebcefa90295}\label{multiple__sensor__modbus__driver_8h_a6a33ad9a75b15ce1c4936ebcefa90295}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadLineCalibTable\_Serial\_MultipleSensor@{ReadLineCalibTable\_Serial\_MultipleSensor}}
+\index{ReadLineCalibTable\_Serial\_MultipleSensor@{ReadLineCalibTable\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadLineCalibTable\_Serial\_MultipleSensor()}{ReadLineCalibTable\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Line\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{int}]{line\+\_\+number,  }\item[{float $\ast$}]{RAW\+\_\+value\+\_\+ptr,  }\item[{float $\ast$}]{measurement\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+function to download/read from the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a6a33ad9a75b15ce1c4936ebcefa90295}{Read\+Line\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int channel\+\_\+number, int line\+\_\+number, float $\ast$\+RAW\+\_\+value\+\_\+ptr, float $\ast$measurement\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be read its calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em line\+\_\+number} & -\/ int -\/ number of the line to be read \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+RAW\+\_\+value\+\_\+ptr} & -\/ float -\/ pointer where is to be saved the RAW\+\_\+value of the read calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$measurement\+\_\+ptr} & -\/ float -\/ pointer where is to be saved the measurement of the read calibration table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af6690cbf7f6de2f31fcce294c6713cbd}\label{multiple__sensor__modbus__driver_8h_af6690cbf7f6de2f31fcce294c6713cbd}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadMeasurements\_Serial\_MultipleSensor@{ReadMeasurements\_Serial\_MultipleSensor}}
+\index{ReadMeasurements\_Serial\_MultipleSensor@{ReadMeasurements\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadMeasurements\_Serial\_MultipleSensor()}{ReadMeasurements\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Measurements\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{float $\ast$}]{measurements\+\_\+values\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the measurements for the LCR+\+ADC channels in the units defined on the calibration table . (ADC-\/\+Analogue to Digital Converter). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af6690cbf7f6de2f31fcce294c6713cbd}{Read\+Measurements\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, float $\ast$measurements\+\_\+values\+\_\+vector\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$measurements\+\_\+values\+\_\+vector\+\_\+ptr} & -\/ float -\/ pointer to the (float) vector were will be saved the values read of the calibrated measurements from the LCR+\+ADC channels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a27c14d669dd9fb6c3b90b4ee9b56b948}\label{multiple__sensor__modbus__driver_8h_a27c14d669dd9fb6c3b90b4ee9b56b948}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadModeCHConfig\_Serial\_MultipleSensor@{ReadModeCHConfig\_Serial\_MultipleSensor}}
+\index{ReadModeCHConfig\_Serial\_MultipleSensor@{ReadModeCHConfig\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadModeCHConfig\_Serial\_MultipleSensor()}{ReadModeCHConfig\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Mode\+CHConfig\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char $\ast$}]{mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr,  }\item[{int $\ast$}]{selected\+\_\+channel\+\_\+number\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the selected L,C,R sensor channel mode on the multi-\/sensors device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a27c14d669dd9fb6c3b90b4ee9b56b948}{Read\+Mode\+CHConfig\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char $\ast$mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr, int $\ast$selected\+\_\+channel\+\_\+number\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable were will be saved the boolean value that indicates the mode of operation, 0 (\char`\"{}zero\char`\"{}) indicates board is in multi-\/channel mode, 1 (\char`\"{}one\char`\"{}) indicates board is in single-\/channel mode , \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$selected\+\_\+channel\+\_\+number\+\_\+ptr} & -\/ int -\/ pointer to variable were will be saved the number of the sensor channel that should be read/measured in case the single channel mode is selected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a45c6171df43abb99afb46fd9e4ebabe9}\label{multiple__sensor__modbus__driver_8h_a45c6171df43abb99afb46fd9e4ebabe9}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadOutputConfig\_Serial\_MultipleSensor@{ReadOutputConfig\_Serial\_MultipleSensor}}
+\index{ReadOutputConfig\_Serial\_MultipleSensor@{ReadOutputConfig\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadOutputConfig\_Serial\_MultipleSensor()}{ReadOutputConfig\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Output\+Config\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{output\+\_\+number,  }\item[{char $\ast$}]{out\+\_\+bool\+\_\+func\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Reads the boolean equation of the selected digital output. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a45c6171df43abb99afb46fd9e4ebabe9}{Read\+Output\+Config\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+\_\+number} & -\/ unsigned char -\/ output number (0,1,2) where to be read the boolean equation \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$out\+\_\+bool\+\_\+func\+\_\+str} & -\/ char \mbox{[}3\mbox{]} -\/ string (char $\ast$) were will be saved the read boolean equation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a99f8b94b9c5a967de60a7538b94e13e9}\label{multiple__sensor__modbus__driver_8h_a99f8b94b9c5a967de60a7538b94e13e9}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadOutputs\_Serial\_MultipleSensor@{ReadOutputs\_Serial\_MultipleSensor}}
+\index{ReadOutputs\_Serial\_MultipleSensor@{ReadOutputs\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadOutputs\_Serial\_MultipleSensor()}{ReadOutputs\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Outputs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char $\ast$}]{outputs\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Read the outputs of the multi-\/sensors device, INACTIVE=0x00, ACTIVE=0x01. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a99f8b94b9c5a967de60a7538b94e13e9}{Read\+Outputs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char $\ast$outputs\+\_\+vector)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$outputs\+\_\+vector} & -\/ unsigned char \mbox{[}3\mbox{]} -\/ pointer to the vector where will be save the values of the digital outputs of the multi-\/sensors device , boolean values (\textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}) type char\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ade3637aa2c2726886a272fdc5d5fa3f5}\label{multiple__sensor__modbus__driver_8h_ade3637aa2c2726886a272fdc5d5fa3f5}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadSensorConfigs\_Serial\_MultipleSensor@{ReadSensorConfigs\_Serial\_MultipleSensor}}
+\index{ReadSensorConfigs\_Serial\_MultipleSensor@{ReadSensorConfigs\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadSensorConfigs\_Serial\_MultipleSensor()}{ReadSensorConfigs\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Sensor\+Configs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{configs\+\_\+for\+\_\+channel\+\_\+number,  }\item[{char $\ast$}]{make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr,  }\item[{char $\ast$}]{compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr,  }\item[{char $\ast$}]{sensor\+\_\+prescaler\+\_\+ptr,  }\item[{char $\ast$}]{sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr,  }\item[{float $\ast$}]{sensor\+\_\+trigger\+\_\+value\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the various configurations of the sensor channel selected on configs\+\_\+for\+\_\+channel\+\_\+number. Please pass on the arguments the pointers to the variables were the read configuration will be saved. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ade3637aa2c2726886a272fdc5d5fa3f5}{Read\+Sensor\+Configs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char $\ast$make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr, char $\ast$compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr, char $\ast$sensor\+\_\+prescaler\+\_\+ptr, char $\ast$sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr, float $\ast$sensor\+\_\+trigger\+\_\+value\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver \\
+\hline
+\mbox{\texttt{ in}}  & {\em configs\+\_\+for\+\_\+channel\+\_\+number} & -\/ int -\/ Number of the channel to obtain its configuration. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr} & -\/ char -\/ NOT IMPLEMENTED/\+USED (Multiple-\/\+Sensor Interface no longer uses this parameter). Pointer to the variable where will be saved a boolean value (0 or 1), 0 RAW sensor measurement is used , 1 calibrated measurement is used, for the trigger of the sensor channel \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr} & -\/ char -\/ pointer to the variable where will be saved a boolean value (0 or 1), 0 is used for the minor than compare, 1 is used for the greater than compare. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$sensor\+\_\+prescaler\+\_\+ptr} & -\/ char -\/ NOT IMPLEMENTED -\/ (the firmware is set to 4) \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr} & -\/ char \mbox{[}3\mbox{]} -\/ NOT IMPLEMENTED/\+USED -\/ pointer to the variable where will be saved a boolean value that indicate which outputs are activated by this sensor channel \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$sensor\+\_\+trigger\+\_\+value\+\_\+ptr} & -\/ float -\/ pointer to the variable where will be saved the reference value used on the comparison that determines if this sensor channel is triggered\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ab11b42c12f36273cc0666bca096f6373}\label{multiple__sensor__modbus__driver_8h_ab11b42c12f36273cc0666bca096f6373}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ReadSensorCounters\_Serial\_MultipleSensor@{ReadSensorCounters\_Serial\_MultipleSensor}}
+\index{ReadSensorCounters\_Serial\_MultipleSensor@{ReadSensorCounters\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ReadSensorCounters\_Serial\_MultipleSensor()}{ReadSensorCounters\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Read\+Sensor\+Counters\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{long int $\ast$}]{integer\+\_\+\+CH\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Reads/downloads the counter values (units\+: cycles) of each sensor channel signal, save them on a (long int) vector. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ab11b42c12f36273cc0666bca096f6373}{Read\+Sensor\+Counters\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, long int $\ast$integer\+\_\+\+CH\+\_\+vector)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$integer\+\_\+\+CH\+\_\+vector} & -\/ long int -\/ pointer to the (long int) vector were will be saved the counter values (units\+: cycles) of each sensor channel signal (integer values)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a3ef6eb690c52e3b0772700acec3fd124}\label{multiple__sensor__modbus__driver_8h_a3ef6eb690c52e3b0772700acec3fd124}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!ResetSensorCounters\_Serial\_MultipleSensor@{ResetSensorCounters\_Serial\_MultipleSensor}}
+\index{ResetSensorCounters\_Serial\_MultipleSensor@{ResetSensorCounters\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{ResetSensorCounters\_Serial\_MultipleSensor()}{ResetSensorCounters\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Reset\+Sensor\+Counters\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+
+
+Resets the counter values (units\+: cycles) of each sensor channel signal. resets $<$=$>$ set to zero. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a3ef6eb690c52e3b0772700acec3fd124}{Reset\+Sensor\+Counters\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a001a001f8afd2f31d340abc9462bec90}\label{multiple__sensor__modbus__driver_8h_a001a001f8afd2f31d340abc9462bec90}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SaveModeCHConfig\_Serial\_MultipleSensor@{SaveModeCHConfig\_Serial\_MultipleSensor}}
+\index{SaveModeCHConfig\_Serial\_MultipleSensor@{SaveModeCHConfig\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SaveModeCHConfig\_Serial\_MultipleSensor()}{SaveModeCHConfig\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Save\+Mode\+CHConfig\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool,  }\item[{int}]{selected\+\_\+channel\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Save the selected L,C,R sensors channel mode on the multi-\/sensors device, if in single-\/channel mode the update frequency of the sensor measurement is faster because only one channel is monitored in multi-\/channel mode the device monitors the 6 channels using time-\/multiplexing. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a001a001f8afd2f31d340abc9462bec90}{Save\+Mode\+CHConfig\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool, int selected\+\_\+channel\+\_\+number)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool} & -\/ unsigned char -\/ boolean value that indicates the mode of operation, 0 (\char`\"{}zero\char`\"{}) indicates board is in multi-\/channel mode, 1 (\char`\"{}one\char`\"{}) indicates board is in single-\/channel mode, \\
+\hline
+\mbox{\texttt{ in}}  & {\em selected\+\_\+channel\+\_\+number} & -\/ int -\/ the number of the sensor channel that should be read/measured in case the single channel mode is selected, in multi-\/channel mode this argument isn\textquotesingle{}t used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a2b4ec09bbea86818d8859b8b9206731d}\label{multiple__sensor__modbus__driver_8h_a2b4ec09bbea86818d8859b8b9206731d}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SaveSensorConfigs\_Serial\_MultipleSensor@{SaveSensorConfigs\_Serial\_MultipleSensor}}
+\index{SaveSensorConfigs\_Serial\_MultipleSensor@{SaveSensorConfigs\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SaveSensorConfigs\_Serial\_MultipleSensor()}{SaveSensorConfigs\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Save\+Sensor\+Configs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{configs\+\_\+for\+\_\+channel\+\_\+number,  }\item[{char}]{make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value,  }\item[{char}]{compare\+\_\+is\+\_\+greater\+\_\+than,  }\item[{char}]{sensor\+\_\+prescaler,  }\item[{char}]{sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]},  }\item[{float}]{sensor\+\_\+trigger\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Configures the trigger states that activates the digital outputs of the device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a2b4ec09bbea86818d8859b8b9206731d}{Save\+Sensor\+Configs\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value, char compare\+\_\+is\+\_\+greater\+\_\+than, char sensor\+\_\+prescaler, char sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]}, float sensor\+\_\+trigger\+\_\+value)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver \\
+\hline
+\mbox{\texttt{ in}}  & {\em configs\+\_\+for\+\_\+channel\+\_\+number} & -\/ int -\/ Number of the channel to be configured ; \\
+\hline
+\mbox{\texttt{ in}}  & {\em make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value} & -\/ char -\/ NOT IMPLEMENTED/\+USED (Multiple-\/\+Sensor Interface no longer uses this parameter). Boolean value (0 or 1), 0 RAW sensor measurement is used , 1 calibrated measurement is used; for the trigger of the sensor channel ; \\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+is\+\_\+greater\+\_\+than} & -\/ char -\/ boolean value (0 or 1), 0 is used for the minor than compare, 1 is used for the greater than compare. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+prescaler} & -\/ char -\/ NOT IMPLEMENTED -\/ (the firmware is set to 4) \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+used\+\_\+for\+\_\+\+OUT} & -\/ char \mbox{[}3\mbox{]} -\/ NOT IMPLEMENTED/\+USED -\/ boolean values that indicate which outputs are activated by this sensor channel (ex\+: \{0,1,0\} means this channel only activates output N.\+1, \{1,1,0\} means this channel activates output N.\+0 and N.\+1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+trigger\+\_\+value} & -\/ float -\/ is the reference value used on the comparison that determines if this sensor channel is triggered\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_af349aadd5f8edd741db8cbd5b94157b3}\label{multiple__sensor__modbus__driver_8h_af349aadd5f8edd741db8cbd5b94157b3}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!SetBoardIDCode\_Serial\_MultipleSensor@{SetBoardIDCode\_Serial\_MultipleSensor}}
+\index{SetBoardIDCode\_Serial\_MultipleSensor@{SetBoardIDCode\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{SetBoardIDCode\_Serial\_MultipleSensor()}{SetBoardIDCode\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Set\+Board\+IDCode\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{new\+\_\+board\+\_\+\+ID }\end{DoxyParamCaption})}
+
+
+
+Set the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_af349aadd5f8edd741db8cbd5b94157b3}{Set\+Board\+IDCode\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char new\+\_\+board\+\_\+\+ID)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+board\+\_\+\+ID} & -\/ unsigned char -\/ number (0 -\/ 254) of the new \textquotesingle{}board\+\_\+\+ID\textquotesingle{} to be saved on the Multiple-\/\+Sensor Interface device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_aa20b50f591cda596ce7a9edc8dccf1f0}\label{multiple__sensor__modbus__driver_8h_aa20b50f591cda596ce7a9edc8dccf1f0}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WriteCountersCalib\_Serial\_MultipleSensor@{WriteCountersCalib\_Serial\_MultipleSensor}}
+\index{WriteCountersCalib\_Serial\_MultipleSensor@{WriteCountersCalib\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WriteCountersCalib\_Serial\_MultipleSensor()}{WriteCountersCalib\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Write\+Counters\+Calib\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{float}]{C0,  }\item[{float}]{C1,  }\item[{float}]{C2,  }\item[{float}]{C3 }\end{DoxyParamCaption})}
+
+
+
+Writes the counter calibration constants for the selected channel number on the device, the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_aa20b50f591cda596ce7a9edc8dccf1f0}{Write\+Counters\+Calib\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int channel\+\_\+number, float C0, float C1, float C2, float C3)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be written its counter calibration constants/parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em C0} & -\/ float -\/ constant of the offset \\
+\hline
+\mbox{\texttt{ in}}  & {\em C1} & -\/ float -\/ constant of the counter\+\_\+\+RAW\+\_\+value \\
+\hline
+\mbox{\texttt{ in}}  & {\em C2} & -\/ float -\/ constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em C3} & -\/ float -\/ constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$3\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_ac544067f7ca95086fd7ad314cdb1fbac}\label{multiple__sensor__modbus__driver_8h_ac544067f7ca95086fd7ad314cdb1fbac}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WriteHeaderCalibTable\_Serial\_MultipleSensor@{WriteHeaderCalibTable\_Serial\_MultipleSensor}}
+\index{WriteHeaderCalibTable\_Serial\_MultipleSensor@{WriteHeaderCalibTable\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WriteHeaderCalibTable\_Serial\_MultipleSensor()}{WriteHeaderCalibTable\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Write\+Header\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{unsigned char}]{calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool,  }\item[{unsigned char}]{number\+\_\+table\+\_\+lines,  }\item[{unsigned char}]{calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch,  }\item[{char}]{jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range,  }\item[{char $\ast$}]{units\+\_\+str,  }\item[{char $\ast$}]{counter\+\_\+calib\+\_\+units\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Writes/uploads the header of the calibration table for the selected channel number on the device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_ac544067f7ca95086fd7ad314cdb1fbac}{Write\+Header\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int channel\+\_\+number, unsigned char calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool, unsigned char number\+\_\+table\+\_\+lines, unsigned char calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch, char jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range, char $\ast$units\+\_\+str, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be written its calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool} & -\/ unsigned char -\/ indicates if the calib table is being used by the device to calculate measurements for the respective sensor channel, (\textquotesingle{}0\textquotesingle{} false, \textquotesingle{}1\textquotesingle{} true) \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+\_\+table\+\_\+lines} & -\/ unsigned char -\/ number (0 -\/ 32) of valid lines of the calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch} & -\/ unsigned char -\/ mode of operation of the device when the calibration table was obtained (\textquotesingle{}1\textquotesingle{} -\/ single channel mode , \textquotesingle{}0\textquotesingle{} -\/ multiple channel mode) \\
+\hline
+\mbox{\texttt{ in}}  & {\em jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range} & -\/ char -\/ letter (character \textquotesingle{}A\textquotesingle{}, \textquotesingle{}B\textquotesingle{}, \textquotesingle{}+\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{}) indicating the jumper selection of oscillator tuning range , this parameter is the jumpers position of a LCR channel selected by the user on the multiple sensor interface , it can be \textquotesingle{}+\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{} \textquotesingle{}A\textquotesingle{} or \textquotesingle{}B\textquotesingle{} ( +, -\/, A, B coded in ASCII) (\textquotesingle{}A\textquotesingle{} -\/ only placed/closed the jumper A; \textquotesingle{}B\textquotesingle{} -\/ only placed/closed the jumper B; \textquotesingle{}+\textquotesingle{} -\/ placed/closed the jumpers A and B; \textquotesingle{}-\/\textquotesingle{} -\/ removed/open the jumpers A and B) \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$units\+\_\+str} & -\/ char -\/ string (char $\ast$) with the units of the calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$counter\+\_\+calib\+\_\+units\+\_\+str} & -\/ char -\/ string (char $\ast$) with the units of the counter calibration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_afa55fc0466a4c0190beac742067a8807}\label{multiple__sensor__modbus__driver_8h_afa55fc0466a4c0190beac742067a8807}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WriteLineCalibTable\_Serial\_MultipleSensor@{WriteLineCalibTable\_Serial\_MultipleSensor}}
+\index{WriteLineCalibTable\_Serial\_MultipleSensor@{WriteLineCalibTable\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WriteLineCalibTable\_Serial\_MultipleSensor()}{WriteLineCalibTable\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Write\+Line\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{int}]{line\+\_\+number,  }\item[{float}]{RAW\+\_\+value,  }\item[{float}]{measurement }\end{DoxyParamCaption})}
+
+
+
+function to upload/write to the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_afa55fc0466a4c0190beac742067a8807}{Write\+Line\+Calib\+Table\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, int channel\+\_\+number, int line\+\_\+number, float RAW\+\_\+value, float measurement)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be written its calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em line\+\_\+number} & -\/ int -\/ number of the line that is to be saved on the device \\
+\hline
+\mbox{\texttt{ in}}  & {\em RAW\+\_\+value} & -\/ float -\/ RAW\+\_\+value of the line to be saved on the device \\
+\hline
+\mbox{\texttt{ in}}  & {\em measurement} & -\/ float -\/ measurement of the line to be saved on the device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__modbus__driver_8h_a64c21e01d8a32707febed870278ba296}\label{multiple__sensor__modbus__driver_8h_a64c21e01d8a32707febed870278ba296}} 
+\index{multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}!WriteOutputConfig\_Serial\_MultipleSensor@{WriteOutputConfig\_Serial\_MultipleSensor}}
+\index{WriteOutputConfig\_Serial\_MultipleSensor@{WriteOutputConfig\_Serial\_MultipleSensor}!multiple\_sensor\_modbus\_driver.h@{multiple\_sensor\_modbus\_driver.h}}
+\doxysubsubsection{\texorpdfstring{WriteOutputConfig\_Serial\_MultipleSensor()}{WriteOutputConfig\_Serial\_MultipleSensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a5d0aa629de625d93b88299649fa931f2}{Multiple\+Sensor\+\_\+serial\+\_\+driver\+\_\+\+EXPORT\+\_\+\+CALL}} int Write\+Output\+Config\+\_\+\+Serial\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a7d750e38964cb036f321c09de3b75f74}{Multiple\+Sensor\+\_\+serial\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{output\+\_\+number,  }\item[{char $\ast$}]{out\+\_\+bool\+\_\+func\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Writes the boolean equation of the selected digital output to the device, before writing to the device it checks the validity of the boolean function inserted by the user, in case the boolean function has an error returns the correspondent error code and inside the session struct sets \char`\"{}error\+\_\+at\+\_\+\+CH\+\_\+number\+\_\+or\+\_\+position\char`\"{} to the value of the position were the error occured. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__modbus__driver_8h_a64c21e01d8a32707febed870278ba296}{Write\+Output\+Config\+\_\+\+Serial\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+serial\+\_\+driver -\/ pointer to structure of infos about this session of LCR sensors RS485/serial driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+\_\+number} & -\/ unsigned char -\/ output number (0,1,2) that will use the saved boolean equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$out\+\_\+bool\+\_\+func\+\_\+str} & -\/ char -\/ string (char $\ast$) with the boolean equation to be saved on the device for the selected \textquotesingle{}output\+\_\+number\textquotesingle{} (max length 50 characters (bytes))\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}

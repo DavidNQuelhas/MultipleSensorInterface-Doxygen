@@ -1,0 +1,46 @@
+\hypertarget{struct_worker___arguments___struct}{}\doxysection{Worker\+\_\+\+Arguments\+\_\+\+Struct Struct Reference}
+\label{struct_worker___arguments___struct}\index{Worker\_Arguments\_Struct@{Worker\_Arguments\_Struct}}
+
+
+{\ttfamily \#include $<$worker.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_a6ec429e4f765d7ced28c98686543234b}\label{struct_worker___arguments___struct_a6ec429e4f765d7ced28c98686543234b}} 
+char {\bfseries communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_a256c8477ae57d25f768ff93b9d9f39f7}\label{struct_worker___arguments___struct_a256c8477ae57d25f768ff93b9d9f39f7}} 
+\mbox{\hyperlink{struct_device___calib___header___data__struct}{Device\+Calib\+Header\+Data}} $\ast$ {\bfseries device\+\_\+calib\+\_\+header\+\_\+data\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_a53f26f4a65d3004e9cdf912cddef5b86}\label{struct_worker___arguments___struct_a53f26f4a65d3004e9cdf912cddef5b86}} 
+QStandard\+Item\+Model $\ast$ {\bfseries model\+\_\+tables\+\_\+device\+\_\+calib\+\_\+vector} \mbox{[}N\+\_\+\+LCR\+\_\+\+CHANNELS+N\+\_\+\+ADC\+\_\+\+CHANNELS\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_a3f568811d0039553ce6be0b10b88d237}\label{struct_worker___arguments___struct_a3f568811d0039553ce6be0b10b88d237}} 
+char {\bfseries N\+\_\+channels}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_add0fcbcf93c0bd9162a9b381be53ce8d}\label{struct_worker___arguments___struct_add0fcbcf93c0bd9162a9b381be53ce8d}} 
+int {\bfseries calib\+\_\+table\+\_\+max\+\_\+rows\+\_\+to\+\_\+process\+\_\+on\+\_\+single\+\_\+mode}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_aa9da3490d90195e1f61bda69edede983}\label{struct_worker___arguments___struct_aa9da3490d90195e1f61bda69edede983}} 
+char $\ast$ {\bfseries log\+\_\+msg\+\_\+str\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_a254907eb499b8edaf87b5140e99240ac}\label{struct_worker___arguments___struct_a254907eb499b8edaf87b5140e99240ac}} 
+char {\bfseries flag\+\_\+transfer\+\_\+mode\+\_\+bool}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_ae617ce87eeaaa1721d514dc287d57ae7}\label{struct_worker___arguments___struct_ae617ce87eeaaa1721d514dc287d57ae7}} 
+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$ {\bfseries serial\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{struct_worker___arguments___struct_a4ea424d98a46a536838a1ad885405775}\label{struct_worker___arguments___struct_a4ea424d98a46a536838a1ad885405775}} 
+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$ {\bfseries driver\+\_\+\+LCR\+\_\+sensors\+\_\+session\+\_\+ptr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textquotesingle{}typedef Worker\+\_\+\+Arguments\textquotesingle{} ; \textquotesingle{}struct \mbox{\hyperlink{struct_worker___arguments___struct}{Worker\+\_\+\+Arguments\+\_\+\+Struct}}\textquotesingle{}
+
+{\bfseries{Description}} Structure containing all info and variable references by the worker thread that will upload/download the Multiple-\/\+Sensor Interface calibration data. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/worker.\+h\end{DoxyCompactItemize}

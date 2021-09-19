@@ -1,0 +1,143 @@
+\hypertarget{class_config___board_i_d___dialog}{}\doxysection{Config\+\_\+\+Board\+ID\+\_\+\+Dialog Class Reference}
+\label{class_config___board_i_d___dialog}\index{Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Config\+\_\+\+Board\+ID\+\_\+\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config___board_i_d___dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_config___board_i_d___dialog_a1bdb74d437525516f651a4aaa774f1d6}{Config\+\_\+\+Board\+ID\+\_\+\+Dialog}} (Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session\+\_\+serial, char communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool)
+\begin{DoxyCompactList}\small\item\em The constructor of the class of the dialog used for configuring the board\+ID of a connected Multiple-\/\+Sensor device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_abc2ffdba7eb5c0aa04d72d84d6aa1d45}\label{class_config___board_i_d___dialog_abc2ffdba7eb5c0aa04d72d84d6aa1d45}} 
+QWidget $\ast$ {\bfseries config\+\_\+board\+ID\+\_\+widget}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_config___board_i_d___dialog_ad23b7cc8800d5a8b83ddb7b603b48942}{Send\+\_\+\+New\+\_\+\+Board\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Save on the Multiple-\/\+Sensor device the new board\+\_\+\+ID of that specific device/unit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_config___board_i_d___dialog_ac49da08fe0fa1c2edb4e1338063f0bcb}{Read\+\_\+\+Board\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Read from a Multiple-\/\+Sensor device the board\+\_\+\+ID of that specific device/unit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a3bf37660a665b841e090a6854a27b6ef}\label{class_config___board_i_d___dialog_a3bf37660a665b841e090a6854a27b6ef}} 
+void {\bfseries Close\+\_\+\+Dialog} ()
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a188a22deed5d21559dac574199ec0a87}\label{class_config___board_i_d___dialog_a188a22deed5d21559dac574199ec0a87}} 
+void {\bfseries Set\+\_\+\+Status\+\_\+\+Label\+\_\+\+Error} ()
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a88522bde94b8d8324583981315b2303b}\label{class_config___board_i_d___dialog_a88522bde94b8d8324583981315b2303b}} 
+void {\bfseries Set\+\_\+\+Status\+\_\+\+Label\+\_\+\+OK} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_aec0259e3796237c4a18cb51ef48bde68}\label{class_config___board_i_d___dialog_aec0259e3796237c4a18cb51ef48bde68}} 
+QGrid\+Layout $\ast$ {\bfseries config\+\_\+board\+ID\+\_\+dialog\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a3c52ec53c36086e4bb77c8c354fae140}\label{class_config___board_i_d___dialog_a3c52ec53c36086e4bb77c8c354fae140}} 
+QSpin\+Box $\ast$ {\bfseries board\+ID\+\_\+spinbox}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_adc3077213164e7add999869948a534e5}\label{class_config___board_i_d___dialog_adc3077213164e7add999869948a534e5}} 
+QWidget $\ast$ {\bfseries button\+\_\+widget}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_aa9d41cd07a3fbfe086f705fb5cda080c}\label{class_config___board_i_d___dialog_aa9d41cd07a3fbfe086f705fb5cda080c}} 
+QGrid\+Layout $\ast$ {\bfseries button\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_ad99340050ac1ef0ff6321efe209166c1}\label{class_config___board_i_d___dialog_ad99340050ac1ef0ff6321efe209166c1}} 
+QPush\+Button $\ast$ {\bfseries set\+\_\+board\+ID\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_abb826379250bd051473925d1431e2f5e}\label{class_config___board_i_d___dialog_abb826379250bd051473925d1431e2f5e}} 
+QPush\+Button $\ast$ {\bfseries read\+\_\+board\+ID\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_ac129a0b7c9b41b9fb94ae245d28ebcea}\label{class_config___board_i_d___dialog_ac129a0b7c9b41b9fb94ae245d28ebcea}} 
+QPush\+Button $\ast$ {\bfseries close\+\_\+dialog\+\_\+button}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a4fa8ba7fae1e650a18df1656f560442f}\label{class_config___board_i_d___dialog_a4fa8ba7fae1e650a18df1656f560442f}} 
+QLabel $\ast$ {\bfseries status\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_acab50e43bfb0aad806eaa88aab1568af}\label{class_config___board_i_d___dialog_acab50e43bfb0aad806eaa88aab1568af}} 
+QLabel $\ast$ {\bfseries board\+ID\+\_\+name\+\_\+label}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_ad562f3031bac23597424f7a7faccae03}\label{class_config___board_i_d___dialog_ad562f3031bac23597424f7a7faccae03}} 
+QGrid\+Layout $\ast$ {\bfseries config\+\_\+board\+ID\+\_\+widget\+\_\+layout}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a589ac568b439108585608caf2749d4ba}\label{class_config___board_i_d___dialog_a589ac568b439108585608caf2749d4ba}} 
+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$ {\bfseries m\+\_\+\+USB\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a7fd77c45fd1e9f6b262bcd4015d25b4d}\label{class_config___board_i_d___dialog_a7fd77c45fd1e9f6b262bcd4015d25b4d}} 
+Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$ {\bfseries m\+\_\+serial\+\_\+driver\+\_\+\+LCR\+\_\+sensors\+\_\+session}
+\item 
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a108db7e01554bb7729c02f519041d97d}\label{class_config___board_i_d___dialog_a108db7e01554bb7729c02f519041d97d}} 
+char {\bfseries m\+\_\+communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_config___board_i_d___dialog}{Config\+\_\+\+Board\+ID\+\_\+\+Dialog}} -\/ Dialog window for the configuration of the board\+ID of a connected Multiple-\/\+Sensor device.
+
+{\bfseries{Description}} Class of the dialog window used for reading and writing the board\+ID of a Multiple-\/\+Sensor Interface device. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_config___board_i_d___dialog_a1bdb74d437525516f651a4aaa774f1d6}\label{class_config___board_i_d___dialog_a1bdb74d437525516f651a4aaa774f1d6}} 
+\index{Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}!Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}}
+\index{Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}!Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Config\_BoardID\_Dialog()}{Config\_BoardID\_Dialog()}}
+{\footnotesize\ttfamily Config\+\_\+\+Board\+ID\+\_\+\+Dialog\+::\+Config\+\_\+\+Board\+ID\+\_\+\+Dialog (\begin{DoxyParamCaption}\item[{Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$}]{session,  }\item[{Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$}]{session\+\_\+serial,  }\item[{char}]{communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor of the class of the dialog used for configuring the board\+ID of a connected Multiple-\/\+Sensor device. 
+
+explicit \mbox{\hyperlink{class_config___board_i_d___dialog}{Config\+\_\+\+Board\+ID\+\_\+\+Dialog(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, Multiple\+Sensor\+\_\+serial\+\_\+driver $\ast$session\+\_\+serial, int $\ast$previous\+\_\+output\+\_\+number\+\_\+for\+\_\+saved\+\_\+config\+\_\+dialog\+\_\+ptr, char communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$session} & Variable with information of a currently used/available USB session on the main window of the Multiple-\/\+Sensor Interface. \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$session\+\_\+serial} & Variable with information of a currently used/available serial/\+RS485 session on the main window of the Multiple-\/\+Sensor Interface. \\
+\hline
+\mbox{\texttt{ in}}  & {\em communication\+\_\+is\+\_\+\+SERIAL\+\_\+bool} & Is as boolean used to signal if currently the program is communicating with the Multiple-\/\+Sensor device through the USB driver(=0) of through the serial/\+RS485 driver(=1). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_config___board_i_d___dialog_ac49da08fe0fa1c2edb4e1338063f0bcb}\label{class_config___board_i_d___dialog_ac49da08fe0fa1c2edb4e1338063f0bcb}} 
+\index{Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}!Read\_BoardID@{Read\_BoardID}}
+\index{Read\_BoardID@{Read\_BoardID}!Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Read\_BoardID}{Read\_BoardID}}
+{\footnotesize\ttfamily void Config\+\_\+\+Board\+ID\+\_\+\+Dialog\+::\+Read\+\_\+\+Board\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Read from a Multiple-\/\+Sensor device the board\+\_\+\+ID of that specific device/unit. 
+
+void \mbox{\hyperlink{class_config___board_i_d___dialog_ac49da08fe0fa1c2edb4e1338063f0bcb}{Read\+\_\+\+Board\+ID()}}
+
+This function will read the board\+\_\+\+ID number (between 0 and 255, 255 used for broadcast) from a target Multiple-\/\+Sensor device. To be able to read a board\+\_\+\+ID from a Multiple-\/\+Sensor device connected by RS485/serial, you must know the current board\+\_\+\+ID of the device and use it on the program to send the message of read board\+\_\+\+ID to that device, or alternatively use on the program the \textquotesingle{}255\textquotesingle{}(broadcast) board\+\_\+\+ID and ensure only one Multiple-\/\+Sensor device is connected on the RS485/serial cable. \mbox{\Hypertarget{class_config___board_i_d___dialog_ad23b7cc8800d5a8b83ddb7b603b48942}\label{class_config___board_i_d___dialog_ad23b7cc8800d5a8b83ddb7b603b48942}} 
+\index{Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}!Send\_New\_BoardID@{Send\_New\_BoardID}}
+\index{Send\_New\_BoardID@{Send\_New\_BoardID}!Config\_BoardID\_Dialog@{Config\_BoardID\_Dialog}}
+\doxysubsubsection{\texorpdfstring{Send\_New\_BoardID}{Send\_New\_BoardID}}
+{\footnotesize\ttfamily void Config\+\_\+\+Board\+ID\+\_\+\+Dialog\+::\+Send\+\_\+\+New\+\_\+\+Board\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Save on the Multiple-\/\+Sensor device the new board\+\_\+\+ID of that specific device/unit. 
+
+void \mbox{\hyperlink{class_config___board_i_d___dialog_ad23b7cc8800d5a8b83ddb7b603b48942}{Send\+\_\+\+New\+\_\+\+Board\+ID()}}
+
+This function will save/send a new board\+\_\+\+ID number (between 0 and 255, 255 used for broadcast) on a target Multiple-\/\+Sensor device. To be able to set/save a new board\+\_\+\+ID on a Multiple-\/\+Sensor device connected by RS485/serial, you must know the current board\+\_\+\+ID of the device and use it on the program to send the message of new board\+\_\+\+ID to that device, or alternatively use on the program the \textquotesingle{}255\textquotesingle{}(broadcast) board\+\_\+\+ID and ensure only one Multiple-\/\+Sensor device is connected on the RS485/serial cable. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+h\item 
+C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+GUI/mainwindow.\+cpp\end{DoxyCompactItemize}

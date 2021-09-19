@@ -1,0 +1,1047 @@
+\hypertarget{multiple__sensor__usb__driver_8c}{}\doxysection{C\+:/\+Users/\+David\+Q/projects/\+Multiple\+Sensor/\+Repository/\+Git\+Hub/\+Multiple\+Sensor\+Interface/\+USB\+\_\+driver/multiple\+\_\+sensor\+\_\+\+USB\+\_\+driver/multiple\+\_\+sensor\+\_\+usb\+\_\+driver.c File Reference}
+\label{multiple__sensor__usb__driver_8c}\index{C:/Users/DavidQ/projects/MultipleSensor/Repository/GitHub/MultipleSensorInterface/USB\_driver/multiple\_sensor\_USB\_driver/multiple\_sensor\_usb\_driver.c@{C:/Users/DavidQ/projects/MultipleSensor/Repository/GitHub/MultipleSensorInterface/USB\_driver/multiple\_sensor\_USB\_driver/multiple\_sensor\_usb\_driver.c}}
+{\ttfamily \#include \char`\"{}../\+HIDAPI/hidapi.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$wchar.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}multiple\+\_\+sensor\+\_\+usb\+\_\+driver.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_modbus___data___struct}{Modbus\+\_\+\+Data\+\_\+\+Struct}}
+\item 
+struct \mbox{\hyperlink{structret__type1__struct}{ret\+\_\+type1\+\_\+struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a6c3a72bc0e40227ac2c8d256e5e0e5fa}{SELECT\+\_\+\+MEASUREMENT\+\_\+\+TIME\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x01
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a1309fa036d677bb8aa3be8b8759f0eeb}{QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a7e7a73505e0bd5544fd5c9dd23a97dab}{QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x16
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a014ad41a0a032365fc6e2b86f36d0f0e}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x20
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_af4cf2f9d44bc7159afcae27095397dad}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x30
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ac031bcb83ffc359cec557a25c3192add}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x40
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a586abe0961ec0dd44ebc5cbee10ee900}{QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x87
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a0adbd91c96d76789445288c59e63b3fd}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x91
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a8c4362be63119a0a98f4ac9c96cc249e}{QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x95
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ae46acebece6befc966b5652d35c1705a}{SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x96
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a5ca68d13e0b9cd82609c9ed4044aa30f}{QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x50
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aaaa45e5ffb0211e3155c15a3c93e4cdb}{RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x58
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a494b00108204a2e952f691452678cea7}{QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x60
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a3f9d25eced969511dac92ce58367a385}{SET\+\_\+\+OR\+\_\+\+GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU}}~0x98
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_adc2199ec879d50eb3db8769964a183d5}{MULTIPLE\+\_\+\+SENSOR\+\_\+\+FIRMWARE\+\_\+\+ERROR\+\_\+\+Modbus\+RTU}}~0x\+FF
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a9979ff47ff5b344d84a936aab2f73a63}{QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a3f0e8e85d5299c11191f5e664aba305b}{QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a2a78575a7270cb5eacd80b602ae0d370}{SAVE\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a9b3b4592d4f47b7b182d44636fae01c3}{QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ab2f7b803aa6a78262e6ded5dce51fcef}{SAVE\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aa2c3ebd637f7a729ec2abba375d1b544}{QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_acf613afb004ada8505f5e6eac1879415}{SAVE\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a578816cd6610bdbe015856bf5a037ef6}{QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aed051da940c6c73a182288f1a63ea458}{QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_af70fee45ffcd4548528005ca2973f915}{QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a9a8500d1d42b5093abdb8fa21ff17c42}{SAVE\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x10
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a8b2a8cc8713c99be4c325793275f44d2}{QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a98963274c20a3c5576b7679f1bcdf859}{QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a43bb7d8c33916b2e426332e9fee9510d}{SAVE\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x06
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a39958637056c9b31190ab2a7f4c928b1}{QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ae4fa40a2a98220fce79be6da9f1d3045}{QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x04
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a7dfe2f375e0cfe3da16c47a94ea820a8}{RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x06
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a83e97cb0a29731b466c23a8933a5f35a}{GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x03
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ad013157ae4ea36cf6fa796a1b030c263}{SET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function}}~0x06
+\item 
+\#define \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aa55bbb692b1c5e89d3a5c3bee1ce8399}{POLY}}~0x\+A001
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structret__type1__struct}{ret\+\_\+type1\+\_\+struct}} \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a45aa2a32122670ea834079701b77c4fb}{ret\+\_\+type1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a3027a638aa74d1d2997edbe45139c6f6}{Remove\+Char}} (char $\ast$str, char garbage)
+\item 
+void \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a00ee73eb7c5c5c71c7624e2b1d5b50d3}{print\+\_\+\+ERROR\+\_\+\+MSG\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (int error\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Prints the error message correspondent to the error code that was returned by the USB driver of Multiple-\/\+Sensor. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a44f715013a5e6808f565e14ab87e3d6b}{crc16}} (unsigned char $\ast$p, unsigned char n)
+\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ac3bf585319f8262c83fe5fe0673b4d5b}{Add\+Parentheses\+At\+Start\+End}} (char $\ast$str, short max\+\_\+len, short max\+\_\+available\+\_\+size)
+\item 
+\mbox{\hyperlink{multiple__sensor__usb__driver_8c_a45aa2a32122670ea834079701b77c4fb}{ret\+\_\+type1}} \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a2b3683973b53c19e7b969c9fad88a130}{Check\+Boolean\+Func}} (char $\ast$bool\+\_\+func\+\_\+ptr)
+\item 
+\mbox{\hyperlink{struct_modbus___data___struct}{Modbus\+\_\+\+Data\+\_\+\+Struct}} \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aa8dcfaafccce84b733e973c50c5f6624}{Process\+\_\+\+Modbus\+\_\+\+Reply}} (unsigned char $\ast$Input\+Packet\+Buffer\+\_\+ptr, unsigned char this\+\_\+device\+\_\+\+ID)
+\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a5c02ff3fe535058c7d2466dc5c585a8c}{Open\+Device\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session)
+\begin{DoxyCompactList}\small\item\em Open the USB connection to the Multiple-\/\+Sensor device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aa62e8d3361eb45a3ff4ae88ba29752ad}{Read\+Frequency\+Measurement\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, long int $\ast$integer\+\_\+\+CH\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Read the frequency of the all the sensor channels in Hertz, save them as a integer vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a6c942985ca99b1367a99bd295da77af9}{Save\+Sensor\+Configs\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value, char compare\+\_\+is\+\_\+greater\+\_\+than, char sensor\+\_\+prescaler, char sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]}, float sensor\+\_\+trigger\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the trigger states that activates the digital outputs of the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a1fb33b390da55afd7164f1125f93aea5}{Read\+Sensor\+Configs\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char $\ast$make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr, char $\ast$compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr, char $\ast$sensor\+\_\+prescaler\+\_\+ptr, char $\ast$sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr, float $\ast$sensor\+\_\+trigger\+\_\+value\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the various configurations of the sensor channel selected on configs\+\_\+for\+\_\+channel\+\_\+number. Please pass on the arguments the pointers to the variables were the read configuration will be saved. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a23dba9479a3a41dcb2796043f021af24}{Read\+ADCValue\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, float $\ast$ADC\+\_\+values\+\_\+vector\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the ADC values in Volt (V) for all the ADC channels (ADC-\/\+Analogue to digital converter). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a8ad0c47d38942be64ccafa8af05b6da7}{Read\+Line\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int channel\+\_\+number, int line\+\_\+number, float $\ast$RAW\+\_\+value\+\_\+ptr, float $\ast$measurement\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em function to download/read from the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a3b675b3e504596f023492630d38cf056}{Write\+Line\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int channel\+\_\+number, int line\+\_\+number, float RAW\+\_\+value, float measurement)
+\begin{DoxyCompactList}\small\item\em function to upload/write to the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a19b6333b1f89dc3c7460dff86898cddf}{Read\+Header\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int channel\+\_\+number, unsigned char $\ast$calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr, unsigned char $\ast$number\+\_\+table\+\_\+lines\+\_\+ptr, unsigned char $\ast$calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr, char $\ast$jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr, char $\ast$units\+\_\+str\+\_\+ptr, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Reads/downloads the header of the calibration table for the selected channel number on the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_add34b78b9ddec95a5f4aab955535d5e1}{Write\+Header\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int channel\+\_\+number, unsigned char calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool, unsigned char number\+\_\+table\+\_\+lines, unsigned char calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch, char jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range, char $\ast$units\+\_\+str, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Writes/uploads the header of the calibration table for the selected channel number on the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a3fa59381f04dbefcc5c0e36e267966ed}{Read\+Measurements\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, float $\ast$measurements\+\_\+vector\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the measurements for the LCR+\+ADC channels in the units defined on the calibration table . (ADC-\/\+Analogue to Digital Converter). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_aaa88628db534fd4fb4830a4e27d67e55}{Read\+Outputs\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char $\ast$outputs\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Read the outputs of the multi-\/sensors device, INACTIVE=0x00, ACTIVE=0x01. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_af72f9ebda390844d00e25f2389a9659c}{Write\+Output\+Config\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Writes the boolean equation of the selected digital output to the device, before writing to the device it checks the validity of the boolean function inserted by the user, in case the boolean function has an error returns the correspondent error code and inside the session struct sets \char`\"{}error\+\_\+at\+\_\+\+CH\+\_\+number\+\_\+or\+\_\+position\char`\"{} to the value of the position were the error occured. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_afe6fd5322f81e0fc5885aaa48700073e}{Read\+Output\+Config\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Reads the boolean equation of the selected digital output. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a96b9eced2c58a4ed59e0dd703e2a034d}{Save\+Mode\+CHConfig\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool, int selected\+\_\+channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Save the selected L,C,R sensors channel mode on the multi-\/sensors device, if in single-\/channel mode the update frequency of the sensor measurement is faster because only one channel is monitored in multi-\/channel mode the device monitors the 6 channels using time-\/multiplexing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ac97ee0264f347a6644d78ee5149d21d6}{Read\+Mode\+CHConfig\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char $\ast$mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr, int $\ast$selected\+\_\+channel\+\_\+number\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the selected L,C,R sensor channel mode on the multi-\/sensors device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a92ca9b43f195f6c57715aa4c9c1ca002}{Read\+Sensor\+Counters\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, long int $\ast$integer\+\_\+\+CH\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Reads/downloads the counter values (units\+: cycles) of each sensor channel signal, save them on a (long int) vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ae7e10c68baad4163f94521d0c6703f4b}{Reset\+Sensor\+Counters\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session)
+\begin{DoxyCompactList}\small\item\em resets the counter values (units\+: cycles) of each sensor channel signal. resets $<$=$>$ set to zero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a22ad5a02fe05a52e89b05fb9274c7cc9}{Get\+Board\+IDCode\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char $\ast$board\+\_\+\+ID\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Get the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_af4bc265018b45b3b1ac26dab71a25b4a}{Set\+Board\+IDCode\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, unsigned char new\+\_\+board\+\_\+\+ID)
+\begin{DoxyCompactList}\small\item\em Set the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a677fc0f153b7901232dce95cf8610185}{Read\+Counters\+Calib\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int channel\+\_\+number, float $\ast$C0\+\_\+ptr, float $\ast$C1\+\_\+ptr, float $\ast$C2\+\_\+ptr, float $\ast$C3\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Reads the counter calibration constants for the selected channel number on the device the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_ab3d4a5ccea7725595cfc8a96cf418fa5}{Write\+Counters\+Calib\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, int channel\+\_\+number, float C0, float C1, float C2, float C3)
+\begin{DoxyCompactList}\small\item\em Writes the counter calibration constants for the selected channel number on the device, the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a92a9be44d9f92cc3af6494420c81c9c3}{Read\+Counters\+Measurements\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session, float $\ast$counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Read the measurements for the counters of the LCR channels in the units defined on the counters calibration . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a0f40e4736ae8ed07be22135451d1e5b5}{Close\+Device\+\_\+\+USB\+\_\+\+Multiple\+Sensor}} (\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$session)
+\begin{DoxyCompactList}\small\item\em Close the USB connection to the Multiple-\/\+Sensor device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a879f513bb07bca89c562f29d9cb360b4}{modbus\+\_\+data}} \mbox{[}255\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a83e97cb0a29731b466c23a8933a5f35a}\label{multiple__sensor__usb__driver_8c_a83e97cb0a29731b466c23a8933a5f35a}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+\index{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}{GET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_adc2199ec879d50eb3db8769964a183d5}\label{multiple__sensor__usb__driver_8c_adc2199ec879d50eb3db8769964a183d5}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU@{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}}
+\index{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU@{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}{MULTIPLE\_SENSOR\_FIRMWARE\_ERROR\_ModbusRTU}}
+{\footnotesize\ttfamily \#define MULTIPLE\+\_\+\+SENSOR\+\_\+\+FIRMWARE\+\_\+\+ERROR\+\_\+\+Modbus\+RTU~0x\+FF}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aa55bbb692b1c5e89d3a5c3bee1ce8399}\label{multiple__sensor__usb__driver_8c_aa55bbb692b1c5e89d3a5c3bee1ce8399}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!POLY@{POLY}}
+\index{POLY@{POLY}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{POLY}{POLY}}
+{\footnotesize\ttfamily \#define POLY~0x\+A001}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a7e7a73505e0bd5544fd5c9dd23a97dab}\label{multiple__sensor__usb__driver_8c_a7e7a73505e0bd5544fd5c9dd23a97dab}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}}
+\index{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}{QUERY\_ADC\_MEASUREMENTS\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x16}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a3f0e8e85d5299c11191f5e664aba305b}\label{multiple__sensor__usb__driver_8c_a3f0e8e85d5299c11191f5e664aba305b}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}}
+\index{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}{QUERY\_ADC\_MEASUREMENTS\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+ADC\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a9b3b4592d4f47b7b182d44636fae01c3}\label{multiple__sensor__usb__driver_8c_a9b3b4592d4f47b7b182d44636fae01c3}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}{QUERY\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a494b00108204a2e952f691452678cea7}\label{multiple__sensor__usb__driver_8c_a494b00108204a2e952f691452678cea7}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+\index{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x60}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_af70fee45ffcd4548528005ca2973f915}\label{multiple__sensor__usb__driver_8c_af70fee45ffcd4548528005ca2973f915}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}{QUERY\_COUNTERS\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+COUNTERS\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a1309fa036d677bb8aa3be8b8759f0eeb}\label{multiple__sensor__usb__driver_8c_a1309fa036d677bb8aa3be8b8759f0eeb}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}}
+\index{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU@{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}{QUERY\_FREQUENCY\_MEASUREMENTS\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a9979ff47ff5b344d84a936aab2f73a63}\label{multiple__sensor__usb__driver_8c_a9979ff47ff5b344d84a936aab2f73a63}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}}
+\index{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function@{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}{QUERY\_FREQUENCY\_MEASUREMENTS\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+FREQUENCY\+\_\+\+MEASUREMENTS\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a578816cd6610bdbe015856bf5a037ef6}\label{multiple__sensor__usb__driver_8c_a578816cd6610bdbe015856bf5a037ef6}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{QUERY\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aa2c3ebd637f7a729ec2abba375d1b544}\label{multiple__sensor__usb__driver_8c_aa2c3ebd637f7a729ec2abba375d1b544}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{QUERY\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a586abe0961ec0dd44ebc5cbee10ee900}\label{multiple__sensor__usb__driver_8c_a586abe0961ec0dd44ebc5cbee10ee900}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+\index{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU@{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}{QUERY\_MEASUREMENTS\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x87}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aed051da940c6c73a182288f1a63ea458}\label{multiple__sensor__usb__driver_8c_aed051da940c6c73a182288f1a63ea458}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+\index{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function@{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}{QUERY\_MEASUREMENTS\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MEASUREMENTS\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a5ca68d13e0b9cd82609c9ed4044aa30f}\label{multiple__sensor__usb__driver_8c_a5ca68d13e0b9cd82609c9ed4044aa30f}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+\index{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x50}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ae4fa40a2a98220fce79be6da9f1d3045}\label{multiple__sensor__usb__driver_8c_ae4fa40a2a98220fce79be6da9f1d3045}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+\index{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}{QUERY\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a39958637056c9b31190ab2a7f4c928b1}\label{multiple__sensor__usb__driver_8c_a39958637056c9b31190ab2a7f4c928b1}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+\index{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}{QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a8b2a8cc8713c99be4c325793275f44d2}\label{multiple__sensor__usb__driver_8c_a8b2a8cc8713c99be4c325793275f44d2}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+\index{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}{QUERY\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x03}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a8c4362be63119a0a98f4ac9c96cc249e}\label{multiple__sensor__usb__driver_8c_a8c4362be63119a0a98f4ac9c96cc249e}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}}
+\index{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}{QUERY\_OUTPUTS\_CURRENT\_VALUE\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x95}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a98963274c20a3c5576b7679f1bcdf859}\label{multiple__sensor__usb__driver_8c_a98963274c20a3c5576b7679f1bcdf859}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}}
+\index{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function@{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}{QUERY\_OUTPUTS\_CURRENT\_VALUE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define QUERY\+\_\+\+OUTPUTS\+\_\+\+CURRENT\+\_\+\+VALUE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x04}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aaaa45e5ffb0211e3155c15a3c93e4cdb}\label{multiple__sensor__usb__driver_8c_aaaa45e5ffb0211e3155c15a3c93e4cdb}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+\index{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x58}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a7dfe2f375e0cfe3da16c47a94ea820a8}\label{multiple__sensor__usb__driver_8c_a7dfe2f375e0cfe3da16c47a94ea820a8}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+\index{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function@{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}{RESET\_MULTIPLE\_SENSOR\_COUNTER\_VALUES\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define RESET\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+COUNTER\+\_\+\+VALUES\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x06}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a2a78575a7270cb5eacd80b602ae0d370}\label{multiple__sensor__usb__driver_8c_a2a78575a7270cb5eacd80b602ae0d370}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+\index{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function@{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}{SAVE\_CONFIGURATIONS\_SENSOR\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_acf613afb004ada8505f5e6eac1879415}\label{multiple__sensor__usb__driver_8c_acf613afb004ada8505f5e6eac1879415}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{SAVE\_HEADER\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ab2f7b803aa6a78262e6ded5dce51fcef}\label{multiple__sensor__usb__driver_8c_ab2f7b803aa6a78262e6ded5dce51fcef}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+\index{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function@{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}{SAVE\_LINE\_CALIB\_TABLE\_CH\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a43bb7d8c33916b2e426332e9fee9510d}\label{multiple__sensor__usb__driver_8c_a43bb7d8c33916b2e426332e9fee9510d}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+\index{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function@{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}{SAVE\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x06}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a014ad41a0a032365fc6e2b86f36d0f0e}\label{multiple__sensor__usb__driver_8c_a014ad41a0a032365fc6e2b86f36d0f0e}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_CONFIGURATIONS\_SENSOR\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+CONFIGURATIONS\+\_\+\+SENSOR\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x20}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ac031bcb83ffc359cec557a25c3192add}\label{multiple__sensor__usb__driver_8c_ac031bcb83ffc359cec557a25c3192add}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_HEADER\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+HEADER\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x40}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_af4cf2f9d44bc7159afcae27095397dad}\label{multiple__sensor__usb__driver_8c_af4cf2f9d44bc7159afcae27095397dad}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_LINE\_CALIB\_TABLE\_CH\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+LINE\+\_\+\+CALIB\+\_\+\+TABLE\+\_\+\+CH\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x30}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ae46acebece6befc966b5652d35c1705a}\label{multiple__sensor__usb__driver_8c_ae46acebece6befc966b5652d35c1705a}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_MULTIPLE\_SENSOR\_MODE\_MULTI\_OR\_SINGLE\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+MULTIPLE\+\_\+\+SENSOR\+\_\+\+MODE\+\_\+\+MULTI\+\_\+\+OR\+\_\+\+SINGLE\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x96}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a0adbd91c96d76789445288c59e63b3fd}\label{multiple__sensor__usb__driver_8c_a0adbd91c96d76789445288c59e63b3fd}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+\index{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU@{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}{SAVE\_OR\_QUERY\_OUTPUT\_CONFIG\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OR\+\_\+\+QUERY\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x91}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a9a8500d1d42b5093abdb8fa21ff17c42}\label{multiple__sensor__usb__driver_8c_a9a8500d1d42b5093abdb8fa21ff17c42}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+\index{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function@{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}{SAVE\_OUTPUT\_CONFIG\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SAVE\+\_\+\+OUTPUT\+\_\+\+CONFIG\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x10}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a6c3a72bc0e40227ac2c8d256e5e0e5fa}\label{multiple__sensor__usb__driver_8c_a6c3a72bc0e40227ac2c8d256e5e0e5fa}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU@{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}}
+\index{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU@{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}{SELECT\_MEASUREMENT\_TIME\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SELECT\+\_\+\+MEASUREMENT\+\_\+\+TIME\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x01}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ad013157ae4ea36cf6fa796a1b030c263}\label{multiple__sensor__usb__driver_8c_ad013157ae4ea36cf6fa796a1b030c263}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+\index{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function@{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}{SET\_BOARD\_ID\_CODE\_ModbusRTU\_Function}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU\+\_\+\+Function~0x06}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a3f9d25eced969511dac92ce58367a385}\label{multiple__sensor__usb__driver_8c_a3f9d25eced969511dac92ce58367a385}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU@{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}}
+\index{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU@{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}{SET\_OR\_GET\_BOARD\_ID\_CODE\_ModbusRTU}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+OR\+\_\+\+GET\+\_\+\+BOARD\+\_\+\+ID\+\_\+\+CODE\+\_\+\+Modbus\+RTU~0x98}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a45aa2a32122670ea834079701b77c4fb}\label{multiple__sensor__usb__driver_8c_a45aa2a32122670ea834079701b77c4fb}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ret\_type1@{ret\_type1}}
+\index{ret\_type1@{ret\_type1}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ret\_type1}{ret\_type1}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structret__type1__struct}{ret\+\_\+type1\+\_\+struct}} \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a45aa2a32122670ea834079701b77c4fb}{ret\+\_\+type1}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ac3bf585319f8262c83fe5fe0673b4d5b}\label{multiple__sensor__usb__driver_8c_ac3bf585319f8262c83fe5fe0673b4d5b}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!AddParenthesesAtStartEnd@{AddParenthesesAtStartEnd}}
+\index{AddParenthesesAtStartEnd@{AddParenthesesAtStartEnd}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{AddParenthesesAtStartEnd()}{AddParenthesesAtStartEnd()}}
+{\footnotesize\ttfamily int Add\+Parentheses\+At\+Start\+End (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{short}]{max\+\_\+len,  }\item[{short}]{max\+\_\+available\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a2b3683973b53c19e7b969c9fad88a130}\label{multiple__sensor__usb__driver_8c_a2b3683973b53c19e7b969c9fad88a130}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!CheckBooleanFunc@{CheckBooleanFunc}}
+\index{CheckBooleanFunc@{CheckBooleanFunc}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{CheckBooleanFunc()}{CheckBooleanFunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{multiple__sensor__usb__driver_8c_a45aa2a32122670ea834079701b77c4fb}{ret\+\_\+type1}} Check\+Boolean\+Func (\begin{DoxyParamCaption}\item[{char $\ast$}]{bool\+\_\+func\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a0f40e4736ae8ed07be22135451d1e5b5}\label{multiple__sensor__usb__driver_8c_a0f40e4736ae8ed07be22135451d1e5b5}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!CloseDevice\_USB\_MultipleSensor@{CloseDevice\_USB\_MultipleSensor}}
+\index{CloseDevice\_USB\_MultipleSensor@{CloseDevice\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{CloseDevice\_USB\_MultipleSensor()}{CloseDevice\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily void Close\+Device\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+
+
+Close the USB connection to the Multiple-\/\+Sensor device. 
+
+\DoxyHorRuler{0}
+ void \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a4eadbfbd2cbb065bc1fe1879a70c11b5}{Close\+Device\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session)}};
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a44f715013a5e6808f565e14ab87e3d6b}\label{multiple__sensor__usb__driver_8c_a44f715013a5e6808f565e14ab87e3d6b}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!crc16@{crc16}}
+\index{crc16@{crc16}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{crc16()}{crc16()}}
+{\footnotesize\ttfamily unsigned int crc16 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{p,  }\item[{unsigned char}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a22ad5a02fe05a52e89b05fb9274c7cc9}\label{multiple__sensor__usb__driver_8c_a22ad5a02fe05a52e89b05fb9274c7cc9}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!GetBoardIDCode\_USB\_MultipleSensor@{GetBoardIDCode\_USB\_MultipleSensor}}
+\index{GetBoardIDCode\_USB\_MultipleSensor@{GetBoardIDCode\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{GetBoardIDCode\_USB\_MultipleSensor()}{GetBoardIDCode\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Get\+Board\+IDCode\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char $\ast$}]{board\+\_\+\+ID\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Get the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_ada64fd7e2da7ba49ab35515df6ab0390}{Get\+Board\+IDCode\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char $\ast$board\+\_\+\+ID\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$board\+\_\+\+ID\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where to save the \textquotesingle{}board\+\_\+\+ID\textquotesingle{} (0 -\/ 254) read from the Multiple-\/\+Sensor Interface device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a5c02ff3fe535058c7d2466dc5c585a8c}\label{multiple__sensor__usb__driver_8c_a5c02ff3fe535058c7d2466dc5c585a8c}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!OpenDevice\_USB\_MultipleSensor@{OpenDevice\_USB\_MultipleSensor}}
+\index{OpenDevice\_USB\_MultipleSensor@{OpenDevice\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{OpenDevice\_USB\_MultipleSensor()}{OpenDevice\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Open\+Device\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+
+
+Open the USB connection to the Multiple-\/\+Sensor device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9732ff99684aa52ab07f5e5aabc49d85}{Open\+Device\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a00ee73eb7c5c5c71c7624e2b1d5b50d3}\label{multiple__sensor__usb__driver_8c_a00ee73eb7c5c5c71c7624e2b1d5b50d3}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!print\_ERROR\_MSG\_USB\_MultipleSensor@{print\_ERROR\_MSG\_USB\_MultipleSensor}}
+\index{print\_ERROR\_MSG\_USB\_MultipleSensor@{print\_ERROR\_MSG\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{print\_ERROR\_MSG\_USB\_MultipleSensor()}{print\_ERROR\_MSG\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily void print\+\_\+\+ERROR\+\_\+\+MSG\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{int}]{error\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Prints the error message correspondent to the error code that was returned by the USB driver of Multiple-\/\+Sensor. 
+
+\DoxyHorRuler{0}
+ void \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a7cf24b74b933486dcde41f9393104206}{print\+\_\+\+ERROR\+\_\+\+MSG\+\_\+\+USB\+\_\+\+Multiple\+Sensor(int error\+\_\+code)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em error\+\_\+code} & -\/ int -\/ The \textquotesingle{}error code\textquotesingle{}/\textquotesingle{}return value\textquotesingle{} an integer number from the list \char`\"{}\+Driver of LCR sensors, list of commands return codes\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aa8dcfaafccce84b733e973c50c5f6624}\label{multiple__sensor__usb__driver_8c_aa8dcfaafccce84b733e973c50c5f6624}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!Process\_Modbus\_Reply@{Process\_Modbus\_Reply}}
+\index{Process\_Modbus\_Reply@{Process\_Modbus\_Reply}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{Process\_Modbus\_Reply()}{Process\_Modbus\_Reply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_modbus___data___struct}{Modbus\+\_\+\+Data\+\_\+\+Struct}} Process\+\_\+\+Modbus\+\_\+\+Reply (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{Input\+Packet\+Buffer\+\_\+ptr,  }\item[{unsigned char}]{this\+\_\+device\+\_\+\+ID }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a23dba9479a3a41dcb2796043f021af24}\label{multiple__sensor__usb__driver_8c_a23dba9479a3a41dcb2796043f021af24}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadADCValue\_USB\_MultipleSensor@{ReadADCValue\_USB\_MultipleSensor}}
+\index{ReadADCValue\_USB\_MultipleSensor@{ReadADCValue\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadADCValue\_USB\_MultipleSensor()}{ReadADCValue\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+ADCValue\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{float $\ast$}]{ADC\+\_\+values\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the ADC values in Volt (V) for all the ADC channels (ADC-\/\+Analogue to digital converter). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a1330f3d9d01c6c12f262faba1e6fd06e}{Read\+ADCValue\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, float $\ast$\+ADC\+\_\+values\+\_\+vector\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+ADC\+\_\+values\+\_\+vector\+\_\+ptr} & -\/ float -\/ pointer to (float) vector were will be saved the values read from the ADC\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a677fc0f153b7901232dce95cf8610185}\label{multiple__sensor__usb__driver_8c_a677fc0f153b7901232dce95cf8610185}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadCountersCalib\_USB\_MultipleSensor@{ReadCountersCalib\_USB\_MultipleSensor}}
+\index{ReadCountersCalib\_USB\_MultipleSensor@{ReadCountersCalib\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadCountersCalib\_USB\_MultipleSensor()}{ReadCountersCalib\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Counters\+Calib\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{float $\ast$}]{C0\+\_\+ptr,  }\item[{float $\ast$}]{C1\+\_\+ptr,  }\item[{float $\ast$}]{C2\+\_\+ptr,  }\item[{float $\ast$}]{C3\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Reads the counter calibration constants for the selected channel number on the device the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a2d1a16dbc3f3f34a87cdd98a8f14326d}{Read\+Counters\+Calib\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int channel\+\_\+number, float $\ast$\+C0\+\_\+ptr, float $\ast$\+C1\+\_\+ptr, float $\ast$\+C2\+\_\+ptr, float $\ast$\+C3\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ number of the channel that is to be read its counter calibration constants/parameters \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C0\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the offset \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C1\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the counter\+\_\+\+RAW\+\_\+value \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C2\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$2 \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+C3\+\_\+ptr} & -\/ float -\/ pointer to where will be saved the constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$3\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a92a9be44d9f92cc3af6494420c81c9c3}\label{multiple__sensor__usb__driver_8c_a92a9be44d9f92cc3af6494420c81c9c3}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadCountersMeasurements\_USB\_MultipleSensor@{ReadCountersMeasurements\_USB\_MultipleSensor}}
+\index{ReadCountersMeasurements\_USB\_MultipleSensor@{ReadCountersMeasurements\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadCountersMeasurements\_USB\_MultipleSensor()}{ReadCountersMeasurements\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Counters\+Measurements\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{float $\ast$}]{counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the measurements for the counters of the LCR channels in the units defined on the counters calibration . 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a7ec6e5d413504a079f55ef0f691b37cb}{Read\+Counters\+Measurements\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, float $\ast$counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$counters\+\_\+measurements\+\_\+values\+\_\+vector\+\_\+ptr} & -\/ float -\/ pointer to the (float) vector were will be saved the values read of the calibrated counters measurements from the LCR channels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aa62e8d3361eb45a3ff4ae88ba29752ad}\label{multiple__sensor__usb__driver_8c_aa62e8d3361eb45a3ff4ae88ba29752ad}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadFrequencyMeasurement\_USB\_MultipleSensor@{ReadFrequencyMeasurement\_USB\_MultipleSensor}}
+\index{ReadFrequencyMeasurement\_USB\_MultipleSensor@{ReadFrequencyMeasurement\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadFrequencyMeasurement\_USB\_MultipleSensor()}{ReadFrequencyMeasurement\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Frequency\+Measurement\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{long int $\ast$}]{integer\+\_\+\+CH\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Read the frequency of the all the sensor channels in Hertz, save them as a integer vector. 
+
+\DoxyHorRuler{0}
+ int Read\+Frequency\+Measurement\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int $\ast$integer\+\_\+\+CH\+\_\+vector)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$integer\+\_\+\+CH\+\_\+vector} & -\/ int -\/ pointer to (int) vector were will be saved the frequency in Hertz of each sensor channel signal (integer values)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a19b6333b1f89dc3c7460dff86898cddf}\label{multiple__sensor__usb__driver_8c_a19b6333b1f89dc3c7460dff86898cddf}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadHeaderCalibTable\_USB\_MultipleSensor@{ReadHeaderCalibTable\_USB\_MultipleSensor}}
+\index{ReadHeaderCalibTable\_USB\_MultipleSensor@{ReadHeaderCalibTable\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadHeaderCalibTable\_USB\_MultipleSensor()}{ReadHeaderCalibTable\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Header\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{unsigned char $\ast$}]{calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr,  }\item[{unsigned char $\ast$}]{number\+\_\+table\+\_\+lines\+\_\+ptr,  }\item[{unsigned char $\ast$}]{calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr,  }\item[{char $\ast$}]{jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr,  }\item[{char $\ast$}]{units\+\_\+str\+\_\+ptr,  }\item[{char $\ast$}]{counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Reads/downloads the header of the calibration table for the selected channel number on the device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_add410ed6ea7a748ad42b346b9871b2ea}{Read\+Header\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int channel\+\_\+number, unsigned char $\ast$calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr, unsigned char $\ast$number\+\_\+table\+\_\+lines\+\_\+ptr, unsigned char $\ast$calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr, char $\ast$jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr, char $\ast$units\+\_\+str\+\_\+ptr, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be read its calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where will be saved if the calib table is being used by the device to calculate measurements for the respective sensor channel \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$number\+\_\+table\+\_\+lines\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where will be saved the number of valid lines of the calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable where will be saved the mode of operation of the device when the calibration table was obtained (\textquotesingle{}1\textquotesingle{} -\/ single channel mode , \textquotesingle{}0\textquotesingle{} -\/ multiple channel mode) \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range\+\_\+ptr} & -\/ char -\/ pointer to variable where will be saved the letter (character A or B) indicating the jumper selection of oscilator tunning range , this parameter is the jumper position of a LCR channel selected by the user on the multiple sensor interface , it can be A or B ( A, B coded in ASCII) \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$units\+\_\+str\+\_\+ptr} & -\/ char -\/ string (char $\ast$) where will be saved the units of the calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $<$em$>$counter\+\_\+calib\+\_\+units\+\_\+str\+\_\+ptr} & -\/ char -\/ string (char $\ast$) where will be saved the units of the counter calibration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a8ad0c47d38942be64ccafa8af05b6da7}\label{multiple__sensor__usb__driver_8c_a8ad0c47d38942be64ccafa8af05b6da7}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadLineCalibTable\_USB\_MultipleSensor@{ReadLineCalibTable\_USB\_MultipleSensor}}
+\index{ReadLineCalibTable\_USB\_MultipleSensor@{ReadLineCalibTable\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadLineCalibTable\_USB\_MultipleSensor()}{ReadLineCalibTable\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Line\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{int}]{line\+\_\+number,  }\item[{float $\ast$}]{RAW\+\_\+value\+\_\+ptr,  }\item[{float $\ast$}]{measurement\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+function to download/read from the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a693e35b59950b3a4770d145f1cc52898}{Read\+Line\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int channel\+\_\+number, int line\+\_\+number, float $\ast$\+RAW\+\_\+value\+\_\+ptr, float $\ast$measurement\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel to be read data from its calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em line\+\_\+number} & -\/ int -\/ number of the line to be read from the calibration table \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$\+RAW\+\_\+value\+\_\+ptr} & -\/ float -\/ pointer to the variable where should be saved the read RAW\+\_\+value \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$measurement\+\_\+ptr} & -\/ float -\/ pointer to the variable where should be saved the read measurement(of calibration table)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a3fa59381f04dbefcc5c0e36e267966ed}\label{multiple__sensor__usb__driver_8c_a3fa59381f04dbefcc5c0e36e267966ed}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadMeasurements\_USB\_MultipleSensor@{ReadMeasurements\_USB\_MultipleSensor}}
+\index{ReadMeasurements\_USB\_MultipleSensor@{ReadMeasurements\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadMeasurements\_USB\_MultipleSensor()}{ReadMeasurements\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Measurements\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{float $\ast$}]{measurements\+\_\+vector\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the measurements for the LCR+\+ADC channels in the units defined on the calibration table . (ADC-\/\+Analogue to Digital Converter). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a7a6db432cbd25fd02e62a1f1eee14ee7}{Read\+Measurements\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, float $\ast$measurements\+\_\+vector\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$measurements\+\_\+values\+\_\+vector\+\_\+ptr} & -\/ float -\/ pointer to the (float) vector were will be saved the values read of the calibrated measurements from the LCR+\+ADC channels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ac97ee0264f347a6644d78ee5149d21d6}\label{multiple__sensor__usb__driver_8c_ac97ee0264f347a6644d78ee5149d21d6}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadModeCHConfig\_USB\_MultipleSensor@{ReadModeCHConfig\_USB\_MultipleSensor}}
+\index{ReadModeCHConfig\_USB\_MultipleSensor@{ReadModeCHConfig\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadModeCHConfig\_USB\_MultipleSensor()}{ReadModeCHConfig\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Mode\+CHConfig\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char $\ast$}]{mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr,  }\item[{int $\ast$}]{selected\+\_\+channel\+\_\+number\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the selected L,C,R sensor channel mode on the multi-\/sensors device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a806f123a6d0ea63d9cd2e7306281bfe8}{Read\+Mode\+CHConfig\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char $\ast$mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr, int $\ast$selected\+\_\+channel\+\_\+number\+\_\+ptr)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool\+\_\+ptr} & -\/ unsigned char -\/ pointer to variable were will be saved the boolean value that indicates the mode of operation, 0 (\char`\"{}zero\char`\"{}) indicates board is in multi-\/channel mode, 1 (\char`\"{}one\char`\"{}) indicates board is in single-\/channel mode , \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$selected\+\_\+channel\+\_\+number\+\_\+ptr} & -\/ int -\/ pointer to variable were will be saved the number of the sensor channel that should be read/measured in case the single channel mode is selected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_afe6fd5322f81e0fc5885aaa48700073e}\label{multiple__sensor__usb__driver_8c_afe6fd5322f81e0fc5885aaa48700073e}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadOutputConfig\_USB\_MultipleSensor@{ReadOutputConfig\_USB\_MultipleSensor}}
+\index{ReadOutputConfig\_USB\_MultipleSensor@{ReadOutputConfig\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadOutputConfig\_USB\_MultipleSensor()}{ReadOutputConfig\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Output\+Config\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{output\+\_\+number,  }\item[{char $\ast$}]{out\+\_\+bool\+\_\+func\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Reads the boolean equation of the selected digital output. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_ac89e6ea9a576ddecb15fdd9c95a3cc2a}{Read\+Output\+Config\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+\_\+number} & -\/ unsigned char -\/ output number (0,1,2) where to be read the boolean equation \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$out\+\_\+bool\+\_\+func\+\_\+str} & -\/ char \mbox{[}3\mbox{]} -\/ string (char $\ast$) were will be saved the read boolean equation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_aaa88628db534fd4fb4830a4e27d67e55}\label{multiple__sensor__usb__driver_8c_aaa88628db534fd4fb4830a4e27d67e55}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadOutputs\_USB\_MultipleSensor@{ReadOutputs\_USB\_MultipleSensor}}
+\index{ReadOutputs\_USB\_MultipleSensor@{ReadOutputs\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadOutputs\_USB\_MultipleSensor()}{ReadOutputs\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Outputs\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char $\ast$}]{outputs\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Read the outputs of the multi-\/sensors device, INACTIVE=0x00, ACTIVE=0x01. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_ae31a1f8b204fd67d0a1e4b0a228afbdb}{Read\+Outputs\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char $\ast$outputs\+\_\+vector)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$outputs\+\_\+vector} & -\/ unsigned char \mbox{[}3\mbox{]} -\/ pointer to the vector where will be save the values of the digital outputs of the multi-\/sensors device , boolean values (\textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}) type char\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a1fb33b390da55afd7164f1125f93aea5}\label{multiple__sensor__usb__driver_8c_a1fb33b390da55afd7164f1125f93aea5}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadSensorConfigs\_USB\_MultipleSensor@{ReadSensorConfigs\_USB\_MultipleSensor}}
+\index{ReadSensorConfigs\_USB\_MultipleSensor@{ReadSensorConfigs\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadSensorConfigs\_USB\_MultipleSensor()}{ReadSensorConfigs\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Sensor\+Configs\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{configs\+\_\+for\+\_\+channel\+\_\+number,  }\item[{char $\ast$}]{make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr,  }\item[{char $\ast$}]{compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr,  }\item[{char $\ast$}]{sensor\+\_\+prescaler\+\_\+ptr,  }\item[{char $\ast$}]{sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr,  }\item[{float $\ast$}]{sensor\+\_\+trigger\+\_\+value\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Read the various configurations of the sensor channel selected on configs\+\_\+for\+\_\+channel\+\_\+number. Please pass on the arguments the pointers to the variables were the read configuration will be saved. 
+
+\DoxyHorRuler{0}
+ int Read\+\_\+\+Sensor\+\_\+\+Configs\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char $\ast$make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr, char $\ast$compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr, char $\ast$sensor\+\_\+prescaler\+\_\+ptr, char $\ast$sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr, float $\ast$sensor\+\_\+trigger\+\_\+value\+\_\+ptr)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em configs\+\_\+for\+\_\+channel\+\_\+number} & -\/ int -\/ Number of the channel to obtain its configuration. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value\+\_\+ptr} & -\/ char -\/ NOT IMPLEMENTED/\+USED (Multiple-\/\+Sensor Interface no longer uses this parameter). Pointer to the variable where will be saved a boolean value (0 or 1), 0 RAW sensor measurement is used , 1 calibrated measurement is used, for the trigger of the sensor channel \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$compare\+\_\+is\+\_\+greater\+\_\+than\+\_\+ptr} & -\/ char -\/ pointer to the variable where will be saved a boolean value (0 or 1), 0 is used for the minor than compare, 1 is used for the greater than compare. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$sensor\+\_\+prescaler\+\_\+ptr} & -\/ char -\/ NOT IMPLEMENTED -\/ (the firmware is set to 4) \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$sensor\+\_\+used\+\_\+for\+\_\+\+OUT\+\_\+ptr} & -\/ char \mbox{[}3\mbox{]} -\/ NOT IMPLEMENTED/\+USED -\/ pointer to the variable where will be saved a boolean value that indicate which outputs are activated by this sensor channel \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$sensor\+\_\+trigger\+\_\+value\+\_\+ptr} & -\/ float -\/ pointer to the variable where will be saved the reference value used on the comparison that determines if this sensor channel is triggered\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a92ca9b43f195f6c57715aa4c9c1ca002}\label{multiple__sensor__usb__driver_8c_a92ca9b43f195f6c57715aa4c9c1ca002}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ReadSensorCounters\_USB\_MultipleSensor@{ReadSensorCounters\_USB\_MultipleSensor}}
+\index{ReadSensorCounters\_USB\_MultipleSensor@{ReadSensorCounters\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ReadSensorCounters\_USB\_MultipleSensor()}{ReadSensorCounters\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Read\+Sensor\+Counters\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{long int $\ast$}]{integer\+\_\+\+CH\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Reads/downloads the counter values (units\+: cycles) of each sensor channel signal, save them on a (long int) vector. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_aac57740c4864c8b5cb96e9760f6d6f39}{Read\+Sensor\+Counters\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, long int $\ast$integer\+\_\+\+CH\+\_\+vector)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$integer\+\_\+\+CH\+\_\+vector} & -\/ long int -\/ pointer to the (long int) vector were will be saved the counter values (units\+: cycles) of each sensor channel signal (integer values)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a3027a638aa74d1d2997edbe45139c6f6}\label{multiple__sensor__usb__driver_8c_a3027a638aa74d1d2997edbe45139c6f6}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!RemoveChar@{RemoveChar}}
+\index{RemoveChar@{RemoveChar}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{RemoveChar()}{RemoveChar()}}
+{\footnotesize\ttfamily void Remove\+Char (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{char}]{garbage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ae7e10c68baad4163f94521d0c6703f4b}\label{multiple__sensor__usb__driver_8c_ae7e10c68baad4163f94521d0c6703f4b}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!ResetSensorCounters\_USB\_MultipleSensor@{ResetSensorCounters\_USB\_MultipleSensor}}
+\index{ResetSensorCounters\_USB\_MultipleSensor@{ResetSensorCounters\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{ResetSensorCounters\_USB\_MultipleSensor()}{ResetSensorCounters\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Reset\+Sensor\+Counters\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+
+
+resets the counter values (units\+: cycles) of each sensor channel signal. resets $<$=$>$ set to zero. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a37e953be7a085f4edbbada7fedf88249}{Reset\+Sensor\+Counters\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a96b9eced2c58a4ed59e0dd703e2a034d}\label{multiple__sensor__usb__driver_8c_a96b9eced2c58a4ed59e0dd703e2a034d}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SaveModeCHConfig\_USB\_MultipleSensor@{SaveModeCHConfig\_USB\_MultipleSensor}}
+\index{SaveModeCHConfig\_USB\_MultipleSensor@{SaveModeCHConfig\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SaveModeCHConfig\_USB\_MultipleSensor()}{SaveModeCHConfig\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Save\+Mode\+CHConfig\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool,  }\item[{int}]{selected\+\_\+channel\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Save the selected L,C,R sensors channel mode on the multi-\/sensors device, if in single-\/channel mode the update frequency of the sensor measurement is faster because only one channel is monitored in multi-\/channel mode the device monitors the 6 channels using time-\/multiplexing. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a5769b1aa53907a8c725adc0b39cce584}{Save\+Mode\+CHConfig\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool, int selected\+\_\+channel\+\_\+number)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode\+\_\+is\+\_\+single\+\_\+channel\+\_\+bool} & -\/ unsigned char -\/ boolean value that indicates the mode of operation, 0 (\char`\"{}zero\char`\"{}) indicates board is in multi-\/channel mode, 1 (\char`\"{}one\char`\"{}) indicates board is in single-\/channel mode, \\
+\hline
+\mbox{\texttt{ in}}  & {\em selected\+\_\+channel\+\_\+number} & -\/ int -\/ the number of the sensor channel that should be read/measured in case the single channel mode is selected, in multi-\/channel mode this argument isn\textquotesingle{}t used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a6c942985ca99b1367a99bd295da77af9}\label{multiple__sensor__usb__driver_8c_a6c942985ca99b1367a99bd295da77af9}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SaveSensorConfigs\_USB\_MultipleSensor@{SaveSensorConfigs\_USB\_MultipleSensor}}
+\index{SaveSensorConfigs\_USB\_MultipleSensor@{SaveSensorConfigs\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SaveSensorConfigs\_USB\_MultipleSensor()}{SaveSensorConfigs\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Save\+Sensor\+Configs\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{configs\+\_\+for\+\_\+channel\+\_\+number,  }\item[{char}]{make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value,  }\item[{char}]{compare\+\_\+is\+\_\+greater\+\_\+than,  }\item[{char}]{sensor\+\_\+prescaler,  }\item[{char}]{sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]},  }\item[{float}]{sensor\+\_\+trigger\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Configures the trigger states that activates the digital outputs of the device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_aabf9b8c2b2ae9f8abdb2e6005edd445e}{Save\+Sensor\+Configs\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int configs\+\_\+for\+\_\+channel\+\_\+number, char make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value, char compare\+\_\+is\+\_\+greater\+\_\+than, char sensor\+\_\+prescaler, char sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]}, float sensor\+\_\+trigger\+\_\+value)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em configs\+\_\+for\+\_\+channel\+\_\+number} & -\/ int -\/ Number of the channel to be configured ; \\
+\hline
+\mbox{\texttt{ in}}  & {\em make\+\_\+compare\+\_\+w\+\_\+calibrated\+\_\+sensor\+\_\+value} & -\/ char -\/ NOT IMPLEMENTED/\+USED (Multiple-\/\+Sensor Interface no longer uses this parameter). boolean value (0 or 1), 0 RAW sensor measurement is used , 1 calibrated measurement is used; for the trigger of the sensor channel ; \\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+is\+\_\+greater\+\_\+than} & -\/ char -\/ boolean value (0 or 1), 0 is used for the minor than compare, 1 is used for the greater than compare. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+prescaler} & -\/ char -\/ NOT IMPLEMENTED/\+USED (the firmware is set to 4) \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+used\+\_\+for\+\_\+\+OUT\mbox{[}3\mbox{]}} & -\/ char \mbox{[}3\mbox{]} -\/ NOT IMPLEMENTED/\+USED -\/ boolean values that indicate which outputs are activated by this sensor channel (ex\+: \{0,1,0\} means this channel only activates output N.\+1, \{1,1,0\} means this channel activates output N.\+0 and N.\+1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+trigger\+\_\+value} & -\/ float -\/ is the reference value used on the comparison that determines if this sensor channel is triggered\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_af4bc265018b45b3b1ac26dab71a25b4a}\label{multiple__sensor__usb__driver_8c_af4bc265018b45b3b1ac26dab71a25b4a}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!SetBoardIDCode\_USB\_MultipleSensor@{SetBoardIDCode\_USB\_MultipleSensor}}
+\index{SetBoardIDCode\_USB\_MultipleSensor@{SetBoardIDCode\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{SetBoardIDCode\_USB\_MultipleSensor()}{SetBoardIDCode\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Set\+Board\+IDCode\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{new\+\_\+board\+\_\+\+ID }\end{DoxyParamCaption})}
+
+
+
+Set the Multiple-\/\+Sensor Board\+\_\+\+ID, relevant for the Modbus RS485/\+Serial interface. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_ae29ed75696c6705580c31f79a9f928d9}{Set\+Board\+IDCode\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char new\+\_\+board\+\_\+\+ID)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+board\+\_\+\+ID} & -\/ unsigned char -\/ number (0 -\/ 254) of the new \textquotesingle{}board\+\_\+\+ID\textquotesingle{} to be saved on the Multiple-\/\+Sensor Interface device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_ab3d4a5ccea7725595cfc8a96cf418fa5}\label{multiple__sensor__usb__driver_8c_ab3d4a5ccea7725595cfc8a96cf418fa5}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!WriteCountersCalib\_USB\_MultipleSensor@{WriteCountersCalib\_USB\_MultipleSensor}}
+\index{WriteCountersCalib\_USB\_MultipleSensor@{WriteCountersCalib\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{WriteCountersCalib\_USB\_MultipleSensor()}{WriteCountersCalib\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Write\+Counters\+Calib\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{float}]{C0,  }\item[{float}]{C1,  }\item[{float}]{C2,  }\item[{float}]{C3 }\end{DoxyParamCaption})}
+
+
+
+Writes the counter calibration constants for the selected channel number on the device, the calibration for the counters is\+: counter\+\_\+measurement = C3$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$3) + C2$\ast$(counter\+\_\+\+RAW\+\_\+value$^\wedge$2) + C1$\ast$counter\+\_\+\+RAW\+\_\+value + C0. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a94f1176e3165fa4014e589b8686965b2}{Write\+Counters\+Calib\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int channel\+\_\+number, float C0, float C1, float C2, float C3)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be written its counter calibration constants/parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em C0} & -\/ float -\/ constant of the offset \\
+\hline
+\mbox{\texttt{ in}}  & {\em C1} & -\/ float -\/ constant of the counter\+\_\+\+RAW\+\_\+value \\
+\hline
+\mbox{\texttt{ in}}  & {\em C2} & -\/ float -\/ constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em C3} & -\/ float -\/ constant of the counter\+\_\+\+RAW\+\_\+value$^\wedge$3\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_add34b78b9ddec95a5f4aab955535d5e1}\label{multiple__sensor__usb__driver_8c_add34b78b9ddec95a5f4aab955535d5e1}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!WriteHeaderCalibTable\_USB\_MultipleSensor@{WriteHeaderCalibTable\_USB\_MultipleSensor}}
+\index{WriteHeaderCalibTable\_USB\_MultipleSensor@{WriteHeaderCalibTable\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{WriteHeaderCalibTable\_USB\_MultipleSensor()}{WriteHeaderCalibTable\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Write\+Header\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{unsigned char}]{calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool,  }\item[{unsigned char}]{number\+\_\+table\+\_\+lines,  }\item[{unsigned char}]{calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch,  }\item[{char}]{jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range,  }\item[{char $\ast$}]{units\+\_\+str,  }\item[{char $\ast$}]{counter\+\_\+calib\+\_\+units\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Writes/uploads the header of the calibration table for the selected channel number on the device. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_a5e0b3ef5eeead1e5b22096d7fc3f8e02}{Write\+Header\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int channel\+\_\+number, unsigned char calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool, unsigned char number\+\_\+table\+\_\+lines, unsigned char calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch, char jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range, char $\ast$units\+\_\+str, char $\ast$counter\+\_\+calib\+\_\+units\+\_\+str)}};
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel that is to be written its calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em calib\+\_\+table\+\_\+is\+\_\+active\+\_\+bool} & -\/ unsigned char -\/ indicates if the calib table is being used by the device to calculate measurements for the respective sensor channel, (\textquotesingle{}0\textquotesingle{} false, \textquotesingle{}1\textquotesingle{} true) \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+\_\+table\+\_\+lines} & -\/ unsigned char -\/ number (0 -\/ 32) of valid lines of the calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em calibration\+\_\+mode\+\_\+multi\+\_\+or\+\_\+single\+\_\+ch} & -\/ unsigned char -\/ mode of operation of the device when the calibration table was obtained (\textquotesingle{}1\textquotesingle{} -\/ single channel mode , \textquotesingle{}0\textquotesingle{} -\/ multiple channel mode) \\
+\hline
+\mbox{\texttt{ in}}  & {\em jumper\+\_\+selection\+\_\+osc\+\_\+tunning\+\_\+range} & -\/ char -\/ letter (character \textquotesingle{}A\textquotesingle{}, \textquotesingle{}B\textquotesingle{}, \textquotesingle{}+\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{}) indicating the jumper selection of oscillator tuning range , this parameter is the jumpers position of a LCR channel selected by the user on the multiple sensor interface , it can be \textquotesingle{}+\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{} \textquotesingle{}A\textquotesingle{} or \textquotesingle{}B\textquotesingle{} ( +, -\/, A, B coded in ASCII) (\textquotesingle{}A\textquotesingle{} -\/ only placed/closed the jumper A; \textquotesingle{}B\textquotesingle{} -\/ only placed/closed the jumper B; \textquotesingle{}+\textquotesingle{} -\/ placed/closed the jumpers A and B; \textquotesingle{}-\/\textquotesingle{} -\/ removed/open the jumpers A and B) \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$units\+\_\+str} & -\/ char -\/ string (char $\ast$) with the units of the calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$counter\+\_\+calib\+\_\+units\+\_\+str} & -\/ char -\/ string (char $\ast$) with the units of the counter calibration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a3b675b3e504596f023492630d38cf056}\label{multiple__sensor__usb__driver_8c_a3b675b3e504596f023492630d38cf056}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!WriteLineCalibTable\_USB\_MultipleSensor@{WriteLineCalibTable\_USB\_MultipleSensor}}
+\index{WriteLineCalibTable\_USB\_MultipleSensor@{WriteLineCalibTable\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{WriteLineCalibTable\_USB\_MultipleSensor()}{WriteLineCalibTable\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Write\+Line\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{int}]{channel\+\_\+number,  }\item[{int}]{line\+\_\+number,  }\item[{float}]{RAW\+\_\+value,  }\item[{float}]{measurement }\end{DoxyParamCaption})}
+
+
+
+function to upload/write to the device a line (indicated by line\+\_\+number) of the calibration table of the selected channel (by channel\+\_\+number). 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_af2f25a01f6ac0f5be1969f9c7af55147}{Write\+Line\+Calib\+Table\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, int channel\+\_\+number, int line\+\_\+number, float RAW\+\_\+value, float measurement)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel\+\_\+number} & -\/ int -\/ number of the channel to be written data to its calibration table \\
+\hline
+\mbox{\texttt{ in}}  & {\em line\+\_\+number} & -\/ int -\/ number of the line to be written to the calibration table on the device \\
+\hline
+\mbox{\texttt{ out}}  & {\em RAW\+\_\+value} & -\/ float -\/ argument were is passed the RAW\+\_\+value to be written to the device \\
+\hline
+\mbox{\texttt{ out}}  & {\em measurement} & -\/ float -\/ argument were is passed the measurement to be written to the device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_af72f9ebda390844d00e25f2389a9659c}\label{multiple__sensor__usb__driver_8c_af72f9ebda390844d00e25f2389a9659c}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!WriteOutputConfig\_USB\_MultipleSensor@{WriteOutputConfig\_USB\_MultipleSensor}}
+\index{WriteOutputConfig\_USB\_MultipleSensor@{WriteOutputConfig\_USB\_MultipleSensor}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{WriteOutputConfig\_USB\_MultipleSensor()}{WriteOutputConfig\_USB\_MultipleSensor()}}
+{\footnotesize\ttfamily int Write\+Output\+Config\+\_\+\+USB\+\_\+\+Multiple\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{multiple__sensor__usb__driver_8h_a9dd7210252fb2114f89645bca5988569}{Multiple\+Sensor\+\_\+\+USB\+\_\+driver}} $\ast$}]{session,  }\item[{unsigned char}]{output\+\_\+number,  }\item[{char $\ast$}]{out\+\_\+bool\+\_\+func\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Writes the boolean equation of the selected digital output to the device, before writing to the device it checks the validity of the boolean function inserted by the user, in case the boolean function has an error returns the correspondent error code and inside the session struct sets \char`\"{}error\+\_\+at\+\_\+\+CH\+\_\+number\+\_\+or\+\_\+position\char`\"{} to the value of the position were the error occured. 
+
+\DoxyHorRuler{0}
+ int \mbox{\hyperlink{multiple__sensor__usb__driver_8h_afc802ad6ea5e290582f618806e98077b}{Write\+Output\+Config\+\_\+\+USB\+\_\+\+Multiple\+Sensor(\+Multiple\+Sensor\+\_\+\+USB\+\_\+driver $\ast$session, unsigned char output\+\_\+number, char $\ast$out\+\_\+bool\+\_\+func\+\_\+str)}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$session} & -\/ Multiple\+Sensor\+\_\+\+USB\+\_\+driver -\/ pointer to structure of infos about this session of multi-\/sensor device USB driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+\_\+number} & -\/ unsigned char -\/ output number (0,1,2) that will use the saved boolean equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$out\+\_\+bool\+\_\+func\+\_\+str} & -\/ char -\/ string (char $\ast$) with the boolean equation to be saved on the device for the selected \textquotesingle{}output\+\_\+number\textquotesingle{} (max length 50 characters (bytes))\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) command return code 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{multiple__sensor__usb__driver_8c_a879f513bb07bca89c562f29d9cb360b4}\label{multiple__sensor__usb__driver_8c_a879f513bb07bca89c562f29d9cb360b4}} 
+\index{multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}!modbus\_data@{modbus\_data}}
+\index{modbus\_data@{modbus\_data}!multiple\_sensor\_usb\_driver.c@{multiple\_sensor\_usb\_driver.c}}
+\doxysubsubsection{\texorpdfstring{modbus\_data}{modbus\_data}}
+{\footnotesize\ttfamily unsigned char modbus\+\_\+data\mbox{[}255\mbox{]}}
+
